@@ -1,0 +1,42 @@
+
+// ==============================================
+// Media query mixin
+// ==============================================
+
+@mixin when($canvas) {
+	// Between Upper limit and upper limit 
+	@if $canvas == XS-S {
+		@media only screen and (min-width: $XS) and (max-width: $S - 1) {
+			@content;
+		}
+	}
+	@else if $canvas == S-M {
+		@media only screen and (min-width: $S) and (max-width: $M - 1) {
+			@content;
+		}
+	}
+	@else if $canvas == M-L {
+		@media only screen and (min-width: $M) and (max-width: $L - 1) {
+			@content;
+		}
+	}
+	@else if $canvas == L-XL {
+		@media only screen and (min-width: $L) and (max-width: $XL - 1) {
+			@content;
+		}
+	}
+	// From Lower limit to infinity
+	@else if $canvas == XSPlus {
+		@media only screen and (min-width: $XS) { @content; }
+	}
+	@else if $canvas == SPlus {
+		@media only screen and (min-width: $S) { @content; }
+	}
+	@else if $canvas == MPlus {
+		@media only screen and (min-width: $M) { @content; }
+	}
+	@else if $canvas == LPlus {
+		@media only screen and (min-width: $L) { @content; }
+	}
+}
+

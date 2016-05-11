@@ -1,0 +1,71 @@
+* {
+
+}
+
+body {
+
+}
+
+h1 {
+	font-size: 5em;
+
+	@include when(XSPlus) { 
+		color: rgb(255,0,0);
+	}
+
+	@include when(SPlus) {
+		color: rgb(0,255,0);
+	}
+
+	@include when(MPlus) {
+		color: rgb(0,0,255);
+	}
+
+	@include when(LPlus) {
+		color: rgb(178,248,155);
+	}
+
+	@include when(XS-S) {
+		color: rgb(228,54,157);
+	}
+
+	@include when(S-M) {
+		color: rgb(241,151,38);
+	}
+
+	@include when(M-L) {
+		color: rgb(255,250,42);
+	}
+
+	@include when(L-XL) {
+		color: rgb(136,38,153)
+	}
+}
+
+// Map of colors 
+$colors: (
+  red        : #FF0000,
+  orange     : #FFBF00,
+  yellow     : #FFFF00,
+  green      : #7FFF00,
+  lightblue  : #007FFF,
+  cyan       : #00FFFF,
+  blue       : #0000FF,
+  purple     : #7F00FF,
+  magenta    : #FF00FF,
+);
+
+@each $name, $color in $colors { // Each key, value in the map
+  a[href^="link#{$name}"] { color: $color; }
+}
+
+
+// This is the for loop
+@for $i from 1 to 4 {
+	// This is interpolation
+	.buy_#{$i} {
+		color: blue;	
+	}
+}
+
+@debug $XL;
