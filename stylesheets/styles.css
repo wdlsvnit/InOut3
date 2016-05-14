@@ -95,6 +95,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   transition: all 0.2s ease-in-out;
 }
 
+/* line 1, ../sass/partials/_base.scss */
+* {
+  box-sizing: border-box;
+}
+
 /* line 5, ../sass/partials/_base.scss */
 html {
   font-size: 62.5%;
@@ -156,7 +161,7 @@ html {
 /* line 12, ../sass/partials/_layout.scss */
 .nav-container {
   background-color: #6C9DE1;
-  height: 80px;
+  height: 90px;
   width: 100vw;
   padding: 15px;
   position: absolute;

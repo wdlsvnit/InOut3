@@ -11,9 +11,9 @@
 
 .nav-container {
 	background-color : $color-nav-default;
-	height: 80px;
+	height: 90px;
 	width: 100vw;
-	padding : 15px;
+	padding: 15px;
 	@include centerer(false, true, 0%, 45%);
 }
 
