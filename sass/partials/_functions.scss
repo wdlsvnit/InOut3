@@ -1,0 +1,3 @@
+@function section-color($section-name) {
+	@return map-get($section-colors, $section-name);
+}

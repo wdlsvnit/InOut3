@@ -1,0 +1,8 @@
+.section--home {
+	@extend %section;
+	background-color: section-color(home);
+}
+
+.section--home__logo {
+	@include centerer(true, true, 0%, -20%);
+}

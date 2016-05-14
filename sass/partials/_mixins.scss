@@ -1,5 +1,25 @@
 
 // ==============================================
+// General mixins
+// ==============================================
+
+@mixin centerer($horizontal: true, $vertical: true, $offsetH: 0%, $offsetV: 0%) {
+  position: absolute;
+  @if ($horizontal and $vertical) {
+    top: 50% + $offsetV;
+    left: 50% + $offsetH;
+    transform: translate(-50%, -50%);
+  } @else if ($horizontal) {
+    left: 50% + $offsetH;
+    transform: translate(-50%, 0);
+  } @else if ($vertical) {
+    top: 50% + $offsetV;
+    transform: translate(0, -50%);
+  }
+}
+
+
+// ==============================================
 // Media query mixin
 // ==============================================
 

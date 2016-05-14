@@ -1,112 +1,85 @@
-/* line 9, ../sass/partials/_base.scss */
-h1 {
-  font-size: 5em;
-}
-@media only screen and (min-width: 288px) {
-  /* line 9, ../sass/partials/_base.scss */
-  h1 {
-    color: red;
-  }
-}
-@media only screen and (min-width: 480px) {
-  /* line 9, ../sass/partials/_base.scss */
-  h1 {
-    color: lime;
-  }
-}
-@media only screen and (min-width: 688px) {
-  /* line 9, ../sass/partials/_base.scss */
-  h1 {
-    color: blue;
-  }
-}
-@media only screen and (min-width: 912px) {
-  /* line 9, ../sass/partials/_base.scss */
-  h1 {
-    color: #b2f89b;
-  }
-}
-@media only screen and (min-width: 288px) and (max-width: 479px) {
-  /* line 9, ../sass/partials/_base.scss */
-  h1 {
-    color: #e4369d;
-  }
-}
-@media only screen and (min-width: 480px) and (max-width: 687px) {
-  /* line 9, ../sass/partials/_base.scss */
-  h1 {
-    color: #f19726;
-  }
-}
-@media only screen and (min-width: 688px) and (max-width: 911px) {
-  /* line 9, ../sass/partials/_base.scss */
-  h1 {
-    color: #fffa2a;
-  }
-}
-@media only screen and (min-width: 912px) and (max-width: 2039px) {
-  /* line 9, ../sass/partials/_base.scss */
-  h1 {
-    color: #882699;
-  }
+/* line 5, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
 }
 
-/* line 59, ../sass/partials/_base.scss */
-a[href^="linkred"] {
-  color: #FF0000;
+/* line 22, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
 }
 
-/* line 59, ../sass/partials/_base.scss */
-a[href^="linkorange"] {
-  color: #FFBF00;
+/* line 24, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
 }
 
-/* line 59, ../sass/partials/_base.scss */
-a[href^="linkyellow"] {
-  color: #FFFF00;
+/* line 26, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-/* line 59, ../sass/partials/_base.scss */
-a[href^="linkgreen"] {
-  color: #7FFF00;
+/* line 28, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
 }
 
-/* line 59, ../sass/partials/_base.scss */
-a[href^="linklightblue"] {
-  color: #007FFF;
+/* line 30, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
 }
 
-/* line 59, ../sass/partials/_base.scss */
-a[href^="linkcyan"] {
-  color: #00FFFF;
+/* line 32, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
 }
 
-/* line 59, ../sass/partials/_base.scss */
-a[href^="linkblue"] {
-  color: #0000FF;
+/* line 116, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
 }
 
-/* line 59, ../sass/partials/_base.scss */
-a[href^="linkpurple"] {
-  color: #7F00FF;
+/* line 1, ../sass/partials/_placeholders.scss */
+.section--home {
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  position: relative;
 }
 
-/* line 59, ../sass/partials/_base.scss */
-a[href^="linkmagenta"] {
-  color: #FF00FF;
+/* line 1, ../sass/partials/_layout.scss */
+.section--home {
+  background-color: #FFFFFF;
 }
 
-/* line 66, ../sass/partials/_base.scss */
-.buy_1 {
-  color: blue;
-}
-
-/* line 66, ../sass/partials/_base.scss */
-.buy_2 {
-  color: blue;
-}
-
-/* line 66, ../sass/partials/_base.scss */
-.buy_3 {
-  color: blue;
+/* line 6, ../sass/partials/_layout.scss */
+.section--home__logo {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
