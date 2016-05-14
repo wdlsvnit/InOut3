@@ -1,8 +1,19 @@
-.section--home {
-	@extend %section;
-	background-color: section-color(home);
+
+// ==============================================
+// Site Sections
+// ==============================================
+
+@import "sections/home";
+
+// ==============================================
+// Navigation 
+// ==============================================
+
+.nav-container {
+	background-color : $color-nav-default;
+	height: 80px;
+	width: 100vw;
+	padding : 15px;
+	@include centerer(false, true, 0%, 45%);
 }
 
-.section--home__logo {
-	@include centerer(true, true, 0%, -20%);
-}

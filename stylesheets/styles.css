@@ -67,19 +67,108 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .section--home {
   width: 100vw;
   height: 100vh;
-  padding: 20px;
   position: relative;
+  max-height: 800px;
 }
 
-/* line 1, ../sass/partials/_layout.scss */
+/* line 8, ../sass/partials/_placeholders.scss */
+.section--home__button_apply {
+  background: #000000;
+  color: #000000;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.24);
+  border-radius: 100px;
+  cursor: pointer;
+  text-align: center;
+  font-family: Bold;
+  font-size: 1.6rem;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+/* line 19, ../sass/partials/_placeholders.scss */
+.section--home__button_apply:hover {
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12), 0px 8px 8px 0px rgba(0, 0, 0, 0.2);
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+/* line 5, ../sass/partials/_base.scss */
+html {
+  font-size: 62.5%;
+}
+
+/* line 1, ../sass/partials/sections/_home.scss */
 .section--home {
   background-color: #FFFFFF;
 }
 
-/* line 6, ../sass/partials/_layout.scss */
+/* line 6, ../sass/partials/sections/_home.scss */
 .section--home__logo {
   position: absolute;
-  top: 30%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+/* line 10, ../sass/partials/sections/_home.scss */
+.section--home__pattern_code {
+  position: absolute;
+  top: 12%;
+  transform: translate(0, -50%);
+}
+
+/* line 14, ../sass/partials/sections/_home.scss */
+.section--home__pattern_brackets {
+  position: absolute;
+  top: 65%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+}
+
+/* line 18, ../sass/partials/sections/_home.scss */
+.section--home__button_apply {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #E1EAFA;
+  width: 190px;
+  height: 59px;
+  line-height: 59px;
+  letter-spacing: 2px;
+}
+
+/* line 28, ../sass/partials/sections/_home.scss */
+.section--home__heading_location {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Bold;
+  font-size: 2rem;
+  color: #989DAF;
+  letter-spacing: 2px;
+}
+
+/* line 12, ../sass/partials/_layout.scss */
+.nav-container {
+  background-color: #6C9DE1;
+  height: 80px;
+  width: 100vw;
+  padding: 15px;
+  position: absolute;
+  top: 95%;
+  transform: translate(0, -50%);
+}
+
+@font-face {
+  font-family: "Regular";
+  src: url("../fonts/proximanova-regular-webfont.eot?") format("eot"), url("../fonts/proximanova-regular-webfont.woff2") format("woff2"), url("../fonts/proximanova-regular-webfont.woff") format("woff"), url("../fonts/proximanova-regular-webfont.ttf") format("truetype"), url("../fonts/proximanova-regular-webfont.svg#Regular") format("svg");
+}
+@font-face {
+  font-family: "Bold";
+  src: url("../fonts/proximanova-bold-webfont.eot?") format("eot"), url("../fonts/proximanova-bold-webfont.woff2") format("woff2"), url("../fonts/proximanova-bold-webfont.woff") format("woff"), url("../fonts/proximanova-bold-webfont.ttf") format("truetype"), url("../fonts/proximanova-bold-webfont.svg#Bold") format("svg");
 }

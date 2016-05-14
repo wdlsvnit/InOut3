@@ -1,6 +1,6 @@
 
 // ==============================================
-// General mixins
+// General
 // ==============================================
 
 @mixin centerer($horizontal: true, $vertical: true, $offsetH: 0%, $offsetV: 0%) {
@@ -18,9 +18,8 @@
   }
 }
 
-
 // ==============================================
-// Media query mixin
+// Media query
 // ==============================================
 
 @mixin when($canvas) {
@@ -57,6 +56,37 @@
 	}
 	@else if $canvas == LPlus {
 		@media only screen and (min-width: $L) { @content; }
+	}
+}
+
+// ==============================================
+// Font
+// ==============================================
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
 	}
 }
 
