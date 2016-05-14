@@ -1,0 +1,37 @@
+.navbar {
+	background-color : $color-nav-default;
+	height: 90px;
+	width: 100vw;
+	margin: 0 auto;
+	@include centerer(false, true, 0%, 45%);
+}
+
+.navbar__nav {
+	display: inline-block;		
+	height: 90px;
+	width: 150px;
+	padding : 0 10px 0 10px;
+	line-height: 90px;
+	vertical-align: middle;
+	font-family: Regular;
+	letter-spacing: 2px;
+	font-size: 1.8rem;
+	cursor: pointer;
+	&:hover {
+		background-color: $color-nav-active;	
+	}
+}
+
+.navbar__nav--active {
+	@extend .navbar__nav;
+	background-color: $color-nav-active;	
+}
+
+.navbar__nav__link {
+	color: #FFFFFF;
+	&:hover {
+		color: #FFFFFF;
+		text-decoration: none;
+	}
+}
+

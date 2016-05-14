@@ -69,9 +69,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: 100vh;
   position: relative;
   max-height: 800px;
+  overflow: hidden;
 }
 
-/* line 8, ../sass/partials/_placeholders.scss */
+/* line 9, ../sass/partials/_placeholders.scss */
 .section--home__button_apply {
   background: #000000;
   color: #000000;
@@ -86,7 +87,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
-/* line 19, ../sass/partials/_placeholders.scss */
+/* line 20, ../sass/partials/_placeholders.scss */
 .section--home__button_apply:hover {
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12), 0px 8px 8px 0px rgba(0, 0, 0, 0.2);
   -moz-transition: all 0.2s ease-in-out;
@@ -158,15 +159,48 @@ html {
   letter-spacing: 2px;
 }
 
-/* line 12, ../sass/partials/_layout.scss */
-.nav-container {
+/* line 1, ../sass/partials/_navigation.scss */
+.navbar {
   background-color: #6C9DE1;
   height: 90px;
   width: 100vw;
-  padding: 15px;
+  margin: 0 auto;
   position: absolute;
   top: 95%;
   transform: translate(0, -50%);
+}
+
+/* line 9, ../sass/partials/_navigation.scss */
+.navbar__nav, .navbar__nav--active {
+  display: inline-block;
+  height: 90px;
+  width: 150px;
+  padding: 0 10px 0 10px;
+  line-height: 90px;
+  vertical-align: middle;
+  font-family: Regular;
+  letter-spacing: 2px;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+/* line 20, ../sass/partials/_navigation.scss */
+.navbar__nav:hover, .navbar__nav--active:hover {
+  background-color: #D57053;
+}
+
+/* line 25, ../sass/partials/_navigation.scss */
+.navbar__nav--active {
+  background-color: #D57053;
+}
+
+/* line 30, ../sass/partials/_navigation.scss */
+.navbar__nav__link {
+  color: #FFFFFF;
+}
+/* line 32, ../sass/partials/_navigation.scss */
+.navbar__nav__link:hover {
+  color: #FFFFFF;
+  text-decoration: none;
 }
 
 @font-face {

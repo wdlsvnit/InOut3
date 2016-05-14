@@ -4,16 +4,5 @@
 // ==============================================
 
 @import "sections/home";
-
-// ==============================================
-// Navigation 
-// ==============================================
-
-.nav-container {
-	background-color : $color-nav-default;
-	height: 90px;
-	width: 100vw;
-	padding: 15px;
-	@include centerer(false, true, 0%, 45%);
-}
+@import "navigation";
 
