@@ -24,6 +24,7 @@
 
 .navbar__nav--active {
 	@extend .navbar__nav;
+	text-decoration: none;
 	background-color: $color-nav-active;	
 }
 

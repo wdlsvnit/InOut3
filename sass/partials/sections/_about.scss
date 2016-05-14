@@ -1,0 +1,15 @@
+.content-section {
+    padding-top: 100px;
+}
+
+.section--about 
+{
+    @extend %section;
+	background-color: section-color(about);
+	p 
+	{
+	font-size: 2.2rem;
+	font-family: Regular;
+	padding:17rem;
+	}
+}
