@@ -18,9 +18,9 @@ Section.prototype = {
 var sections = {
 	home: new Section('home'),
 	about: new Section('about'),
-	// faq: new Section('faq'),
-	// schedule: new Section('schedule'),
-	// sponsors: new Section('sponsors')
+	faq: new Section('faq'),
+	schedule: new Section('schedule'),
+	sponsors: new Section('sponsors')
 };
 
 
@@ -32,9 +32,9 @@ initSectionStartPositions();
 function initSectionStartPositions() {
 	sections.home.startPos = 0;
 	sections.about.startPos = sections.home.height() - navigationBarHeight;
-	// sections.faq.startPos = sections.about.height() - navigationBarHeight;
-	// sections.schedule.startPos = sections.faq.height() - navigationBarHeight;
-	// sections.sponsors.startPos = sections.schedule.height() - navigationBarHeightl;
+	sections.faq.startPos = sections.about.startPos + sections.about.height();
+	sections.schedule.startPos = sections.faq.startPos + sections.faq.height() 
+	sections.sponsors.startPos = sections.schedule.startPos + sections.schedule.height(); 
 }
 
 // Navigation block Object 
@@ -66,7 +66,9 @@ Nav.prototype = {
 	events: {
 		click: function() {
 			this.el.addEventListener('click', function() {
-				console.log(this.id);	
+				$('html, body').animate({
+			    scrollTop: sections[this.id].startPos
+			  }, 300);
 			});
 		}
 	}
@@ -126,16 +128,41 @@ var navigationBar = {
 			else
 				this.navs[nav].unhighlight();
 		}
+	},
+
+	changeColor: function(color) {
+		this.el.style.backgroundColor = color;
 	}
 
 };
 
 function highlightNavBlock() {
+
 	if( inSection('home')) {
 		navigationBar.highlightNav('home');
-	} else if ( inSection('about') ) {
+		navigationBar.changeColor('#6C9DE1');
+	}
+
+	if ( inSection('about') ) {
 		navigationBar.highlightNav('about');
+		navigationBar.changeColor('#6C9DE1');
 	} 
+
+	if( inSection('faq') ) {
+		navigationBar.highlightNav('faq');
+		navigationBar.changeColor('#CBA496');
+	}
+
+	if( inSection('schedule') ) {
+		navigationBar.highlightNav('schedule');
+		navigationBar.changeColor('#5E729C');
+	}
+
+	if( inSection('sponsors') ) {
+		navigationBar.highlightNav('sponsors');
+		navigationBar.changeColor('#6C9DE1');
+	}
+
 
 }
 

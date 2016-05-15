@@ -64,7 +64,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 1, ../sass/partials/_placeholders.scss */
-.section--home, .section--about {
+.section--home, .section--about, .section--faq, .section--schedule, .section--sponsors {
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -176,6 +176,21 @@ html {
 /* line 1, ../sass/partials/sections/_about.scss */
 .section--about {
   background-color: #6C9DE1;
+}
+
+/* line 1, ../sass/partials/sections/_faq.scss */
+.section--faq {
+  background-color: #CBA496;
+}
+
+/* line 1, ../sass/partials/sections/_schedule.scss */
+.section--schedule {
+  background-color: #5E729C;
+}
+
+/* line 1, ../sass/partials/sections/_sponsors.scss */
+.section--sponsors {
+  background-color: #FFFFFF;
 }
 
 /* line 1, ../sass/partials/_navigation.scss */
