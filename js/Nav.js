@@ -26,7 +26,7 @@ class Nav{
 	click() {
 		this.el.addEventListener('click', function() {
 			$('html, body').animate({
-		    scrollTop: sections[this.id].startPos
+		    scrollTop: window.Inout.sections[this.id].startPos
 		  }, 300);
 		});
 	}

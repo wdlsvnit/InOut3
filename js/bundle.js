@@ -54,6 +54,9 @@
 
 	var navigationBar = __webpack_require__(2);
 
+	// To allow other modules to access variables
+	window.Inout = {};
+
 	// All The sections
 	var sections = {
 		home: new _Section2.default('home'),
@@ -62,6 +65,8 @@
 		schedule: new _Section2.default('schedule'),
 		sponsors: new _Section2.default('sponsors')
 	};
+
+	window.Inout.sections = sections;
 
 	var navigationBarHeight = 90;
 	var navigationBarInitialPos = sections.home.height() - navigationBarHeight;
@@ -109,7 +114,7 @@
 	function inSection(section) {
 		var scrollPos = document.documentElement && document.documentElement.scrollTop || document.body.scrollTop;
 		var lowerLimit = sections[section].startPos;
-		var upperLimit = lowerLimit + sections[section].height() - navigationBarHeight;
+		var upperLimit = lowerLimit + sections[section].height();
 
 		return scrollPos >= lowerLimit && scrollPos < upperLimit;
 	}
@@ -291,7 +296,7 @@
 			value: function click() {
 				this.el.addEventListener('click', function () {
 					$('html, body').animate({
-						scrollTop: sections[this.id].startPos
+						scrollTop: window.Inout.sections[this.id].startPos
 					}, 300);
 				});
 			}

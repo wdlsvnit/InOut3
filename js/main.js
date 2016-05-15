@@ -3,6 +3,9 @@
 import Section from './Section';
 let navigationBar = require('./NavigationBar');
 
+// To allow other modules to access variables 
+window.Inout = {};
+
 // All The sections
 var sections = {
 	home: new Section('home'),
@@ -11,6 +14,8 @@ var sections = {
 	schedule: new Section('schedule'),
 	sponsors: new Section('sponsors')
 };
+
+window.Inout.sections = sections;
 
 
 let navigationBarHeight = 90;
@@ -61,7 +66,7 @@ function highlightNavBlock() {
 function inSection(section) {
 	var scrollPos = (document.documentElement && document.documentElement.scrollTop || document.body.scrollTop);
 	var lowerLimit = sections[section].startPos;
-	var upperLimit = lowerLimit + sections[section].height() - navigationBarHeight;
+	var upperLimit = lowerLimit + sections[section].height();
 
 	return scrollPos >= lowerLimit && scrollPos < upperLimit;
 }
