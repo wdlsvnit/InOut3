@@ -10,7 +10,6 @@
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1">
   		<link rel="stylesheet" href="stylesheets/styles.css">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
       <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     </head>
     <body>
@@ -18,55 +17,50 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- Home Section   -->
+        <!-- Detached navigation bar -->
+        <ul class="navigation">
+          <center>
+            <li class="navigation__nav" id="home"><a class="navigation__nav__link" href="#">HOME</a></li> 
+            <li class="navigation__nav" id="about"><a class="navigation__nav__link" href="#">ABOUT</a></li>
+            <li class="navigation__nav" id="faq"><a class="navigation__nav__link" href="#">FAQ</a></li>
+            <li class="navigation__nav" id="schedule"><a class="navigation__nav__link" href="#">SCHEDULE</a></li>
+            <li class="navigation__nav" id="sponsors"><a class="navigation__nav__link" href="#">SPONSORS</a></li>
+          </center>
+        </ul>
 
+        <!-- Home Section   -->
         <div class="section--home">
+            <img src="images/pattern_brackets_home.png" alt="Brackets all over" class = "section--home__pattern_brackets">
             <img src="images/logo_inout.png" alt="Inout 3.0" class="section--home__logo">
             <img src="images/pattern_code.png" alt="Code all day code all night" class="section--home__pattern_code">
-            <img src="images/pattern_brackets_home.png" alt="Brackets all over" class = "section--home__pattern_brackets">
 
             <!-- Apply now button -->
             <div class="section--home__button_apply">APPLY NOW</div>
             <h3 class="section--home__heading_location">13-14 AUGUST, NIT SURAT</h3>
 
-            <!-- <div class="navbar"> -->
-            <ul class="navbar">
-            <center>
-              <li class="navbar__nav--active"><a class="navbar__nav__link" href="#">HOME</a></li> 
-              <li class="navbar__nav"><a class="navbar__nav__link" href="#">ABOUT</a></li>
-              <li class="navbar__nav"><a class="navbar__nav__link" href="#">FAQ</a></li>
-              <li class="navbar__nav"><a class="navbar__nav__link" href="#">SPONSORS</a></li>
-              </center>
-            </ul>
-            <!-- </div> -->
         </div> 
-<!-- End of Home Section -->
+       <!-- End of Home Section -->
 
 
-  <section class="section--about" id="about" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-12">
-               
-               <p>
-                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                   consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                   proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                   <br>
-                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                   consequat.
-           </p>
-
-            </div>
+        <!-- About Section -->
+        <div class="section--about">
+          <div class="section__content">
+             <p class="section__content--text">
+                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                 <br>
+                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                 consequat.
+             </p>
+           </div>
         </div>
-    </section>
         <!-- End of About Section -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     </body>
 </html>
