@@ -122,19 +122,19 @@ html {
   margin: 100px auto 0px auto;
 }
 
-/* line 8, ../sass/partials/_layout.scss */
+/* line 7, ../sass/partials/_layout.scss */
 .section__content--text {
   font-family: Regular;
   font-size: 2.2rem;
   color: white;
   line-height: 3rem;
 }
-/* line 14, ../sass/partials/_layout.scss */
+/* line 13, ../sass/partials/_layout.scss */
 .section__content--text a {
   text-decoration: underline;
   color: #FFFFFF;
 }
-/* line 17, ../sass/partials/_layout.scss */
+/* line 16, ../sass/partials/_layout.scss */
 .section__content--text a:hover {
   color: #FFFFFF;
 }
