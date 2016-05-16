@@ -36,6 +36,7 @@
 .section--home__social_links {
 
 	.social_icon {
+		padding : 8px;
 		color: rgba(93,111,158, 0.4);
 		&:hover {
 			color: rgba(93,111,158, 1);
@@ -44,10 +45,9 @@
 
 	li {
 		display: inline-block;
-		margin-right: 20px;
+		margin-right: 1px;
 	}
 
-	padding: 20px;
 	width: auto;
 	@include centerer(true, true, 0%, -42%);
 }

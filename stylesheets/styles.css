@@ -175,7 +175,6 @@ html {
 
 /* line 36, ../sass/partials/sections/_home.scss */
 .section--home__social_links {
-  padding: 20px;
   width: auto;
   position: absolute;
   top: 8%;
@@ -184,16 +183,17 @@ html {
 }
 /* line 38, ../sass/partials/sections/_home.scss */
 .section--home__social_links .social_icon {
+  padding: 8px;
   color: rgba(93, 111, 158, 0.4);
 }
-/* line 40, ../sass/partials/sections/_home.scss */
+/* line 41, ../sass/partials/sections/_home.scss */
 .section--home__social_links .social_icon:hover {
   color: #5d6f9e;
 }
-/* line 45, ../sass/partials/sections/_home.scss */
+/* line 46, ../sass/partials/sections/_home.scss */
 .section--home__social_links li {
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 1px;
 }
 
 /* line 1, ../sass/partials/sections/_about.scss */
