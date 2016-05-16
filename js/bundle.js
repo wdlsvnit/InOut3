@@ -61,8 +61,8 @@
 	var sections = {
 		home: new _Section2.default('home', '#6C9DE1'),
 		about: new _Section2.default('about', '#6C9DE1'),
-		faq: new _Section2.default('faq', '#CBA496'),
-		schedule: new _Section2.default('schedule', '#5E729C'),
+		faq: new _Section2.default('faq', '#5E729C'),
+		schedule: new _Section2.default('schedule', '#34495e'),
 		sponsors: new _Section2.default('sponsors', '#6C9DE1')
 	};
 

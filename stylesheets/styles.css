@@ -185,12 +185,13 @@ html {
 .section--home__social_links .social_icon {
   padding: 8px;
   color: rgba(93, 111, 158, 0.4);
+  font-size: 2.4rem;
 }
-/* line 41, ../sass/partials/sections/_home.scss */
+/* line 42, ../sass/partials/sections/_home.scss */
 .section--home__social_links .social_icon:hover {
   color: #5d6f9e;
 }
-/* line 46, ../sass/partials/sections/_home.scss */
+/* line 47, ../sass/partials/sections/_home.scss */
 .section--home__social_links li {
   display: inline-block;
   margin-right: 1px;
@@ -203,12 +204,12 @@ html {
 
 /* line 1, ../sass/partials/sections/_faq.scss */
 .section--faq {
-  background-color: #CBA496;
+  background-color: #5E729C;
 }
 
 /* line 1, ../sass/partials/sections/_schedule.scss */
 .section--schedule {
-  background-color: #5E729C;
+  background-color: #34495e;
 }
 /* line 5, ../sass/partials/sections/_schedule.scss */
 .section--schedule p {
@@ -275,27 +276,35 @@ html {
   cursor: pointer;
   margin-right: 10px;
 }
-/* line 22, ../sass/partials/_navigation.scss */
-.navigation__nav:hover, .navigation__nav--active:hover {
-  background-color: #D57053;
+/* line 23, ../sass/partials/_navigation.scss */
+.navigation__nav:hover span, .navigation__nav--active:hover span {
+  color: white;
+  -moz-transition: all, 0.3s;
+  -o-transition: all, 0.3s;
+  -webkit-transition: all, 0.3s;
+  transition: all, 0.3s;
 }
-/* line 26, ../sass/partials/_navigation.scss */
+/* line 29, ../sass/partials/_navigation.scss */
 .navigation__nav:last-child, .navigation__nav--active:last-child {
   margin-right: 0px;
 }
 
-/* line 31, ../sass/partials/_navigation.scss */
+/* line 34, ../sass/partials/_navigation.scss */
 .navigation__nav--active {
   text-decoration: none;
-  background-color: #D57053;
+  background-color: #D77828;
+}
+/* line 36, ../sass/partials/_navigation.scss */
+.navigation__nav--active span {
+  color: white;
 }
 
-/* line 37, ../sass/partials/_navigation.scss */
+/* line 44, ../sass/partials/_navigation.scss */
 .navigation__nav__link {
-  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
 }
-/* line 40, ../sass/partials/_navigation.scss */
+/* line 47, ../sass/partials/_navigation.scss */
 .navigation__nav__link:hover {
   color: #FFFFFF;
   text-decoration: none;

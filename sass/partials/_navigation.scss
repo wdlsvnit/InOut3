@@ -20,7 +20,10 @@
 	cursor: pointer;
 	margin-right: 10px;
 	&:hover {
-		background-color: $color-nav-active;	
+		span{
+			color: rgba(255, 255, 255, 1);
+			@include transition(all, 0.3s);
+		}
 	}
 
 	&:last-child {
@@ -30,12 +33,16 @@
 
 .navigation__nav--active {
 	@extend .navigation__nav;
+	span {
+		color: rgba(255, 255, 255, 1);
+	}
 	text-decoration: none;
 	background-color: $color-nav-active;	
+
 }
 
 .navigation__nav__link {
-	color: #FFFFFF;
+	color: rgba(255, 255, 255, 0.5);
 	text-decoration: none;
 	&:hover {
 		color: #FFFFFF;

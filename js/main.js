@@ -10,8 +10,8 @@ window.Inout = {};
 var sections = {
 	home: new Section('home', '#6C9DE1'),
 	about: new Section('about', '#6C9DE1'),
-	faq: new Section('faq', '#CBA496'),
-	schedule: new Section('schedule', '#5E729C'),
+	faq: new Section('faq', '#5E729C'),
+	schedule: new Section('schedule', '#34495e'),
 	sponsors: new Section('sponsors', '#6C9DE1')
 };
 
