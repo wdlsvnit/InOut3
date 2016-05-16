@@ -1,4 +1,4 @@
-/* line 5, ../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../var/lib/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,45 +20,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../var/lib/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../var/lib/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../var/lib/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../var/lib/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../var/lib/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../var/lib/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../var/lib/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../.rvm/gems/ruby-2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../var/lib/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -231,6 +231,146 @@ html {
 /* line 1, ../sass/partials/sections/_faq.scss */
 .section--faq {
   background-color: #5E729C;
+}
+
+/* line 7, ../sass/partials/sections/_faq.scss */
+.wrap {
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+
+/* line 12, ../sass/partials/sections/_faq.scss */
+a:focus,
+a:hover,
+a:active {
+  outline: 0;
+  text-decoration: none !important;
+}
+
+/* line 19, ../sass/partials/sections/_faq.scss */
+.panel {
+  /*border-width: 4px;*/
+  border-color: #fff;
+  background: none;
+  box-shadow: none;
+  border: 3px solid transparent !important;
+}
+
+/* line 28, ../sass/partials/sections/_faq.scss */
+.panel-group > .panel:first-child .panel-heading {
+  border-radius: 4px 4px 0 0;
+}
+
+/* line 32, ../sass/partials/sections/_faq.scss */
+.panel-group .panel {
+  border-radius: 0;
+}
+
+/* line 36, ../sass/partials/sections/_faq.scss */
+.panel-group .panel + .panel {
+  margin-top: 0;
+}
+
+/* line 40, ../sass/partials/sections/_faq.scss */
+.panel-heading {
+  background-color: #5e729c;
+  border-radius: 0;
+  border: none;
+  color: #fff;
+  padding: 0;
+}
+
+/* line 48, ../sass/partials/sections/_faq.scss */
+.panel-title a {
+  display: block;
+  color: #fff;
+  padding: 15px;
+  font-family: Regular;
+  position: relative;
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+
+/* line 58, ../sass/partials/sections/_faq.scss */
+.panel-body {
+  background: #fff;
+  font-family: Regular;
+  font-size: 2.0rem;
+}
+
+/* line 64, ../sass/partials/sections/_faq.scss */
+.panel:last-child .panel-body {
+  border-radius: 0 0 4px 4px;
+}
+
+/* line 68, ../sass/partials/sections/_faq.scss */
+.panel:last-child .panel-heading {
+  border-radius: 0 0 4px 4px;
+  transition: border-radius 0.3s linear 0.2s;
+}
+
+/* line 73, ../sass/partials/sections/_faq.scss */
+.panel:last-child .panel-heading.active {
+  border-radius: 0;
+  transition: border-radius linear 0s;
+}
+
+/* #bs-collapse icon scale option */
+/* line 79, ../sass/partials/sections/_faq.scss */
+.panel-heading a:before {
+  content: '\e146';
+  position: absolute;
+  font-family: 'Material Icons';
+  right: 5px;
+  top: 10px;
+  font-size: 24px;
+  transition: all 0.5s;
+  transform: scale(1);
+}
+
+/* line 90, ../sass/partials/sections/_faq.scss */
+.panel-heading.active a:before {
+  content: ' ';
+  transition: all 0.5s;
+  transform: scale(0);
+}
+
+/* line 96, ../sass/partials/sections/_faq.scss */
+#bs-collapse .panel-heading a:after {
+  content: ' ';
+  font-size: 24px;
+  position: absolute;
+  font-family: 'Material Icons';
+  right: 5px;
+  top: 10px;
+  transform: scale(0);
+  transition: all 0.5s;
+}
+
+/* line 107, ../sass/partials/sections/_faq.scss */
+#bs-collapse .panel-heading.active a:after {
+  content: '\e909';
+  transform: scale(1);
+  transition: all 0.5s;
+}
+
+/* #accordion rotate icon option */
+/* line 114, ../sass/partials/sections/_faq.scss */
+#accordion .panel-heading a:before {
+  content: '\e316';
+  font-size: 24px;
+  position: absolute;
+  font-family: 'Material Icons';
+  right: 5px;
+  top: 10px;
+  transform: rotate(180deg);
+  transition: all 0.5s;
+}
+
+/* line 125, ../sass/partials/sections/_faq.scss */
+#accordion .panel-heading.active a:before {
+  transform: rotate(0deg);
+  transition: all 0.5s;
 }
 
 /* line 1, ../sass/partials/sections/_schedule.scss */
