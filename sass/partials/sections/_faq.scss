@@ -1,7 +1,12 @@
 .section--faq{
   @extend %section;
 	background-color: section-color(faq);
-	
+  height: auto;	
+}
+
+.section__heading--faq {
+  @extend %section__heading;
+  margin-bottom : 80px;
 }
 
 .wrap {

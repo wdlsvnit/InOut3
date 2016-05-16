@@ -71,8 +71,39 @@
 	var navigationBarHeight = 90;
 	var navigationBarInitialPos = sections.home.height() - navigationBarHeight;
 
-	navigationBar.positionAtIntialPos(navigationBarInitialPos);
-	initSectionStartPositions();
+	// Event Listeners
+	window.addEventListener("DOMContentLoaded", function (event) {
+		navigationBar.positionAtIntialPos(navigationBarInitialPos);
+		initSectionStartPositions();
+
+		// Accordion
+		$('.collapse.in').prev('.panel-heading').addClass('active');
+		$('#accordion, #bs-collapse').on('show.bs.collapse', function (a) {
+			$(a.target).prev('.panel-heading').addClass('active');
+		}).on('hide.bs.collapse', function (a) {
+			$(a.target).prev('.panel-heading').removeClass('active');
+		});
+	});
+
+	window.addEventListener('resize', function () {
+		initSectionStartPositions();
+
+		if (!navigationBar.stuckAtTop) {
+			navigationBarInitialPos = sections.home.height() - navigationBarHeight;
+			navigationBar.positionAtIntialPos(navigationBarInitialPos);
+		}
+	});
+
+	window.addEventListener('scroll', function () {
+
+		if (navigationBar.shouldStick()) {
+			navigationBar.sitckToTop();
+		} else if (navigationBar.shouldNotStick()) {
+			navigationBar.unstick();
+		}
+
+		highlightNavBlock();
+	});
 
 	// Functions
 	function initSectionStartPositions() {
@@ -118,38 +149,6 @@
 
 		return scrollPos >= lowerLimit && scrollPos < upperLimit;
 	}
-
-	// Event Listeners
-
-	window.addEventListener('resize', function () {
-		initSectionStartPositions();
-
-		if (!navigationBar.stuckAtTop) {
-			navigationBarInitialPos = sections.home.height() - navigationBarHeight;
-			navigationBar.positionAtIntialPos(navigationBarInitialPos);
-		}
-	});
-
-	window.addEventListener('scroll', function () {
-
-		if (navigationBar.shouldStick()) {
-			navigationBar.sitckToTop();
-		} else if (navigationBar.shouldNotStick()) {
-			navigationBar.unstick();
-		}
-
-		highlightNavBlock();
-	});
-
-	// Accordion
-	window.addEventListener("DOMContentLoaded", function (event) {
-		$('.collapse.in').prev('.panel-heading').addClass('active');
-		$('#accordion, #bs-collapse').on('show.bs.collapse', function (a) {
-			$(a.target).prev('.panel-heading').addClass('active');
-		}).on('hide.bs.collapse', function (a) {
-			$(a.target).prev('.panel-heading').removeClass('active');
-		});
-	});
 
 /***/ },
 /* 1 */
