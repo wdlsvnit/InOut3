@@ -116,6 +116,11 @@ html {
   font-size: 62.5%;
 }
 
+/* line 9, ../sass/partials/_base.scss */
+body {
+  overflow-x: hidden;
+}
+
 /* line 2, ../sass/partials/_layout.scss */
 .section__content {
   width: 70%;
