@@ -17,7 +17,6 @@ var sections = {
 
 window.Inout.sections = sections;
 
-
 let navigationBarHeight = 90;
 let navigationBarInitialPos = sections.home.height() - navigationBarHeight;
 

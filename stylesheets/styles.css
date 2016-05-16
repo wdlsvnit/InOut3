@@ -70,9 +70,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   position: relative;
   max-height: 800px;
   overflow: hidden;
+  padding-bottom: 150px;
 }
 
-/* line 9, ../sass/partials/_placeholders.scss */
+/* line 10, ../sass/partials/_placeholders.scss */
+.section__heading--about {
+  color: #FFFFFF;
+  font-family: Bold;
+  font-size: 4rem;
+  margin: 0px 0px 40px 0px;
+}
+
+/* line 18, ../sass/partials/_placeholders.scss */
 .section--home__button_apply {
   background: #000000;
   color: #000000;
@@ -87,7 +96,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
-/* line 20, ../sass/partials/_placeholders.scss */
+/* line 29, ../sass/partials/_placeholders.scss */
 .section--home__button_apply:hover {
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12), 0px 8px 8px 0px rgba(0, 0, 0, 0.2);
   -moz-transition: all 0.2s ease-in-out;
@@ -108,7 +117,7 @@ html {
 
 /* line 2, ../sass/partials/_layout.scss */
 .section__content {
-  width: 80%;
+  width: 70%;
   margin: 100px auto 0px auto;
 }
 
@@ -118,6 +127,15 @@ html {
   font-size: 2.2rem;
   color: white;
   line-height: 3rem;
+}
+/* line 14, ../sass/partials/_layout.scss */
+.section__content--text a {
+  text-decoration: underline;
+  color: #FFFFFF;
+}
+/* line 17, ../sass/partials/_layout.scss */
+.section__content--text a:hover {
+  color: #FFFFFF;
 }
 
 /* line 1, ../sass/partials/sections/_home.scss */
@@ -199,7 +217,15 @@ html {
 
 /* line 1, ../sass/partials/sections/_about.scss */
 .section--about {
+  height: auto;
   background-color: #6C9DE1;
+}
+
+/* line 11, ../sass/partials/sections/_about.scss */
+.section__content--text__code {
+  color: #7936B9;
+  font-size: 2.4rem;
+  font-family: 'Courier', 'mono';
 }
 
 /* line 1, ../sass/partials/sections/_faq.scss */
