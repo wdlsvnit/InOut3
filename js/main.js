@@ -8,11 +8,11 @@ window.Inout = {};
 
 // All The sections
 var sections = {
-	home: new Section('home'),
-	about: new Section('about'),
-	faq: new Section('faq'),
-	schedule: new Section('schedule'),
-	sponsors: new Section('sponsors')
+	home: new Section('home', '#6C9DE1'),
+	about: new Section('about', '#6C9DE1'),
+	faq: new Section('faq', '#CBA496'),
+	schedule: new Section('schedule', '#5E729C'),
+	sponsors: new Section('sponsors', '#6C9DE1')
 };
 
 window.Inout.sections = sections;
@@ -37,27 +37,27 @@ function highlightNavBlock() {
 
 	if( inSection('home')) {
 		navigationBar.highlightNav('home');
-		navigationBar.changeColor('#6C9DE1');
+		navigationBar.changeColor(sections.home.navColor);
 	}
 
 	if ( inSection('about') ) {
 		navigationBar.highlightNav('about');
-		navigationBar.changeColor('#6C9DE1');
+		navigationBar.changeColor(sections.about.navColor);
 	} 
 
 	if( inSection('faq') ) {
 		navigationBar.highlightNav('faq');
-		navigationBar.changeColor('#CBA496');
+		navigationBar.changeColor(sections.faq.navColor);
 	}
 
 	if( inSection('schedule') ) {
 		navigationBar.highlightNav('schedule');
-		navigationBar.changeColor('#5E729C');
+		navigationBar.changeColor(sections.schedule.navColor);
 	}
 
 	if( inSection('sponsors') ) {
 		navigationBar.highlightNav('sponsors');
-		navigationBar.changeColor('#6C9DE1');
+		navigationBar.changeColor(sections.sponsors.navColor);
 	}
 
 
@@ -75,9 +75,13 @@ function inSection(section) {
 // Event Listeners 
 
 window.addEventListener('resize', function() {
-	navigationBarInitialPos = sections.home.height() - navigationBarHeight;
-	navigationBar.positionAtIntialPos(navigationBarInitialPos);
 	initSectionStartPositions();
+
+	if( !navigationBar.stuckAtTop ) {
+		navigationBarInitialPos = sections.home.height() - navigationBarHeight;
+		navigationBar.positionAtIntialPos(navigationBarInitialPos);
+	}
+	
 });
 
 window.addEventListener('scroll', function() {

@@ -1,4 +1,35 @@
-.section--schedule{
-  @extend %section;
+.section--schedule {
+	@extend %section;
 	background-color: section-color(schedule);
+
+	p {
+		font-size: 1.4rem;
+		font-family: Regular;
+		color: #777777;
+	}
+	h2 {
+		font-family: Regular;
+		color: #ffffff;
+		font-size: 2.3rem;
+	}
+	.timing li {
+		display: block;
+		height: 60px;
+		padding: 10px;
+		margin-top: 20px;
+		background: #fff;
+		font-size: 1.5rem;
+		font-family: bold;
+		width: 240px;
+		border: 1px solid #fff;
+		border-radius: 3px;
+	}
+	.imp {
+		background: #C4DC52 !important;
+		color: #fff !important;
+		border: 1px solid #C4DC52 !important;
+	}
+	.time {
+		color: #fff !important;
+	}
 }

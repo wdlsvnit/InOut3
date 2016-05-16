@@ -59,11 +59,11 @@
 
 	// All The sections
 	var sections = {
-		home: new _Section2.default('home'),
-		about: new _Section2.default('about'),
-		faq: new _Section2.default('faq'),
-		schedule: new _Section2.default('schedule'),
-		sponsors: new _Section2.default('sponsors')
+		home: new _Section2.default('home', '#6C9DE1'),
+		about: new _Section2.default('about', '#6C9DE1'),
+		faq: new _Section2.default('faq', '#CBA496'),
+		schedule: new _Section2.default('schedule', '#5E729C'),
+		sponsors: new _Section2.default('sponsors', '#6C9DE1')
 	};
 
 	window.Inout.sections = sections;
@@ -87,27 +87,27 @@
 
 		if (inSection('home')) {
 			navigationBar.highlightNav('home');
-			navigationBar.changeColor('#6C9DE1');
+			navigationBar.changeColor(sections.home.navColor);
 		}
 
 		if (inSection('about')) {
 			navigationBar.highlightNav('about');
-			navigationBar.changeColor('#6C9DE1');
+			navigationBar.changeColor(sections.about.navColor);
 		}
 
 		if (inSection('faq')) {
 			navigationBar.highlightNav('faq');
-			navigationBar.changeColor('#CBA496');
+			navigationBar.changeColor(sections.faq.navColor);
 		}
 
 		if (inSection('schedule')) {
 			navigationBar.highlightNav('schedule');
-			navigationBar.changeColor('#5E729C');
+			navigationBar.changeColor(sections.schedule.navColor);
 		}
 
 		if (inSection('sponsors')) {
 			navigationBar.highlightNav('sponsors');
-			navigationBar.changeColor('#6C9DE1');
+			navigationBar.changeColor(sections.sponsors.navColor);
 		}
 	}
 
@@ -122,9 +122,12 @@
 	// Event Listeners
 
 	window.addEventListener('resize', function () {
-		navigationBarInitialPos = sections.home.height() - navigationBarHeight;
-		navigationBar.positionAtIntialPos(navigationBarInitialPos);
 		initSectionStartPositions();
+
+		if (!navigationBar.stuckAtTop) {
+			navigationBarInitialPos = sections.home.height() - navigationBarHeight;
+			navigationBar.positionAtIntialPos(navigationBarInitialPos);
+		}
 	});
 
 	window.addEventListener('scroll', function () {
@@ -153,12 +156,13 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var Section = function () {
-		function Section(identifer) {
+		function Section(identifer, navColor) {
 			_classCallCheck(this, Section);
 
 			this.id = identifer;
 			this.el = document.querySelector('.section--' + identifer);
 			this.startPos = 0;
+			this.navColor = navColor;
 		}
 
 		_createClass(Section, [{
