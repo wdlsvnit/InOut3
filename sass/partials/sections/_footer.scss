@@ -1,0 +1,8 @@
+.section--footer {
+	@extend %section;
+	height: 250px;
+}
+
+.section--footer__logo {
+	@include centerer(true, true, 0%, 0%);
+}
