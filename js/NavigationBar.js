@@ -5,7 +5,7 @@ module.exports = {
 
 	el: document.querySelector('.navigation'),
 	stuckAtTop: false,
-	navigationBarInitialPos: 0,
+	initialPos: 0,
 
 	navs: {
 		home: new Nav('home'), 
@@ -17,20 +17,23 @@ module.exports = {
 
 	// Navigation Bar functions 
 
-	positionAtIntialPos: function(initialPos = this.navigationBarInitialPos) {
-		this.el.style.top = initialPos + 'px';
-		this.navigationBarInitialPos = initialPos;
+	init(initialPos) {
+		this.initialPos = initialPos;
 		this.navs.home.highlight();
 	},
 
-	shouldStick: function() {
-		var scrollPos = (document.documentElement && document.documentElement.scrollTop || document.body.scrollTop);
-		return(scrollPos >= this.navigationBarInitialPos);
+	positionAt(position) {
+		this.el.style.top =  position + 'px';
 	},
 
-	shouldNotStick: function() {
+	shouldStick() {
 		var scrollPos = (document.documentElement && document.documentElement.scrollTop || document.body.scrollTop);
-		return(scrollPos < this.navigationBarInitialPos);
+		return(scrollPos >= this.initialPos);
+	},
+
+	shouldNotStick() {
+		var scrollPos = (document.documentElement && document.documentElement.scrollTop || document.body.scrollTop);
+		return(scrollPos < this.initialPos);
 	},
 
 	sitckToTop() {
@@ -44,12 +47,12 @@ module.exports = {
 	unstick() {
 		if( this.stuckAtTop ) {
 			this.el.style.position = 'absolute';
-			this.positionAtIntialPos();
+			this.positionAt(this.initialPos);
 			this.stuckAtTop = false;	
 		}
 	},
 
-	highlightNav: function(identifier) {
+	highlightNav(identifier) {
 		for (var nav in this.navs){
 			if (nav === identifier)
 				this.navs[nav].highlight();
@@ -58,7 +61,7 @@ module.exports = {
 		}
 	},
 
-	changeColor: function(color) {
+	changeColor(color) {
 		this.el.style.backgroundColor = color;
 	}
 

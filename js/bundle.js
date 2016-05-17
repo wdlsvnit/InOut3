@@ -72,28 +72,34 @@
 	var navigationBarInitialPos = sections.home.height() - navigationBarHeight;
 
 	$(window).load(function () {
-		navigationBar.positionAtIntialPos(navigationBarInitialPos);
 		initSectionStartPositions();
-	});
+		navigationBar.init(navigationBarInitialPos);
+		navigationBar.positionAt(navigationBarInitialPos);
 
-	$('.collapse.in').prev('.panel-heading').addClass('active');
-	$('#accordion, #bs-collapse').on('show.bs.collapse', function (a) {
-		$(a.target).prev('.panel-heading').addClass('active');
-	}).on('hide.bs.collapse', function (a) {
-		$(a.target).prev('.panel-heading').removeClass('active');
-	});
+		var scrollPos = document.documentElement && document.documentElement.scrollTop || document.body.scrollTop;
 
-	// Event Listeners
-	// window.addEventListener("DOMContentLoaded", function(event) {
-	// });
+		if (scrollPos > 0) {
+			if (inSection('home')) {
+				navigationBar.positionAt(navigationBarInitialPos - scrollPos);
+				// Ductape fixing FTW!
+				navigationBar.navs['sponsors'].unhighlight();
+			} else {
+				navigationBar.positionAt(0);
+				highlightNavBlock();
+			}
+		}
+	});
 
 	window.addEventListener('resize', function () {
 		initSectionStartPositions();
 
 		if (!navigationBar.stuckAtTop) {
 			navigationBarInitialPos = sections.home.height() - navigationBarHeight;
-			navigationBar.positionAtIntialPos(navigationBarInitialPos);
+			navigationBar.initialPos = navigationBarInitialPos;
+			navigationBar.positionAt(navigationBarInitialPos);
 		}
+
+		highlightNavBlock();
 	});
 
 	window.addEventListener('scroll', function () {
@@ -152,6 +158,14 @@
 		return scrollPos >= lowerLimit && scrollPos < upperLimit;
 	}
 
+	// For the accordion
+	$('.collapse.in').prev('.panel-heading').addClass('active');
+	$('#accordion, #bs-collapse').on('show.bs.collapse', function (a) {
+		$(a.target).prev('.panel-heading').addClass('active');
+	}).on('hide.bs.collapse', function (a) {
+		$(a.target).prev('.panel-heading').removeClass('active');
+	});
+
 /***/ },
 /* 1 */
 /***/ function(module, exports) {
@@ -205,7 +219,7 @@
 
 		el: document.querySelector('.navigation'),
 		stuckAtTop: false,
-		navigationBarInitialPos: 0,
+		initialPos: 0,
 
 		navs: {
 			home: new _Nav2.default('home'),
@@ -217,24 +231,21 @@
 
 		// Navigation Bar functions
 
-		positionAtIntialPos: function positionAtIntialPos() {
-			var initialPos = arguments.length <= 0 || arguments[0] === undefined ? this.navigationBarInitialPos : arguments[0];
-
-			this.el.style.top = initialPos + 'px';
-			this.navigationBarInitialPos = initialPos;
+		init: function init(initialPos) {
+			this.initialPos = initialPos;
 			this.navs.home.highlight();
 		},
-
+		positionAt: function positionAt(position) {
+			this.el.style.top = position + 'px';
+		},
 		shouldStick: function shouldStick() {
 			var scrollPos = document.documentElement && document.documentElement.scrollTop || document.body.scrollTop;
-			return scrollPos >= this.navigationBarInitialPos;
+			return scrollPos >= this.initialPos;
 		},
-
 		shouldNotStick: function shouldNotStick() {
 			var scrollPos = document.documentElement && document.documentElement.scrollTop || document.body.scrollTop;
-			return scrollPos < this.navigationBarInitialPos;
+			return scrollPos < this.initialPos;
 		},
-
 		sitckToTop: function sitckToTop() {
 			if (!this.stuckAtTop) {
 				this.el.style.position = 'fixed';
@@ -245,22 +256,18 @@
 		unstick: function unstick() {
 			if (this.stuckAtTop) {
 				this.el.style.position = 'absolute';
-				this.positionAtIntialPos();
+				this.positionAt(this.initialPos);
 				this.stuckAtTop = false;
 			}
 		},
-
-
 		highlightNav: function highlightNav(identifier) {
 			for (var nav in this.navs) {
 				if (nav === identifier) this.navs[nav].highlight();else this.navs[nav].unhighlight();
 			}
 		},
-
 		changeColor: function changeColor(color) {
 			this.el.style.backgroundColor = color;
 		}
-
 	};
 
 /***/ },

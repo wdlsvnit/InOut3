@@ -22,31 +22,35 @@ let navigationBarInitialPos = sections.home.height() - navigationBarHeight;
 
 
 $(window).load(function() {
-	navigationBar.positionAtIntialPos(navigationBarInitialPos);
 	initSectionStartPositions();
+	navigationBar.init(navigationBarInitialPos);
+	navigationBar.positionAt(navigationBarInitialPos);
+
+	var scrollPos = (document.documentElement && document.documentElement.scrollTop || document.body.scrollTop);
+
+	if( scrollPos > 0 ) {
+		if( inSection('home') ) {
+			navigationBar.positionAt(navigationBarInitialPos - scrollPos);
+			// Ductape fixing FTW!
+			navigationBar.navs['sponsors'].unhighlight();
+		} else {
+			navigationBar.positionAt(0);
+			highlightNavBlock();
+		}
+	} 
+
 });
-
-$('.collapse.in').prev('.panel-heading').addClass('active');
-$('#accordion, #bs-collapse')
-	.on('show.bs.collapse', function(a) {
-		$(a.target).prev('.panel-heading').addClass('active');
-	})
-	.on('hide.bs.collapse', function(a) {
-		$(a.target).prev('.panel-heading').removeClass('active');
-	});
-
-// Event Listeners 
-// window.addEventListener("DOMContentLoaded", function(event) {
-// });
-
 
 window.addEventListener('resize', function() {
 	initSectionStartPositions();
 
 	if (!navigationBar.stuckAtTop) {
 		navigationBarInitialPos = sections.home.height() - navigationBarHeight;
-		navigationBar.positionAtIntialPos(navigationBarInitialPos);
-	}
+		navigationBar.initialPos = navigationBarInitialPos;
+		navigationBar.positionAt(navigationBarInitialPos);
+	} 
+
+	highlightNavBlock();
 
 });
 
@@ -110,5 +114,16 @@ function inSection(section) {
 
 	return scrollPos >= lowerLimit && scrollPos < upperLimit;
 }
+
+
+// For the accordion 
+$('.collapse.in').prev('.panel-heading').addClass('active');
+$('#accordion, #bs-collapse')
+	.on('show.bs.collapse', function(a) {
+		$(a.target).prev('.panel-heading').addClass('active');
+	})
+	.on('hide.bs.collapse', function(a) {
+		$(a.target).prev('.panel-heading').removeClass('active');
+	});
 
 
