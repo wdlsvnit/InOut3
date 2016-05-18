@@ -239,20 +239,21 @@ body {
 .section--faq {
   background-color: #5E729C;
   height: auto;
+  max-height: none;
 }
 
-/* line 7, ../sass/partials/sections/_faq.scss */
+/* line 8, ../sass/partials/sections/_faq.scss */
 .section__heading--faq {
   margin-bottom: 80px;
 }
 
-/* line 12, ../sass/partials/sections/_faq.scss */
+/* line 13, ../sass/partials/sections/_faq.scss */
 .wrap {
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
 }
 
-/* line 17, ../sass/partials/sections/_faq.scss */
+/* line 18, ../sass/partials/sections/_faq.scss */
 a:focus,
 a:hover,
 a:active {
@@ -260,7 +261,7 @@ a:active {
   text-decoration: none !important;
 }
 
-/* line 24, ../sass/partials/sections/_faq.scss */
+/* line 25, ../sass/partials/sections/_faq.scss */
 .panel {
   /*border-width: 4px;*/
   border-color: #fff;
@@ -269,22 +270,22 @@ a:active {
   border: 3px solid transparent !important;
 }
 
-/* line 33, ../sass/partials/sections/_faq.scss */
+/* line 34, ../sass/partials/sections/_faq.scss */
 .panel-group > .panel:first-child .panel-heading {
   border-radius: 4px 4px 0 0;
 }
 
-/* line 37, ../sass/partials/sections/_faq.scss */
+/* line 38, ../sass/partials/sections/_faq.scss */
 .panel-group .panel {
   border-radius: 0;
 }
 
-/* line 41, ../sass/partials/sections/_faq.scss */
+/* line 42, ../sass/partials/sections/_faq.scss */
 .panel-group .panel + .panel {
   margin-top: 0;
 }
 
-/* line 45, ../sass/partials/sections/_faq.scss */
+/* line 46, ../sass/partials/sections/_faq.scss */
 .panel-heading {
   background-color: #5e729c;
   border-radius: 0;
@@ -293,7 +294,7 @@ a:active {
   padding: 0;
 }
 
-/* line 53, ../sass/partials/sections/_faq.scss */
+/* line 54, ../sass/partials/sections/_faq.scss */
 .panel-title a {
   display: block;
   color: #fff;
@@ -304,32 +305,32 @@ a:active {
   font-weight: 400;
 }
 
-/* line 63, ../sass/partials/sections/_faq.scss */
+/* line 64, ../sass/partials/sections/_faq.scss */
 .panel-body {
   background: #fff;
   font-family: Regular;
   font-size: 2.0rem;
 }
 
-/* line 69, ../sass/partials/sections/_faq.scss */
+/* line 70, ../sass/partials/sections/_faq.scss */
 .panel:last-child .panel-body {
   border-radius: 0 0 4px 4px;
 }
 
-/* line 73, ../sass/partials/sections/_faq.scss */
+/* line 74, ../sass/partials/sections/_faq.scss */
 .panel:last-child .panel-heading {
   border-radius: 0 0 4px 4px;
   transition: border-radius 0.3s linear 0.2s;
 }
 
-/* line 78, ../sass/partials/sections/_faq.scss */
+/* line 79, ../sass/partials/sections/_faq.scss */
 .panel:last-child .panel-heading.active {
   border-radius: 0;
   transition: border-radius linear 0s;
 }
 
 /* #bs-collapse icon scale option */
-/* line 84, ../sass/partials/sections/_faq.scss */
+/* line 85, ../sass/partials/sections/_faq.scss */
 .panel-heading a:before {
   content: '\e146';
   position: absolute;
@@ -341,14 +342,14 @@ a:active {
   transform: scale(1);
 }
 
-/* line 95, ../sass/partials/sections/_faq.scss */
+/* line 96, ../sass/partials/sections/_faq.scss */
 .panel-heading.active a:before {
   content: ' ';
   transition: all 0.5s;
   transform: scale(0);
 }
 
-/* line 101, ../sass/partials/sections/_faq.scss */
+/* line 102, ../sass/partials/sections/_faq.scss */
 #bs-collapse .panel-heading a:after {
   content: ' ';
   font-size: 24px;
@@ -360,7 +361,7 @@ a:active {
   transition: all 0.5s;
 }
 
-/* line 112, ../sass/partials/sections/_faq.scss */
+/* line 113, ../sass/partials/sections/_faq.scss */
 #bs-collapse .panel-heading.active a:after {
   content: '\e909';
   transform: scale(1);
@@ -368,7 +369,7 @@ a:active {
 }
 
 /* #accordion rotate icon option */
-/* line 119, ../sass/partials/sections/_faq.scss */
+/* line 120, ../sass/partials/sections/_faq.scss */
 #accordion .panel-heading a:before {
   content: '\e316';
   font-size: 24px;
@@ -380,7 +381,7 @@ a:active {
   transition: all 0.5s;
 }
 
-/* line 130, ../sass/partials/sections/_faq.scss */
+/* line 131, ../sass/partials/sections/_faq.scss */
 #accordion .panel-heading.active a:before {
   transform: rotate(0deg);
   transition: all 0.5s;
@@ -389,15 +390,16 @@ a:active {
 /* line 1, ../sass/partials/sections/_schedule.scss */
 .section--schedule {
   background-color: #34495e;
+  max-height: none;
   height: auto;
 }
 
-/* line 7, ../sass/partials/sections/_schedule.scss */
+/* line 8, ../sass/partials/sections/_schedule.scss */
 .section__heading--schedule {
   margin-bottom: 80px;
 }
 
-/* line 12, ../sass/partials/sections/_schedule.scss */
+/* line 13, ../sass/partials/sections/_schedule.scss */
 .schedule__heading--left, .schedule__heading--right {
   display: block;
   font-family: Bold;
@@ -410,7 +412,7 @@ a:active {
   border-radius: 4px;
 }
 
-/* line 22, ../sass/partials/sections/_schedule.scss */
+/* line 23, ../sass/partials/sections/_schedule.scss */
 .schedule__item__icon, .schedule__item__time, .schedule__item__event {
   display: inline-block;
   font-family: Regular;
@@ -418,17 +420,17 @@ a:active {
   margin: 0px 8px 0px 8px;
 }
 
-/* line 29, ../sass/partials/sections/_schedule.scss */
+/* line 30, ../sass/partials/sections/_schedule.scss */
 .schedule__heading--left {
   background-color: #828DB7;
 }
 
-/* line 34, ../sass/partials/sections/_schedule.scss */
+/* line 35, ../sass/partials/sections/_schedule.scss */
 .schedule__heading--right {
   background-color: #91A786;
 }
 
-/* line 42, ../sass/partials/sections/_schedule.scss */
+/* line 43, ../sass/partials/sections/_schedule.scss */
 .schedule__item--morning, .schedule__item--noon, .schedule__item--evening, .schedule__item--night {
   margin: 0px 0px 20px 0px;
   background-repeat: no-repeat;
@@ -436,33 +438,33 @@ a:active {
   padding: 3px 0px 3px 10px;
 }
 
-/* line 49, ../sass/partials/sections/_schedule.scss */
+/* line 50, ../sass/partials/sections/_schedule.scss */
 .schedule__item--morning {
   background-image: url("../images/icon_sun_morning.png");
 }
 
-/* line 54, ../sass/partials/sections/_schedule.scss */
+/* line 55, ../sass/partials/sections/_schedule.scss */
 .schedule__item--noon {
   background-image: url("../images/icon_sun_noon.png");
   background-position: 0% 50%;
 }
 
-/* line 60, ../sass/partials/sections/_schedule.scss */
+/* line 61, ../sass/partials/sections/_schedule.scss */
 .schedule__item--evening {
   background-image: url("../images/icon_sun_eve.png");
 }
 
-/* line 65, ../sass/partials/sections/_schedule.scss */
+/* line 66, ../sass/partials/sections/_schedule.scss */
 .schedule__item--night {
   background-image: url("../images/icon_moon.png");
 }
 
-/* line 70, ../sass/partials/sections/_schedule.scss */
+/* line 71, ../sass/partials/sections/_schedule.scss */
 .schedule__item__icon {
   vertical-align: super;
 }
 
-/* line 75, ../sass/partials/sections/_schedule.scss */
+/* line 76, ../sass/partials/sections/_schedule.scss */
 .schedule__item__time {
   color: rgba(255, 255, 255, 0.7);
   margin-left: 30px;
@@ -470,7 +472,7 @@ a:active {
   text-align: right;
 }
 
-/* line 84, ../sass/partials/sections/_schedule.scss */
+/* line 85, ../sass/partials/sections/_schedule.scss */
 .schedule__item__event {
   color: white;
 }

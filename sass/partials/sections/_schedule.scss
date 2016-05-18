@@ -1,6 +1,7 @@
 .section--schedule {
 	@extend %section;
 	background-color: section-color(schedule);
+	max-height: none;
 	height: auto;
 }
 
