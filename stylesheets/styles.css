@@ -74,15 +74,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 10, ../sass/partials/_placeholders.scss */
-.section__heading--about, .section__heading--faq {
+.section__heading--about, .section__heading--faq, .section__heading--schedule {
   color: #FFFFFF;
   font-family: Bold;
   font-size: 4rem;
   text-align: center;
   margin: 0px 0px 40px 0px;
+  letter-spacing: 0.5rem;
 }
 
-/* line 18, ../sass/partials/_placeholders.scss */
+/* line 19, ../sass/partials/_placeholders.scss */
 .section--home__button_apply {
   background: #000000;
   color: #000000;
@@ -97,7 +98,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
-/* line 29, ../sass/partials/_placeholders.scss */
+/* line 30, ../sass/partials/_placeholders.scss */
 .section--home__button_apply:hover {
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12), 0px 8px 8px 0px rgba(0, 0, 0, 0.2);
   -moz-transition: all 0.2s ease-in-out;
@@ -388,41 +389,90 @@ a:active {
 /* line 1, ../sass/partials/sections/_schedule.scss */
 .section--schedule {
   background-color: #34495e;
+  height: auto;
 }
-/* line 5, ../sass/partials/sections/_schedule.scss */
-.section--schedule p {
-  font-size: 1.4rem;
-  font-family: Regular;
-  color: #777777;
+
+/* line 7, ../sass/partials/sections/_schedule.scss */
+.section__heading--schedule {
+  margin-bottom: 80px;
 }
-/* line 10, ../sass/partials/sections/_schedule.scss */
-.section--schedule h2 {
-  font-family: Regular;
-  color: #ffffff;
-  font-size: 2.3rem;
-}
-/* line 15, ../sass/partials/sections/_schedule.scss */
-.section--schedule .timing li {
+
+/* line 12, ../sass/partials/sections/_schedule.scss */
+.schedule__heading--left, .schedule__heading--right {
   display: block;
-  height: 70px;
-  padding: 15px;
-  margin-top: 20px;
-  background: #fff;
-  font-size: 1.5rem;
-  font-family: bold;
-  width: 320px;
-  border: 1px solid #fff;
-  border-radius: 3px;
+  font-family: Bold;
+  padding: 10px 10px 10px 20px;
+  color: #FFFFFF;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
 }
-/* line 27, ../sass/partials/sections/_schedule.scss */
-.section--schedule .imp {
-  background: #C4DC52 !important;
-  color: #fff !important;
-  border: 1px solid #C4DC52 !important;
+
+/* line 22, ../sass/partials/sections/_schedule.scss */
+.schedule__item__icon, .schedule__item__time, .schedule__item__event {
+  display: inline-block;
+  font-family: Regular;
+  font-size: 2.4rem;
+  margin: 0px 8px 0px 8px;
 }
-/* line 32, ../sass/partials/sections/_schedule.scss */
-.section--schedule .time {
-  color: #fff !important;
+
+/* line 29, ../sass/partials/sections/_schedule.scss */
+.schedule__heading--left {
+  background-color: #828DB7;
+}
+
+/* line 34, ../sass/partials/sections/_schedule.scss */
+.schedule__heading--right {
+  background-color: #91A786;
+}
+
+/* line 42, ../sass/partials/sections/_schedule.scss */
+.schedule__item--morning, .schedule__item--noon, .schedule__item--evening, .schedule__item--night {
+  margin: 0px 0px 20px 0px;
+  background-repeat: no-repeat;
+  background-position: 1.7% 50%;
+  padding: 3px 0px 3px 10px;
+}
+
+/* line 49, ../sass/partials/sections/_schedule.scss */
+.schedule__item--morning {
+  background-image: url("../images/icon_sun_morning.png");
+}
+
+/* line 54, ../sass/partials/sections/_schedule.scss */
+.schedule__item--noon {
+  background-image: url("../images/icon_sun_noon.png");
+  background-position: 0% 50%;
+}
+
+/* line 60, ../sass/partials/sections/_schedule.scss */
+.schedule__item--evening {
+  background-image: url("../images/icon_sun_eve.png");
+}
+
+/* line 65, ../sass/partials/sections/_schedule.scss */
+.schedule__item--night {
+  background-image: url("../images/icon_moon.png");
+}
+
+/* line 70, ../sass/partials/sections/_schedule.scss */
+.schedule__item__icon {
+  vertical-align: super;
+}
+
+/* line 75, ../sass/partials/sections/_schedule.scss */
+.schedule__item__time {
+  color: rgba(255, 255, 255, 0.7);
+  margin-left: 30px;
+  min-width: 100px;
+  text-align: right;
+}
+
+/* line 84, ../sass/partials/sections/_schedule.scss */
+.schedule__item__event {
+  color: white;
 }
 
 /* line 1, ../sass/partials/sections/_sponsors.scss */

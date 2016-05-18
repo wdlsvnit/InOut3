@@ -1,35 +1,87 @@
 .section--schedule {
 	@extend %section;
 	background-color: section-color(schedule);
+	height: auto;
+}
 
-	p {
-		font-size: 1.4rem;
-		font-family: Regular;
-		color: #777777;
-	}
-	h2 {
-		font-family: Regular;
-		color: #ffffff;
-		font-size: 2.3rem;
-	}
-	.timing li {
-		display: block;
-		height: 70px;
-		padding: 15px;
-		margin-top: 20px;
-		background: #fff;
-		font-size: 1.5rem;
-		font-family: bold;
-		width: 320px;
-		border: 1px solid #fff;
-		border-radius: 3px;
-	}
-	.imp {
-		background: #C4DC52 !important;
-		color: #fff !important;
-		border: 1px solid #C4DC52 !important;
-	}
-	.time {
-		color: #fff !important;
-	}
+.section__heading--schedule {
+  @extend %section__heading;
+  margin-bottom : 80px;
+}
+
+%schedule__heading {
+	display : block;
+	font-family: Bold;
+	padding: 10px 10px 10px 20px;
+	color: #FFFFFF;
+	font-size: 2.2rem;
+	margin-bottom : 30px;
+	@include border-radius(4px); 
+}
+
+%schedule__list_item {
+	display: inline-block;
+	font-family: Regular;
+	font-size: 2.4rem;
+	margin: 0px 8px 0px 8px;
+}
+
+.schedule__heading--left {
+	@extend %schedule__heading;
+	background-color: #828DB7;
+}
+
+.schedule__heading--right {
+	@extend %schedule__heading;
+	background-color: #91A786;
+}
+
+.schedule__list {
+}
+
+%schedule__item {
+	margin : 0px 0px 20px 0px;
+	background-repeat : no-repeat;
+	background-position: 1.7% 50%;
+  padding: 3px 0px 3px 10px;
+}
+
+.schedule__item--morning {
+	@extend %schedule__item;
+	background-image : url('../images/icon_sun_morning.png');
+}
+
+.schedule__item--noon {
+	@extend %schedule__item;
+	background-image: url('../images/icon_sun_noon.png');
+	background-position: 0% 50%;
+}
+
+.schedule__item--evening {
+	@extend %schedule__item;
+	background-image : url('../images/icon_sun_eve.png');
+}
+
+.schedule__item--night {
+	@extend %schedule__item;
+	background-image: url('../images/icon_moon.png');
+}
+
+.schedule__item__icon {
+	@extend %schedule__list_item;
+	vertical-align: super;
+}
+
+.schedule__item__time {
+	@extend %schedule__list_item;
+	color: rgba(255, 255, 255, 0.7);
+	margin-left: 30px;
+	min-width: 100px;
+	text-align: right;
+
+}
+
+.schedule__item__event {
+	@extend %schedule__list_item;
+	color: rgba(255, 255, 255, 1);
 }
