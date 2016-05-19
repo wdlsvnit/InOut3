@@ -4,15 +4,36 @@
 }
 
 .section--home__logo {
+	width: 522px;
+	height: 165px;
+	background: url('../images/logo_inout.png');
 	@include centerer(true, true, 0%, -15%);
+
+	@include when(SMinus) {
+		width: 429px;
+		height: 139px;
+		background: url('../images/logo_inout_small.png') no-repeat;
+	}
+
+	@include when(XSMinus) {
+		width: 352px;
+		height: 110px;
+		background: url('../images/logo_inout_xsmall.png') no-repeat;
+		@include centerer(true, true, 0%, -10%);
+	}
+
+
 }
 
-.section--home__pattern_code {
-	@include centerer(false, true, 0%, -38%);
-}
+// .section--home__pattern_code {
+// 	@include centerer(false, true, 0%, -38%);
+// }
 
 .section--home__pattern_brackets {
 	@include centerer(true, true, 15%, 15%);
+	@include when(SMinus) {
+		@include centerer(true, true, -30%, 0%);
+	}
 }
 
 .section--home__button_apply {
@@ -31,6 +52,18 @@
 	font-size: 2rem;
 	color: #989DAF;
 	letter-spacing: 2px;
+
+	@include when(SMinus) {
+		font-size: 1.5rem;
+		@include centerer(true, true, 0%, -3%);
+	}
+
+	@include when(XSMinus) {
+		font-size: 1.4rem;
+		@include centerer(true, true, 0%, 0%);
+	}
+
+
 }
 
 .section--home__social_links {

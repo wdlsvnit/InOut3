@@ -57,6 +57,28 @@
 	@else if $canvas == LPlus {
 		@media only screen and (min-width: $L) { @content; }
 	}
+	@else if $canvas == XLPlus {
+		@media only screen and (min-width: $XL) { @content; }
+	}
+
+
+	// When viewport width goes less than 
+	@else if $canvas == XSMinus {
+		@media only screen and (max-width: $XS) { @content; }
+	}
+	@else if $canvas == SMinus {
+		@media only screen and (max-width: $S) { @content; }
+	}
+	@else if $canvas == MMinus {
+		@media only screen and (max-width: $M) { @content; }
+	}
+	@else if $canvas == LMinus {
+		@media only screen and (max-width: $L) { @content; }
+	}
+	@else if $canvas == XLMinus {
+		@media only screen and (max-width: $XL) { @content; }
+	}
+
 }
 
 // ==============================================

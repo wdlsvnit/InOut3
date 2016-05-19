@@ -70,8 +70,7 @@
 
 	var navigationBarHeight = 90;
 	var navigationBarInitialPos = sections.home.height() - navigationBarHeight;
-
-	$(window).load(function () {
+	var MOBILE_THRESHOLD = $(window).load(function () {
 		initSectionStartPositions();
 		navigationBar.init(navigationBarInitialPos);
 		navigationBar.positionAt(navigationBarInitialPos);
@@ -97,6 +96,12 @@
 			navigationBarInitialPos = sections.home.height() - navigationBarHeight;
 			navigationBar.initialPos = navigationBarInitialPos;
 			navigationBar.positionAt(navigationBarInitialPos);
+		}
+
+		if (window.document.documentElement.clientWidth < MOBILE_THRESHOLD) {
+			navigationBar.switchToMobileMode();
+		} else {
+			navigationBar.switchToDesktopMode();
 		}
 
 		highlightNavBlock();
@@ -162,8 +167,10 @@
 	$('.collapse.in').prev('.panel-heading').addClass('active');
 	$('#accordion, #bs-collapse').on('show.bs.collapse', function (a) {
 		$(a.target).prev('.panel-heading').addClass('active');
+		initSectionStartPositions();
 	}).on('hide.bs.collapse', function (a) {
 		$(a.target).prev('.panel-heading').removeClass('active');
+		initSectionStartPositions();
 	});
 
 /***/ },
@@ -267,6 +274,9 @@
 		},
 		changeColor: function changeColor(color) {
 			this.el.style.backgroundColor = color;
+		},
+		switchToMobileMode: function switchToMobileMode() {
+			this.el.style.visiblity = 'hidden';
 		}
 	};
 

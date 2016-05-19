@@ -69,11 +69,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: 100vh;
   position: relative;
   max-height: 800px;
+  min-width: 450px;
   overflow: hidden;
   padding-bottom: 150px;
 }
 
-/* line 10, ../sass/partials/_placeholders.scss */
+/* line 11, ../sass/partials/_placeholders.scss */
 .section__heading--about, .section__heading--faq, .section__heading--schedule {
   color: #FFFFFF;
   font-family: Bold;
@@ -83,7 +84,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   letter-spacing: 0.5rem;
 }
 
-/* line 19, ../sass/partials/_placeholders.scss */
+/* line 20, ../sass/partials/_placeholders.scss */
 .section--home__button_apply {
   background: #000000;
   color: #000000;
@@ -98,7 +99,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
-/* line 30, ../sass/partials/_placeholders.scss */
+/* line 31, ../sass/partials/_placeholders.scss */
 .section--home__button_apply:hover {
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12), 0px 8px 8px 0px rgba(0, 0, 0, 0.2);
   -moz-transition: all 0.2s ease-in-out;
@@ -152,28 +153,53 @@ body {
 
 /* line 6, ../sass/partials/sections/_home.scss */
 .section--home__logo {
+  width: 522px;
+  height: 165px;
+  background: url("../images/logo_inout.png");
   position: absolute;
   top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-/* line 10, ../sass/partials/sections/_home.scss */
-.section--home__pattern_code {
-  position: absolute;
-  top: 12%;
-  transform: translate(0, -50%);
+@media only screen and (max-width: 575px) {
+  /* line 6, ../sass/partials/sections/_home.scss */
+  .section--home__logo {
+    width: 429px;
+    height: 139px;
+    background: url("../images/logo_inout_small.png") no-repeat;
+  }
+}
+@media only screen and (max-width: 453px) {
+  /* line 6, ../sass/partials/sections/_home.scss */
+  .section--home__logo {
+    width: 352px;
+    height: 110px;
+    background: url("../images/logo_inout_xsmall.png") no-repeat;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
-/* line 14, ../sass/partials/sections/_home.scss */
+/* line 32, ../sass/partials/sections/_home.scss */
 .section--home__pattern_brackets {
   position: absolute;
   top: 65%;
   left: 65%;
   transform: translate(-50%, -50%);
 }
+@media only screen and (max-width: 575px) {
+  /* line 32, ../sass/partials/sections/_home.scss */
+  .section--home__pattern_brackets {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+  }
+}
 
-/* line 18, ../sass/partials/sections/_home.scss */
+/* line 39, ../sass/partials/sections/_home.scss */
 .section--home__button_apply {
   position: absolute;
   top: 65%;
@@ -186,7 +212,7 @@ body {
   letter-spacing: 2px;
 }
 
-/* line 28, ../sass/partials/sections/_home.scss */
+/* line 49, ../sass/partials/sections/_home.scss */
 .section--home__heading_location {
   position: absolute;
   top: 50%;
@@ -197,8 +223,28 @@ body {
   color: #989DAF;
   letter-spacing: 2px;
 }
+@media only screen and (max-width: 575px) {
+  /* line 49, ../sass/partials/sections/_home.scss */
+  .section--home__heading_location {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media only screen and (max-width: 453px) {
+  /* line 49, ../sass/partials/sections/_home.scss */
+  .section--home__heading_location {
+    font-size: 1.4rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 
-/* line 36, ../sass/partials/sections/_home.scss */
+/* line 69, ../sass/partials/sections/_home.scss */
 .section--home__social_links {
   width: auto;
   position: absolute;
@@ -206,17 +252,17 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-/* line 38, ../sass/partials/sections/_home.scss */
+/* line 71, ../sass/partials/sections/_home.scss */
 .section--home__social_links .social_icon {
   padding: 8px;
   color: rgba(93, 111, 158, 0.4);
   font-size: 2.4rem;
 }
-/* line 42, ../sass/partials/sections/_home.scss */
+/* line 75, ../sass/partials/sections/_home.scss */
 .section--home__social_links .social_icon:hover {
   color: #5d6f9e;
 }
-/* line 47, ../sass/partials/sections/_home.scss */
+/* line 80, ../sass/partials/sections/_home.scss */
 .section--home__social_links li {
   display: inline-block;
   margin-right: 1px;
@@ -531,23 +577,30 @@ a:active {
 .navigation__nav:last-child, .navigation__nav--active:last-child {
   margin-right: 0px;
 }
+@media only screen and (max-width: 820px) {
+  /* line 11, ../sass/partials/_navigation.scss */
+  .navigation__nav, .navigation__nav--active {
+    font-size: 1.5rem;
+    width: 100px;
+  }
+}
 
-/* line 34, ../sass/partials/_navigation.scss */
+/* line 39, ../sass/partials/_navigation.scss */
 .navigation__nav--active {
   text-decoration: none;
   background-color: #D77828;
 }
-/* line 36, ../sass/partials/_navigation.scss */
+/* line 41, ../sass/partials/_navigation.scss */
 .navigation__nav--active span {
   color: white;
 }
 
-/* line 44, ../sass/partials/_navigation.scss */
+/* line 49, ../sass/partials/_navigation.scss */
 .navigation__nav__link {
   color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
 }
-/* line 47, ../sass/partials/_navigation.scss */
+/* line 52, ../sass/partials/_navigation.scss */
 .navigation__nav__link:hover {
   color: #FFFFFF;
   text-decoration: none;

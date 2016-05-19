@@ -29,6 +29,11 @@
 	&:last-child {
 		margin-right : 0px;
 	}
+
+	@include when(MMinus) {
+		font-size: 1.5rem;
+		width: 100px;
+	}
 }
 
 .navigation__nav--active {

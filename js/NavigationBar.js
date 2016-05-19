@@ -63,6 +63,10 @@ module.exports = {
 
 	changeColor(color) {
 		this.el.style.backgroundColor = color;
+	},
+
+	switchToMobileMode() {
+		this.el.style.visiblity = 'hidden';
 	}
 
 };
