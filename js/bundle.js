@@ -70,7 +70,9 @@
 
 	var navigationBarHeight = 90;
 	var navigationBarInitialPos = sections.home.height() - navigationBarHeight;
-	var MOBILE_THRESHOLD = $(window).load(function () {
+	var MOBILE_THRESHOLD = 580;
+
+	$(window).load(function () {
 		initSectionStartPositions();
 		navigationBar.init(navigationBarInitialPos);
 		navigationBar.positionAt(navigationBarInitialPos);
@@ -87,6 +89,10 @@
 				highlightNavBlock();
 			}
 		}
+
+		// If loaded in mobile
+
+		swtichNavigationModeIfNeeded();
 	});
 
 	window.addEventListener('resize', function () {
@@ -98,12 +104,7 @@
 			navigationBar.positionAt(navigationBarInitialPos);
 		}
 
-		if (window.document.documentElement.clientWidth < MOBILE_THRESHOLD) {
-			navigationBar.switchToMobileMode();
-		} else {
-			navigationBar.switchToDesktopMode();
-		}
-
+		swtichNavigationModeIfNeeded();
 		highlightNavBlock();
 	});
 
@@ -114,7 +115,6 @@
 		} else if (navigationBar.shouldNotStick()) {
 			navigationBar.unstick();
 		}
-
 		highlightNavBlock();
 	});
 
@@ -161,6 +161,14 @@
 		var upperLimit = lowerLimit + sections[section].height();
 
 		return scrollPos >= lowerLimit && scrollPos < upperLimit;
+	}
+
+	function swtichNavigationModeIfNeeded() {
+		if (window.document.documentElement.clientWidth < MOBILE_THRESHOLD) {
+			navigationBar.switchToMobileMode();
+		} else {
+			navigationBar.switchToDesktopMode();
+		}
 	}
 
 	// For the accordion
@@ -221,12 +229,18 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	var mode = {
+		mobile: 0,
+		desktop: 1
+	};
+
 	// Navigation Bar
 	module.exports = {
 
 		el: document.querySelector('.navigation'),
 		stuckAtTop: false,
 		initialPos: 0,
+		mode: mode.desktop,
 
 		navs: {
 			home: new _Nav2.default('home'),
@@ -234,6 +248,24 @@
 			faq: new _Nav2.default('faq'),
 			schedule: new _Nav2.default('schedule'),
 			sponsors: new _Nav2.default('sponsors')
+		},
+
+		// Contents of the navigation bar when in desktop mode
+		navContentsDesktop: {
+			home: '<span class="navigation__nav__link">HOME</span>',
+			about: '<span class="navigation__nav__link">ABOUT</span>',
+			faq: '<span class="navigation__nav__link">FAQ</span>',
+			schedule: '<span class="navigation__nav__link">SCHEDULE</span>',
+			sponsors: '<span class="navigation__nav__link">SPONSORS</span>'
+		},
+
+		//Contents of the navigation bar when in mobile mode
+		navContentsMobile: {
+			home: '<i class="fa fa-home fa-2x navigation__nav--mobile_icon"></i>',
+			about: '<i class="fa fa-info fa-2x navigation__nav--mobile_icon"></i>',
+			faq: '<i class="fa fa-question fa-2x navigation__nav--mobile_icon"></i>',
+			schedule: '<i class="fa fa-clock-o fa-2x navigation__nav--mobile_icon"></i>',
+			sponsors: '<i class="fa fa-star fa-2x navigation__nav--mobile_icon"></i>'
 		},
 
 		// Navigation Bar functions
@@ -276,7 +308,42 @@
 			this.el.style.backgroundColor = color;
 		},
 		switchToMobileMode: function switchToMobileMode() {
-			this.el.style.visiblity = 'hidden';
+			if (this.mode === mode.desktop) {
+				for (var nav in this.navs) {
+					this.navs[nav].el.innerHTML = this.navContentsMobile[nav];
+				}
+
+				this.mode = mode.mobile;
+			}
+
+			if (this.mode === mode.mobile) {
+				// Let us try to calculate the size so that it is evently spread across all the navs
+				var navBarWidth = this.el.getBoundingClientRect().width;
+				var navWidth = navBarWidth / (Object.keys(this.navs).length + 1);
+				// Change the width of all the  navs
+				for (var nav in this.navs) {
+					this.navs[nav].el.style.width = navWidth + 'px';
+				}
+			}
+		},
+		switchToDesktopMode: function switchToDesktopMode() {
+			if (this.mode === mode.mobile) {
+				// only switch to desktop when in mobile mode
+
+				for (var nav in this.navs) {
+					this.navs[nav].el.innerHTML = this.navContentsDesktop[nav];
+				}
+
+				this.mode = mode.desktop;
+			}
+
+			if (this.mode === mode.desktop) {
+				for (var nav in this.navs) {
+					if (this.navs[nav].el.hasAttribute('style')) {
+						this.navs[nav].el.removeAttribute('style');
+					}
+				}
+			}
 		}
 	};
 

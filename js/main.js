@@ -19,7 +19,7 @@ window.Inout.sections = sections;
 
 let navigationBarHeight = 90;
 let navigationBarInitialPos = sections.home.height() - navigationBarHeight;
-const MOBILE_THRESHOLD = 
+const MOBILE_THRESHOLD = 580;
 
 
 $(window).load(function() {
@@ -40,6 +40,10 @@ $(window).load(function() {
 		}
 	} 
 
+	// If loaded in mobile 
+
+	swtichNavigationModeIfNeeded();
+
 });
 
 window.addEventListener('resize', function() {
@@ -51,12 +55,7 @@ window.addEventListener('resize', function() {
 		navigationBar.positionAt(navigationBarInitialPos);
 	} 
 
-	if( window.document.documentElement.clientWidth < MOBILE_THRESHOLD ) {
-		navigationBar.switchToMobileMode();
-	} else {
-		navigationBar.switchToDesktopMode();
-	}
-
+	swtichNavigationModeIfNeeded();
 	highlightNavBlock();
 
 });
@@ -68,7 +67,6 @@ window.addEventListener('scroll', function() {
 	} else if (navigationBar.shouldNotStick()) {
 		navigationBar.unstick();
 	}
-
 	highlightNavBlock();
 
 });
@@ -120,6 +118,14 @@ function inSection(section) {
 	var upperLimit = lowerLimit + sections[section].height();
 
 	return scrollPos >= lowerLimit && scrollPos < upperLimit;
+}
+
+function swtichNavigationModeIfNeeded() {
+	if( window.document.documentElement.clientWidth < MOBILE_THRESHOLD ) {
+		navigationBar.switchToMobileMode();
+	} else {
+		navigationBar.switchToDesktopMode();
+	}
 }
 
 

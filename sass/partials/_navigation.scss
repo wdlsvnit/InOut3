@@ -6,6 +6,13 @@
 	margin: 0 auto;
 	box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.20);
 	z-index: 999;
+	min-width: 450px;
+
+	// For the mobile navigation
+	@include when(SMinus) {
+		padding: 0;
+		margin: 0;
+	}
 }
 
 .navigation__nav {
@@ -34,6 +41,12 @@
 		font-size: 1.5rem;
 		width: 100px;
 	}
+
+	// For the mobile navigation
+	@include when(SMinus) {
+		color: rgba(255, 255, 255, 0.7);
+		font-size: 1.2rem;
+	}
 }
 
 .navigation__nav--active {
@@ -53,5 +66,9 @@
 		color: #FFFFFF;
 		text-decoration: none;
 	}
+}
+
+.navigation__nav--mobile_icon {
+	color: #FFFFFF;
 }
 

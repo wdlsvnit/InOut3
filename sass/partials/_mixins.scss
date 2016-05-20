@@ -44,6 +44,7 @@
 			@content;
 		}
 	}
+	
 	// From Lower limit to infinity
 	@else if $canvas == XSPlus {
 		@media only screen and (min-width: $XS) { @content; }

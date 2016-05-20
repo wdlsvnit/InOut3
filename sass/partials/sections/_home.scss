@@ -25,10 +25,6 @@
 
 }
 
-// .section--home__pattern_code {
-// 	@include centerer(false, true, 0%, -38%);
-// }
-
 .section--home__pattern_brackets {
 	@include centerer(true, true, 15%, 15%);
 	@include when(SMinus) {
