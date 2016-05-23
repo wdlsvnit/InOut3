@@ -566,15 +566,46 @@ a:active {
 
 /* line 1, ../sass/partials/sections/_footer.scss */
 .section--footer {
-  height: 250px;
+  text-align: center;
+  height: auto !important;
+  max-height: auto !important;
+  padding: 0 !important;
 }
 
-/* line 6, ../sass/partials/sections/_footer.scss */
+/* line 10, ../sass/partials/sections/_footer.scss */
 .section--footer__logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: block;
+  max-width: 100%;
+  margin: auto;
+}
+
+/* line 18, ../sass/partials/sections/_footer.scss */
+.footer--content {
+  background: -moz-linear-gradient(0deg, #50c4d6 0%, #5271d1 100%);
+  /* ff3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #50c4d6), color-stop(100%, #5271d1));
+  /* safari4+,chrome */
+  background: -webkit-linear-gradient(0deg, #50c4d6 0%, #5271d1 100%);
+  /* safari5.1+,chrome10+ */
+  background: -o-linear-gradient(0deg, #50c4d6 0%, #5271d1 100%);
+  /* opera 11.10+ */
+  background: -ms-linear-gradient(0deg, #50c4d6 0%, #5271d1 100%);
+  /* ie10+ */
+  background: linear-gradient(90deg, #50c4d6 0%, #5271d1 100%);
+  /* w3c */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#50c4d6', endColorstr='#5271d1',GradientType=1 );
+  /* ie6-9 */
+  padding: 20px 0 10px 0;
+}
+/* line 29, ../sass/partials/sections/_footer.scss */
+.footer--content a {
+  color: #fff;
+}
+/* line 34, ../sass/partials/sections/_footer.scss */
+.footer--content .footer--text {
+  font-family: Regular;
+  font-size: 1.7rem;
+  color: white;
 }
 
 /* line 1, ../sass/partials/_navigation.scss */

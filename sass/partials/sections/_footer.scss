@@ -1,8 +1,41 @@
-.section--footer {
+.section--footer 
+{
 	@extend %section;
-	height: 250px;
+    text-align: center;
+    height: auto !important;
+    max-height: auto !important;
+    padding: 0 !important;
 }
 
-.section--footer__logo {
-	@include centerer(true, true, 0%, 0%);
+.section--footer__logo 
+{
+	display: block;
+	max-width: 100%;
+	margin:auto;
+}
+
+
+.footer--content	
+	{
+background: -moz-linear-gradient(0deg, rgba(80,196,214,1) 0%, rgba(82,113,209,1) 100%); /* ff3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(80,196,214,1)), color-stop(100%, rgba(82,113,209,1))); /* safari4+,chrome */
+background: -webkit-linear-gradient(0deg, rgba(80,196,214,1) 0%, rgba(82,113,209,1) 100%); /* safari5.1+,chrome10+ */
+background: -o-linear-gradient(0deg, rgba(80,196,214,1) 0%, rgba(82,113,209,1) 100%); /* opera 11.10+ */
+background: -ms-linear-gradient(0deg, rgba(80,196,214,1) 0%, rgba(82,113,209,1) 100%); /* ie10+ */
+background: linear-gradient(90deg, rgba(80,196,214,1) 0%, rgba(82,113,209,1) 100%); /* w3c */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#50c4d6', endColorstr='#5271d1',GradientType=1 ); /* ie6-9 */
+padding: 20px 0 10px 0;
+
+	a
+	{
+	color: #fff;
+	}
+
+    .footer--text
+    {
+    font-family: Regular;
+    font-size: 1.7rem;
+    color: white;
+ 	}
+
 }
