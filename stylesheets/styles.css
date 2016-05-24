@@ -148,9 +148,9 @@ body {
 
 /* line 5, ../sass/partials/sections/_home.scss */
 .section--home__logo {
-  width: 522px;
-  height: 165px;
-  background: url("../images/logo_inout.png");
+  width: 545px;
+  height: 232px;
+  background: url("../images/InOutWhite.png") no-repeat;
   position: absolute;
   top: 37%;
   left: 50%;
@@ -159,17 +159,17 @@ body {
 @media only screen and (max-width: 575px) {
   /* line 5, ../sass/partials/sections/_home.scss */
   .section--home__logo {
-    width: 429px;
-    height: 139px;
-    background: url("../images/logo_inout_small.png") no-repeat;
+    width: 470px;
+    height: 186px;
+    background: url("../images/inoutsmall.png") no-repeat;
   }
 }
 @media only screen and (max-width: 453px) {
   /* line 5, ../sass/partials/sections/_home.scss */
   .section--home__logo {
     width: 352px;
-    height: 110px;
-    background: url("../images/logo_inout_xsmall.png") no-repeat;
+    height: 135px;
+    background: url("../images/logoxs.png") no-repeat;
     position: absolute;
     top: 40%;
     left: 50%;
@@ -177,16 +177,10 @@ body {
   }
 }
 
- /* .section--home__pattern_brackets {
-	@include centerer(true, true, 15%, 15%);
-	@include when(SMinus) {
-		@include centerer(true, true, -30%, 0%);
-	}
- } */
-/* line 34, ../sass/partials/sections/_home.scss */
+/* line 27, ../sass/partials/sections/_home.scss */
 .section--home__button_apply {
   position: absolute;
-  top: 67%;
+  top: 68%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #E1EAFA;
@@ -196,10 +190,10 @@ body {
   letter-spacing: 2px;
 }
 
-/* line 44, ../sass/partials/sections/_home.scss */
+/* line 37, ../sass/partials/sections/_home.scss */
 .section--home__heading_location {
   position: absolute;
-  top: 52%;
+  top: 56%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: Bold;
@@ -208,27 +202,27 @@ body {
   letter-spacing: 2px;
 }
 @media only screen and (max-width: 575px) {
-  /* line 44, ../sass/partials/sections/_home.scss */
+  /* line 37, ../sass/partials/sections/_home.scss */
   .section--home__heading_location {
     font-size: 1.5rem;
     position: absolute;
-    top: 47%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 }
 @media only screen and (max-width: 453px) {
-  /* line 44, ../sass/partials/sections/_home.scss */
+  /* line 37, ../sass/partials/sections/_home.scss */
   .section--home__heading_location {
     font-size: 1.4rem;
     position: absolute;
-    top: 50%;
+    top: 54%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 }
 
-/* line 64, ../sass/partials/sections/_home.scss */
+/* line 57, ../sass/partials/sections/_home.scss */
 .section--home__social_links {
   width: auto;
   position: absolute;
@@ -236,17 +230,17 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-/* line 66, ../sass/partials/sections/_home.scss */
+/* line 59, ../sass/partials/sections/_home.scss */
 .section--home__social_links .social_icon {
   padding: 8px;
   color: #fff;
   font-size: 2.4rem;
 }
-/* line 70, ../sass/partials/sections/_home.scss */
+/* line 63, ../sass/partials/sections/_home.scss */
 .section--home__social_links .social_icon:hover {
   color: #5d6f9e;
 }
-/* line 75, ../sass/partials/sections/_home.scss */
+/* line 68, ../sass/partials/sections/_home.scss */
 .section--home__social_links li {
   display: inline-block;
   margin-right: 1px;
@@ -268,24 +262,24 @@ body {
     background-position: center -800px;
   }
 }
-/* line 102, ../sass/partials/sections/_home.scss */
+/* line 95, ../sass/partials/sections/_home.scss */
 #inout {
   background: #5380c9;
   padding: 0;
 }
-/* line 106, ../sass/partials/sections/_home.scss */
+/* line 99, ../sass/partials/sections/_home.scss */
 #inout .bg-pattern-back {
   background: url("../images/pattern.png") top center repeat;
   background-size: 600px 300px;
-  animation: bgScrollBack 30s linear infinite;
+  animation: bgScrollBack 50s linear infinite;
 }
-/* line 112, ../sass/partials/sections/_home.scss */
+/* line 105, ../sass/partials/sections/_home.scss */
 #inout .bg-pattern-front {
-  background: rgba(0, 150, 136, 0.3) url("../images/pattern.png") top center repeat;
-  background-size: 720px 360px;
-  animation: bgScrollFront 30s linear infinite;
+  background: url("../images/pattern.png") top center repeat;
+  background-size: contain;
+  animation: bgScrollFront 50s linear infinite;
 }
-/* line 118, ../sass/partials/sections/_home.scss */
+/* line 111, ../sass/partials/sections/_home.scss */
 #inout .bg-gradient {
   height: 800px;
   background-image: -moz-linear-gradient(0deg, rgba(80, 196, 214, 0.9) 0%, rgba(82, 113, 209, 0.9) 100%);
@@ -576,10 +570,11 @@ a:active {
 .section--footer__logo {
   display: block;
   max-width: 100%;
+  padding-bottom: 15px;
   margin: auto;
 }
 
-/* line 18, ../sass/partials/sections/_footer.scss */
+/* line 19, ../sass/partials/sections/_footer.scss */
 .footer--content {
   background: -moz-linear-gradient(0deg, #50c4d6 0%, #5271d1 100%);
   /* ff3.6+ */
@@ -597,11 +592,11 @@ a:active {
   /* ie6-9 */
   padding: 20px 0 10px 0;
 }
-/* line 29, ../sass/partials/sections/_footer.scss */
+/* line 30, ../sass/partials/sections/_footer.scss */
 .footer--content a {
   color: #fff;
 }
-/* line 34, ../sass/partials/sections/_footer.scss */
+/* line 35, ../sass/partials/sections/_footer.scss */
 .footer--content .footer--text {
   font-family: Regular;
   font-size: 1.7rem;
