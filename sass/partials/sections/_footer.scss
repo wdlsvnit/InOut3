@@ -13,11 +13,15 @@
 	max-width: 100%;
 	padding-bottom:15px;
 	margin:auto;
+
+	@include when(XSMinus){
+	width:50%;
+	}
 }
 
 
 .footer--content	
-	{
+{
 background: -moz-linear-gradient(0deg, rgba(80,196,214,1) 0%, rgba(82,113,209,1) 100%); /* ff3.6+ */
 background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(80,196,214,1)), color-stop(100%, rgba(82,113,209,1))); /* safari4+,chrome */
 background: -webkit-linear-gradient(0deg, rgba(80,196,214,1) 0%, rgba(82,113,209,1) 100%); /* safari5.1+,chrome10+ */

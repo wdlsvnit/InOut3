@@ -1,5 +1,8 @@
 .section--home {
 	@extend %section;
+	@include when(XSMinus) {
+	padding-bottom:100px;
+	}
 }
 
 .section--home__logo {
@@ -17,7 +20,7 @@
 	@include when(XSMinus) {
 		width: 352px;
 		height: 135px;
-		background: url('../images/logo_inout_xsmall') no-repeat;
+		background: url('../images/logo_inout_xsmall.png') no-repeat;
 		@include centerer(true, true, 0%, -10%);
 	}
 

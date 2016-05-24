@@ -2,6 +2,9 @@
 .section__content {
 	width: 70%;
 	margin: 100px auto 0px auto;
+	@include when(XSMinus) {
+	width:88%;
+	}
 }
 
 .section__content--text {

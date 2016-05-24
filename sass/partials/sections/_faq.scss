@@ -3,6 +3,9 @@
 	background-color: section-color(faq);
   height: auto;	
   max-height: none;
+  @include when(XSMinus) {
+  padding-bottom:100px;
+  }
 }
 
 .section__heading--faq {
