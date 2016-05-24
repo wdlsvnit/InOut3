@@ -174,7 +174,7 @@ SPARKPOST_OPTIONS = {
     'transactional': True,
 }
 
-# SPARKPOST_API_KEY = os.environ["SPARKPOST_API_KEY"]
+SPARKPOST_API_KEY = os.environ["SPARKPOST_API_KEY"]
 
 
 EMAIL_BACKEND = 'sparkpost.django.email_backend.SparkPostEmailBackend'
