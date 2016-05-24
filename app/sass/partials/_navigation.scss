@@ -1,0 +1,74 @@
+.navigation {
+	position: absolute; 
+	background-color : $color-nav-default;
+	height: 90px;
+	width: 100vw;
+	margin: 0 auto;
+	box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.20);
+	z-index: 999;
+	min-width: 450px;
+
+	// For the mobile navigation
+	@include when(SMinus) {
+		padding: 0;
+		margin: 0;
+	}
+}
+
+.navigation__nav {
+	display: inline-block;		
+	height: 90px;
+	width: 150px;
+	line-height: 90px;
+	vertical-align: middle;
+	font-family: Regular;
+	letter-spacing: 2px;
+	font-size: 1.8rem;
+	cursor: pointer;
+	margin-right: 10px;
+	&:hover {
+		span{
+			color: rgba(255, 255, 255, 1);
+			@include transition(all, 0.3s);
+		}
+	}
+
+	&:last-child {
+		margin-right : 0px;
+	}
+
+	@include when(MMinus) {
+		font-size: 1.5rem;
+		width: 100px;
+	}
+
+	// For the mobile navigation
+	@include when(SMinus) {
+		color: rgba(255, 255, 255, 0.7);
+		font-size: 1.2rem;
+	}
+}
+
+.navigation__nav--active {
+	@extend .navigation__nav;
+	span {
+		color: rgba(255, 255, 255, 1);
+	}
+	text-decoration: none;
+	background-color: $color-nav-active;	
+
+}
+
+.navigation__nav__link {
+	color: rgba(255, 255, 255, 0.5);
+	text-decoration: none;
+	&:hover {
+		color: #FFFFFF;
+		text-decoration: none;
+	}
+}
+
+.navigation__nav--mobile_icon {
+	color: #FFFFFF;
+}
+

@@ -1,5 +1,5 @@
 <div>
-  <h1>InOut - Third edition</h1>
+  <h1>InOut - Second edition</h1>
   <h2>What's a Hackathon?</h2>
   <p>
     A Hackathon is a collaboration of programmers and designers to code, design and build innovative solutions to real life problems, through extensive coding in a short time duration. Hackathons are great way to promote innovation among students by bringing in cutting-edge problem statements. See this for a good explanation.

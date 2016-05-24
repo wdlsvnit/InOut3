@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<section class="registration-form">
+  <div class="form-content">
+<form method="post" action="/new/" enctype="multipart/form-data" class="bootstrap3">
+  {% csrf_token %}
+{{ form|crispy}}
+<input class="btn btn-default" type="submit" value="Submit">
+</form>
+<br><br><br>
+</div>
+</section>
+{% endblock %}

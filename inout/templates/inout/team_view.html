@@ -1,0 +1,589 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<section class="registration-form">
+ <center><h1 class = "title">{{team_name}}</h1>
+ <h4>Registered participants:</h4>
+<ul>
+  {% for participant in participants %}
+    <li>{{participant.full_name}} | {{ participant.email}}</li>
+  {% empty %}
+    <li>No participants have registered in this team yet.</li>
+  {% endfor %}
+</ul>
+</center>
+  <div class="form-content">
+<form method="post" action="" enctype="multipart/form-data" class="bootstrap3">
+  {% csrf_token %}
+{{ form|crispy}}
+<input class="btn btn-default" type="submit" value="Submit">
+</form>
+<br><br><br>
+</div>
+</section>
+{% endblock %}
+
+{% block about %}
+<!-- The about section -->
+<section class = "section__about">
+  <div class="content__about">
+    <center><h1 class = "title">ABOUT INOUT</h1></center>
+    <div class="description">
+        <h2>What's a Hackathon?</h2>
+         <p class = "content_text_normal">
+          A Hackathon is a collaboration of programmers and designers to code, design and build innovative solutions to real life problems, through extensive coding in a short time duration. Hackathons are the biggest thing to happen to education since the rise of the Internet. See <a href="https://medium.com/hackathons-anonymous/wtf-is-a-hackathon-92668579601" target="_blank">this</a> for a good explanation.
+          <br/>
+          <br/>
+          Your only constraint is: <b>You only have 30 hours</b>.
+        </p>
+        <h2>India's Premier Hackathon.</h2>
+        <p class="content_text_normal">
+          Hackathons provide a venue for self-expression and creativity through technology. People with technical backgrounds come together, form teams around a problem or idea, and collaboratively code a unique solution from scratch - these generally take shape in the form of websites, mobile apps, and robots. So prepare yourself for a weekend filled with learning new technologies, building amazing products and making new friends all within the span of 30 hours.
+        </p>
+
+        <h2>Everyone is welcome.</h2>
+        <p class = "content_text_normal">
+        Whether you're making your first website, hacking Oculus Rift to censor real world ads, or creating something fun; InOut is for you. We'll have great workshops, mentors, and more! We will allow you to show your coding skills without getting worried about any mortal needs. We will take care of everything.
+        </p>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+
+{% block faq %}
+<!-- The faq section -->
+ <section class = "section__faq">
+ <!--<center><h1 class = "title">FAQ</h1></center>
+ <div class="description">
+   <div class="content__faq">
+     <div class="row">
+       <div class="col-lg-6 faq__left">
+         <h2>What if I don't have a team or an idea?</h2>
+         <p class="content_text_normal">
+           If you don’t have a team now, don’t stress! We’ll have team formation and ideation events geared towards helping you find people to work with.
+         </p>
+         <h2>How much will it cost?</h2>
+         <p class="content_text_normal">
+           Zero. Zip. Zilch. Nada. Nothing. InOut is free for all accepted hackers. We'll provide you with a weekend's worth of swag, meals, drinks, and snacks and a place to crash when you need a break from coding.
+         </p>
+         <h2>What's the application process like?</h2>
+         <p class="content_text_normal">
+           We're looking for creative and innovative people with a set of skills that can contribute to a project. We generally prefer people that have proven their abilities in previous projects, evident through Github links, project descriptions, or participation/awards in other hackathons.
+         </p>
+         <h2>How big can a team be?</h2>
+         <p class="content_text_normal">
+           This hackathon is strictly a team competition. No lone crusaders please. <b>Max team size : 3 members.</b>
+         </p>
+         <h2>Do you give travel reimbursements?</h2>
+         <p class="content_text_normal">
+          We will provide travel reimbursements post review by our organization committee. This will be provided for Sleeper Class, and if you’re in Surat, you will get a discounted Uber & Jugnoo rides to the venue and back.
+         </p>
+         <h2>What about accommodation?</h2>
+         <p class="content_text_normal">
+           We’ve made special arrangements for subsidized accommodation arrangements. The rates per person per day are as follows:
+            <br/>₹ 200 for Non AC
+            <br/>₹ 400 for AC
+            <br/> Contact Parth (+918155801909) for further clarifications.
+         </p>
+       </div>
+       <div class="col-lg-6 faq__right">
+         <h2>When does registration open?</h2>
+         <p class="content_text_normal">
+           Registration will open on Sept. 15th 12:00am IST and will close on Oct. 18th 23:59pm IST. If you are accepted, you’ll have five days to confirm your attendance. Do Sign up for our updates!
+         </p>
+         <h2>Who can attend?</h2>
+         <p class="content_text_normal">
+           All the coolest people interested in tech will be there. Open to all! Any undergraduate and graduate student or Developers from anywhere in India and outside.
+         </p>
+         <h2>Once I get accepted, what do I need to bring?</h2>
+         <p class="content_text_normal">
+           Laptop and charger, cellphone and charger, extension, water-bottle, student ID/employee ID, a sleeping bag if needed and nerdy t-shirt!
+         </p>
+         <h2>What do i get by attending InOut?</h2>
+         <p class="content_text_normal">
+           Pretty much everything from socializing with fellow hacker community to internships/job offers from coolest tech companies. And yeah awesome prizes(worth 3 lakhs) too!
+         </p>
+         <h2>What if this FAQ didn’t answer my questions?</h2>
+         <p class="content_text_normal">
+           Please email us at mail@hackinout.co if you have any concerns at all! We’re friendly, and we’d love to help you out!
+         </p>
+       </div>
+     </div>
+   </div>
+ </div>-->
+</section>
+   {% endblock %}
+  {% block schedule %}
+  <!-- The schedule section -->
+<section class="section__schedule">
+    <!--   <div class="content__schedule">
+      <center>
+        <h1 class="title">SCHEDULE</h1>
+      </center>
+      <div class="description">
+      <center>
+        <h4>A more detailed schedule will be available at the event!</h4>
+      </center>
+        <div class="row">
+          <div class="col-lg-6 col-md-12 col-lg-offset-0 schedule__saturday">
+            <div class="schedule_card__saturday">
+              <h1 class="schedule_card--title">SATURDAY</h1>
+              <ul>
+                <li class = "schedule_card--single_schedule--saturday">
+                  <div class="row">
+                    <div class="col-md-6 schedule_card--time">
+                    8:00 AM
+                    </div>
+                    <div class="col-md-6 schedule_card--event">
+                    Check-in and Breakfast
+                    </div>
+                  </div>
+                </li>
+                <li class = "schedule_card--single_schedule--saturday">
+                  <div class="row">
+                    <div class="col-md-6 schedule_card--time">
+                    9:00 AM
+                    </div>
+                    <div class="col-md-6 schedule_card--event">
+                    Team Registrations
+                    </div>
+                  </div>
+                </li>
+                <li class = "schedule_card--single_schedule--saturday">
+                  <div class="row">
+                    <div class="col-md-6 schedule_card--time">
+                    10:00 AM
+                    </div>
+                    <div class="col-md-6 schedule_card--event">
+                    Opening Ceremony
+                    </div>
+                  </div>
+                </li>
+
+                <li class = "schedule_card--single_schedule--saturday">
+                  <div class="row">
+                    <div class="col-md-6 schedule_card--time">
+                    11:00 AM
+                    </div>
+                    <div class="col-md-6 schedule_card--event">
+                    Kick-off!
+                    </div>
+                  </div>
+
+                </li>
+                <li class = "schedule_card--single_schedule--saturday">
+                  <div class="row">
+                    <div class="col-md-6 schedule_card--time">
+                    1:00 PM
+                    </div>
+                    <div class="col-md-6 schedule_card--event">
+                    Lunch
+                    </div>
+                  </div>
+
+                </li>
+                <li class = "schedule_card--single_schedule--saturday">
+                  <div class="row">
+                    <div class="col-md-6 schedule_card--time">
+                    2:00 PM
+                    </div>
+                    <div class="col-md-6 schedule_card--event">
+                    API Demo and Tech Talks
+                    </div>
+                  </div>
+
+                </li>
+                <li class = "schedule_card--single_schedule--saturday">
+                  <div class="row">
+                    <div class="col-md-6 schedule_card--time">
+                    5:00 PM
+                    </div>
+                    <div class="col-md-6 schedule_card--event">
+                    Afternoon Snacks
+                    </div>
+                  </div>
+
+                </li>
+                <li class = "schedule_card--single_schedule--saturday">
+                  <div class="row">
+                    <div class="col-md-6 schedule_card--time">
+                    9:00 PM
+                    </div>
+                    <div class="col-md-6 schedule_card--event">
+                    Dinner
+                    </div>
+                  </div>
+
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12 schedule__sunday">
+            <div class="schedule_card__sunday">
+              <h1 class="schedule_card--title">SUNDAY</h1>
+               <ul>
+                <li class = "schedule_card--single_schedule--sunday">
+                  <div class="row">
+                    <div class="col-md-6 schedule_card--time">
+                    12:00 AM
+                    </div>
+                    <div class="col-md-6 schedule_card--event">
+                    Midnight Snacks
+                    </div>
+                  </div>
+                </li>
+                <li class = "schedule_card--single_schedule--sunday">
+                  <div class="row">
+                    <div class="col-md-6 schedule_card--time">
+                    4:00 AM
+                    </div>
+                    <div class="col-md-6 schedule_card--event">
+                    Morning Snacks
+                    </div>
+                  </div>
+                </li>
+                <li class = "schedule_card--single_schedule--sunday">
+                  <div class="row">
+                    <div class="col-md-6 schedule_card--time">
+                    9:00 AM
+                    </div>
+                    <div class="col-md-6 schedule_card--event">
+                    Brunch for Hackers
+                    </div>
+                  </div>
+                </li>
+                <li class = "schedule_card--single_schedule--sunday">
+                  <div class="row">
+                    <div class="col-md-6 schedule_card--time">
+                    1:00 PM
+                    </div>
+                    <div class="col-md-6 schedule_card--event">
+                    Lunch
+                    </div>
+                  </div>
+
+                </li>
+                <li class = "schedule_card--single_schedule--sunday">
+                  <div class="row">
+                    <div class="col-md-6 schedule_card--time">
+                    5:00 PM
+                    </div>
+                    <div class="col-md-6 schedule_card--event">
+                    Hacking Ends!
+                    </div>
+                  </div>
+
+                </li>
+                <li class = "schedule_card--single_schedule--sunday">
+                  <div class="row">
+                    <div class="col-md-6 schedule_card--time">
+                    5:00 PM
+                    </div>
+                    <div class="col-md-6 schedule_card--event">
+                    Expo &amp; Judging
+                    </div>
+                  </div>
+
+                </li>
+                <li class = "schedule_card--single_schedule--sunday">
+                  <div class="row">
+                    <div class="col-md-6 schedule_card--time">
+                    7:00 PM
+                    </div>
+                    <div class="col-md-6 schedule_card--event">
+                    Closing Ceremony
+                    </div>
+                  </div>
+
+                </li>
+                <li class = "schedule_card--single_schedule--sunday">
+                  <div class="row">
+                    <div class="col-md-6 schedule_card--time">
+                    8:00 PM
+                    </div>
+                    <div class="col-md-6 schedule_card--event">
+                    Head Home!
+                    </div>
+                  </div>
+
+                </li>
+              </ul>
+            </div>
+          </di>
+        </div>
+      </div>
+    </div>-->
+  </section> 
+{% endblock %}
+{% block sponsor %}
+<!-- The sponsor Section -->
+<section class="section__sponsors">
+  <div class="content__sponsors">
+    <center><h1 class="title" >PAST SPONSORS</h1>
+     <p> Interested in becoming a sponsor? Email us at <a href="mailto:sponsor@hackinout.co?subject=InOut%203.0%20Sponsorship%20Inquiry">sponsor@hackinout.co</a>
+    </p>
+    </center>
+      <div class="description">
+
+      <!-- PLATINUM SPONSORS  -->
+
+
+      <!-- Google -->
+      <center>
+      <a href = "https://www.google.com/about/careers/students/" target = "_blank">
+        <img src="../../static/inout/images/SponsorLogos/logo_google.png" height="206" width="636" alt="Google logo" class="platinum_sponsor">
+      </a>
+      </center>
+
+      <center>
+      <!-- Particle -->
+      <a href = "https://www.particle.io" target = "_blank">
+      <img src="../../static/inout/images/SponsorLogos/logo_particle.png" height="316" width="342" alt="Particle" class = "platinum_sponsor">
+      </a>
+
+      <!-- IBM -->
+      <a href = "https://ibm.biz/bluemixapp" target = "_blank">
+      <img src="../../static/inout/images/SponsorLogos/logo_ibm.png" height="575" width="488" alt="IBM logo" style="height: 160px;width:auto" class = "platinum_sponsor">
+      </a>
+      <!-- Salesforce -->
+       <a href = "https://developer.salesforce.com/platform" target = "_blank">
+        <img src="../../static/inout/images/SponsorLogos/logo_salesforce.png" height="50%" width="100%" alt="Salesforce logo" class="platinum_sponsor">
+      </a>
+
+      </center>
+
+      <center>
+
+
+
+      <!-- Facebook -->
+       <a href = "https://www.facebook.com/" target = "_blank">
+        <img src="../../static/inout/images/SponsorLogos/logo_fbb.jpg" height="100%" width="100%" alt="Facebook logo" style="height: 55px;" class="platinum_sponsor">
+      </a>
+      
+      <!-- RethinkDB -->
+      <a href = "https://www.rethinkdb.com/" target = "_blank">
+        <img src="../../static/inout/images/SponsorLogos/logo_RethinkDB.png" height="100%" width="100%" alt="RethinkDB logo" style="height: 85px;" class="platinum_sponsor">
+      </a>
+
+      <!-- Ozonetel -->
+      <a href = "http://ozonetel.com/index.html" target = "_blank">
+      <img src="../../static/inout/images/SponsorLogos/logo_ozonetel.png" height="25" width="156" class="platinum_sponsor" style="height:100px" alt="Ozonetel">
+      </a>
+
+      <!-- TCS -->
+      <a href = "http://www.tcs.com/" target = "_blank">
+      <img src="../../static/inout/images/SponsorLogos/logo_tcs.png" height="25" width="156" style="height:100px" class="platinum_sponsor" alt="Tcs logo">
+      </a>
+
+      </center>
+
+      <!-- GOLD SPONSORS -->
+
+      <center>
+
+      <!-- freshdesk -->
+      <a href = "http://freshdesk.com/" target = "_blank">
+        <img src="../../static/inout/images/SponsorLogos/logo_freshdesk.png" height="100" width="247" alt="Freshdesk logo" class="silver_sponsor">
+      </a>
+
+
+      <!-- Sendgrid -->
+      <a href = "https://sendgrid.com/" target = "_blank">
+        <img src="../../static/inout/images/SponsorLogos/logo_sendgrid.png" height="100" width="247" alt="Sendgrid logo" class="gold_sponsor">
+      </a>
+
+      <!-- Exotel -->
+      <a href = "http://bit.ly/exotelhackathon" target = "_blank">
+        <img src="../../static/inout/images/SponsorLogos/logo_exotel.png" height="100" width="247" alt="Exotel logo" class="gold_sponsor">
+      </a>
+
+      <!-- Twitter -->
+      <a href = "https://twitter.com/" target = "_blank">
+      <img src="../../static/inout/images/SponsorLogos/logo_tweet.png" height="1687" width="1687" alt="Twitter logo" class = "gold_sponsor">
+      </a>
+      <!-- SILVER SPONSORS -->
+
+      </center>
+
+     <!-- dropbox -->
+      <a href = "https://dropbox.com" target = "_blank">
+        <img src="../../static/inout/images/SponsorLogos/logo_dropbox.png" height="112" width="406" alt="Dropbox logo" class = "silver_sponsor">
+      </a>
+
+      <!-- Duckduckgo -->
+      <a href = "https://duckduckgo.com/" target = "_blank">
+      <img src="../../static/inout/images/SponsorLogos/logo_duckduckgo.png" height="1687" width="1687" alt="Duckduckgo logo" class = "silver_sponsor">
+      </a>
+
+      </center>
+
+      <!-- Github -->
+      <a href = "https://github.com/" target = "_blank">
+        <img src="../../static/inout/images/SponsorLogos/logo_github.png" height="50%" width="4" alt="github logo" class="silver_sponsor">
+      </a>
+
+      <!-- BRONZE SPONSORS -->
+
+      <!-- Venturesity -->
+      <a href = "http://www.venturesity.com/" target = "_blank">
+        <img src="../../static/inout/images/SponsorLogos/logo_venturesity.png" height="250" width="100%" alt="Venturesity logo" class="bronze_sponsor">
+      </a>
+
+       <!-- GoSquared-->
+       <a href = "https://www.gosquared.com/?utm_source=hackathon&utm_medium=link&utm_campaign=hackinout/" target = "_blank">
+        <img src="../../static/inout/images/SponsorLogos/logo_GoSquared.jpg" height="" width="50" alt="GoSquared logo" class="bronze_sponsor">
+      </a>
+
+<!-- Codeanywhere -->
+       <a href = "https://codeanywhere.com" target = "_blank">
+       <img src="../../static/inout/images/SponsorLogos/logo_codeanywhere.png" height="400" width="400" alt="Codeanywhere logo" class = "bronze_sponsor">
+      </a>
+
+
+       <!-- Keen -->
+       <a href = "https://keen.io" target = "_blank">
+       <img src="../../static/inout/images/SponsorLogos/logo_keen.png" height="400" width="400" alt="Keen logo" class = "bronze_sponsor">
+      </a>
+
+
+
+      <!-- kapeli -->
+     <a href = "https://kapeli.com/inout" target = "_blank">
+     <img src="../../static/inout/images/SponsorLogos/logo_kapeli.png" height="368" width="928" alt="kapeli logo" class = "bronze_sponsor">
+      </a>
+
+
+       <!-- pusher -->
+       <a href = "https://www.pusher.com/" target = "_blank">
+       <img src="../../static/inout/images/SponsorLogos/logo_pusher.png" height="141" width="400" alt="pusher logo" class="bronze_sponsor">
+      </a>
+
+       <!-- clarifai -->
+       <a href = "http://clarifai.com/" target = "_blank">
+       <img src="../../static/inout/images/SponsorLogos/logo_clarifai.jpg"  width="400" alt="clarifai logo" height="12px"class="bronze_sponsor">
+      </a>
+
+
+       <!-- canva -->
+       <a href = "https://www.canva.com/" target = "_blank">
+        <img src="../../static/inout/images/SponsorLogos/logo_canva.png" height="100%" width="100%" alt="Canva logo" class="bronze_sponsor">
+      </a>
+
+    <!-- Rocketship -->
+    <a href = "http://rocketship.fm/?utm_source=InOut" target = "_blank">
+      <img src="../../static/inout/images/SponsorLogos/logo_theRocketShipPodcast.png"  alt="Rocketship logo" class="bronze_sponsor">
+    </a>
+
+       <!-- Koding-->
+       <a href = "https://koding.com/" target = "_blank">
+       <img src="../../static/inout/images/SponsorLogos/logo_koding.png" height="384" width="1380" alt="Koding" class = "bronze_sponsor">
+      </a>
+      <!-- Hackerrank -->
+       <a href = "https://www.hackerrank.com/" target = "_blank">
+       <img src="../../static/inout/images/SponsorLogos/logo_hackerrank.svg" alt="HackerRank logo" class = "bronze_sponsor">
+      </a>
+    </div>
+
+
+
+<center><h1 class="title">MERCHANDISE PARTNER</h1></center>
+<div class="description">
+  
+<a href="https://inkmonk.com/" target="_blank">
+    <img src="../../static/inout/images/SponsorLogos/logo_inkmonk.svg" height="600" width="auto" alt="inkmonk logo" class = "silver_sponsor">
+
+</a>
+  
+</div>
+
+    <center><h1 class="title" >MEDIA PARTNERS</h1></center>
+    <div class="description">
+
+
+<!-- Inc 42 -->
+<a href = "http://inc42.com/" target = "_blank">
+  <img src="../../static/inout/images/SponsorLogos/logo_inc42.png" height="900" width="1200" alt="Inc 42" class = "prime_sponsor">
+</a>
+
+<!--Yourstory logo-->
+        <a href = "http://yourstory.com/" target = "_blank">
+        <img src="../../static/inout/images/SponsorLogos/logo_yourstory.jpg" height="708" width="1525" alt="Yourstory logo" class="prime_sponsor">
+      </a>
+
+<!-- PTBN Logo -->
+      <a href = "http://www.ptbn.org/" target = "_blank">
+        <img src="../../static/inout/images/SponsorLogos/logo_ptbn.png" height="960" width="960" alt="PTBN logo" class="prime_sponsor">
+      </a>
+
+<!-- Du beat logo -->
+     <a href = "http://dubeat.com/" target = "_blank">
+        <img src="../../static/inout/images/SponsorLogos/logo_Dubeat.png" height="960" width="960" alt="DUbeat logo" class="prime_sponsor">
+      </a>
+
+      <!-- DD Surat -->
+       <a href = "http://digitaldoor.in/" target = "_blank">
+       <img src="../../static/inout/images/SponsorLogos/logo_ddsurat.jpg" height="3000" width="3000" alt="Digital Door Surat" class = "prime_sponsor">
+      </a>
+
+
+    </div>
+
+    <center><h1 class = "title">PARTNERS</h1></center>
+    <div class = "description">
+
+       <!-- ACM NIT SURAT -->
+      <a href = "https://www.facebook.com/acmnitsurat" target = "_blank">
+      <img src="../../static/inout/images/SponsorLogos/logo_acm.jpg" height="1676" width="2141" alt="NIT SURAT Logo" class = "prime_sponsor">
+      </a> 
+
+
+      <!-- MAKERFEST -->
+      <a href = "http://www.makerfest.com/" target = "_blank">
+      <img src="../../static/inout/images/SponsorLogos/logo_maker.png" height="1676" width="2141" alt="Maker Fest 2016" class = "prime_sponsor">
+      </a> 
+      <!-- CNC -->
+      <a href = "http://cncparts.in/" target = "_blank">
+      <img src="../../static/inout/images/SponsorLogos/logo_cnc.png" height="338" width="1049" alt="CNC Parts India" class = "prime_sponsor">
+      </a> 
+
+      <!-- ECELL -->
+      <a href = "https://www.facebook.com/ecell.svnit" target = "_blank">
+      <img src="../../static/inout/images/SponsorLogos/logo_ecell.png" height="300" width="250" alt="Ecell NIT Surat" class="prime_sponsor">
+      </a> 
+    </div>
+
+    <center><h1 class = "title">BRANDING PARTNER</h1></center>
+    <div class = "description">
+      <!-- DALPAT -->
+      <a href = "http://chamedesign.com/" target = "_blank">
+      <img src="../../static/inout/images/SponsorLogos/logo_chameleon.png" height="118" width="491" alt="" class = "silver_sponsor">
+      </a> 
+    </div>
+    
+
+    <center><h1 class="title" >ORGANIZED BY</h1></center>
+    <div class="description">
+
+
+<!--Webdevlabs logo-->
+        <a href = "https://www.facebook.com/webdevlabs/" target = "_blank">
+        <img src="../../static/inout/images/SponsorLogos/logo_webdevlabs.png" width="400" alt="Webdevlabs logo">
+      </a>
+
+ <!--GDG NITSURAT logo-->
+        <a href = "https://www.facebook.com/gdgnitsurat/" target = "_blank">
+        <img src="../../static/inout/images/SponsorLogos/logo_gdg.jpg" width="400" alt="GDGNITSURAT logo">
+      </a>
+
+    </div>
+
+
+
+
+
+  </div>
+</section>
+  {% endblock %}

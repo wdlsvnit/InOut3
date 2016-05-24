@@ -1,0 +1,36 @@
+
+.section__content {
+	width: 70%;
+	margin: 100px auto 0px auto;
+	@include when(XSMinus) {
+	width:88%;
+	}
+}
+
+.section__content--text {
+	font-family: Regular;
+	font-size: 2.2rem;
+	color: white;
+	line-height: 3rem;
+
+	a {
+		text-decoration: underline;
+		color: #FFFFFF;
+		&:hover {
+			color: #FFFFFF;
+		}
+	}
+
+}
+
+// ==============================================
+// Site Sections
+// ==============================================
+@import "sections/home";
+@import "sections/about";
+@import "sections/faq";
+@import "sections/schedule";
+@import "sections/sponsors";
+@import "sections/footer";
+@import "navigation";
+

@@ -1,0 +1,102 @@
+.section--schedule {
+	@extend %section;
+	background-color: section-color(schedule);
+	max-height: none;
+	height: auto;
+	@include when(XSMinus) {
+	padding-bottom:100px;
+	}
+}
+
+.section__heading--schedule {
+  @extend %section__heading;
+  margin-bottom : 80px;
+}
+
+%schedule__heading {
+	display : block;
+	font-family: Bold;
+	padding: 10px 10px 10px 20px;
+	color: #FFFFFF;
+	font-size: 2.2rem;
+	margin-bottom : 30px;
+	@include border-radius(4px); 
+	@include when(XSMinus){
+	text-align:center;
+	}
+}
+
+%schedule__list_item {
+	display: inline-block;
+	font-family: Regular;
+	font-size: 2.4rem;
+	margin: 0px 8px 0px 8px;
+
+	@include when(XSMinus) {
+	font-size: 1.90rem;
+	}
+}
+
+.schedule__heading--left {
+	@extend %schedule__heading;
+	background-color: #828DB7;
+}
+
+.schedule__heading--right {
+	@extend %schedule__heading;
+	background-color: #91A786;
+}
+
+.schedule__list {
+@include when(XSMinus) {
+	text-align : left;
+	margin-left : 10%
+	}
+}
+
+%schedule__item {
+	margin : 0px 0px 20px 0px;
+	background-repeat : no-repeat;
+	background-position: 1.7% 50%;
+  	padding: 3px 0px 3px 10px;
+}
+
+.schedule__item--morning {
+	@extend %schedule__item;
+	background-image : url('../images/icon_sun_morning.png');
+}
+
+.schedule__item--noon {
+	@extend %schedule__item;
+	background-image: url('../images/icon_sun_noon.png');
+	background-position: 0% 50%;
+}
+
+.schedule__item--evening {
+	@extend %schedule__item;
+	background-image : url('../images/icon_sun_eve.png');
+}
+
+.schedule__item--night {
+	@extend %schedule__item;
+	background-image: url('../images/icon_moon.png');
+}
+
+.schedule__item__icon {
+	@extend %schedule__list_item;
+	vertical-align: super;
+}
+
+.schedule__item__time {
+	@extend %schedule__list_item;
+	color: rgba(255, 255, 255, 0.7);
+	margin-left: 30px;
+	min-width: 100px;
+	text-align: right;
+
+}
+
+.schedule__item__event {
+	@extend %schedule__list_item;
+	color: rgba(255, 255, 255, 1);
+}

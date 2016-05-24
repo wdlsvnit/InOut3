@@ -1,0 +1,115 @@
+
+// ==============================================
+// General
+// ==============================================
+
+@mixin centerer($horizontal: true, $vertical: true, $offsetH: 0%, $offsetV: 0%) {
+  position: absolute;
+  @if ($horizontal and $vertical) {
+    top: 50% + $offsetV;
+    left: 50% + $offsetH;
+    transform: translate(-50%, -50%);
+  } @else if ($horizontal) {
+    left: 50% + $offsetH;
+    transform: translate(-50%, 0);
+  } @else if ($vertical) {
+    top: 50% + $offsetV;
+    transform: translate(0, -50%);
+  }
+}
+
+// ==============================================
+// Media query
+// ==============================================
+
+@mixin when($canvas) {
+	// Between Upper limit and upper limit 
+	@if $canvas == XS-S {
+		@media only screen and (min-width: $XS) and (max-width: $S - 1) {
+			@content;
+		}
+	}
+	@else if $canvas == S-M {
+		@media only screen and (min-width: $S) and (max-width: $M - 1) {
+			@content;
+		}
+	}
+	@else if $canvas == M-L {
+		@media only screen and (min-width: $M) and (max-width: $L - 1) {
+			@content;
+		}
+	}
+	@else if $canvas == L-XL {
+		@media only screen and (min-width: $L) and (max-width: $XL - 1) {
+			@content;
+		}
+	}
+	
+	// From Lower limit to infinity
+	@else if $canvas == XSPlus {
+		@media only screen and (min-width: $XS) { @content; }
+	}
+	@else if $canvas == SPlus {
+		@media only screen and (min-width: $S) { @content; }
+	}
+	@else if $canvas == MPlus {
+		@media only screen and (min-width: $M) { @content; }
+	}
+	@else if $canvas == LPlus {
+		@media only screen and (min-width: $L) { @content; }
+	}
+	@else if $canvas == XLPlus {
+		@media only screen and (min-width: $XL) { @content; }
+	}
+
+
+	// When viewport width goes less than 
+	@else if $canvas == XSMinus {
+		@media only screen and (max-width: $XS) { @content; }
+	}
+	@else if $canvas == SMinus {
+		@media only screen and (max-width: $S) { @content; }
+	}
+	@else if $canvas == MMinus {
+		@media only screen and (max-width: $M) { @content; }
+	}
+	@else if $canvas == LMinus {
+		@media only screen and (max-width: $L) { @content; }
+	}
+	@else if $canvas == XLMinus {
+		@media only screen and (max-width: $XL) { @content; }
+	}
+
+}
+
+// ==============================================
+// Font
+// ==============================================
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff ttf svg) {
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+	}
+}
+

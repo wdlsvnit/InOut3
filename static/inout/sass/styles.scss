@@ -1,0 +1,20 @@
+
+// =====================================================
+// Imports
+// =====================================================
+
+@import "compass";
+@import "compass/reset";
+@import "partials/variables";
+@import "partials/placeholders";
+@import "partials/functions";
+@import "partials/mixins";
+@import "partials/base";
+@import "partials/layout";
+
+// ==============================================
+// Font
+// ==============================================
+
+@include font-face(Regular, "../fonts/proximanova-regular-webfont");
+@include font-face(Bold, "../fonts/proximanova-bold-webfont");

@@ -1,0 +1,126 @@
+.section--home {
+	@extend %section;
+	@include when(XSMinus) {
+	padding-bottom:100px;
+	}
+}
+
+.section--home__logo {
+	width: 545px;
+	height: 232px;
+	background: url('../images/logo_inout.png') no-repeat;
+	@include centerer(true, true, 0%, -13%);
+
+	@include when(SMinus) {
+		width: 470px;
+		height: 186px;
+		background: url('../images/logo_inout_small.png') no-repeat;
+	}
+
+	@include when(XSMinus) {
+		width: 352px;
+		height: 135px;
+		background: url('../images/logo_inout_xsmall.png') no-repeat;
+		@include centerer(true, true, 0%, -10%);
+	}
+
+
+}
+
+.section--home__button_apply {
+	@extend %button;
+	@include centerer(true, true, 0%, 18%);
+	background-color: $color-button-apply;
+	width: 190px;
+	height: 59px;
+	line-height: 59px;
+	letter-spacing: 2px;
+}
+
+.section--home__heading_location {
+	@include centerer(true, true, 0%, 6%);
+	font-family : Bold;
+	font-size: 2rem;
+	color: #fff;
+	letter-spacing: 2px;
+
+	@include when(SMinus) {
+		font-size: 1.5rem;
+		@include centerer(true, true, 0%, 5%);
+	}
+
+	@include when(XSMinus) {
+		font-size: 1.4rem;
+		@include centerer(true, true, 0%, 4%);
+	}
+
+
+}
+
+.section--home__social_links {
+
+	.social_icon {
+		padding : 8px;
+		color: #fff;
+		font-size: 2.4rem;
+		&:hover {
+			color: rgba(93,111,158, 1);
+		}
+	}
+
+	li {
+		display: inline-block;
+		margin-right: 1px;
+	}
+
+	width: auto;
+	@include centerer(true, true, 0%, -42%);
+}
+
+
+@keyframes bgScrollBack {
+    0% {
+        background-position: center 0
+    }
+    100% {
+        background-position: center 400px
+    }
+}
+@keyframes bgScrollFront {
+    0% {
+        background-position: center 0
+    }
+    100% {
+        background-position: center -800px
+    }
+}
+
+#inout {
+	background: #5380c9;
+    padding: 0;
+	
+	.bg-pattern-back 
+	{
+    background: url("../images/pattern.png") top center repeat;
+    background-size: 600px 300px;
+    animation: bgScrollBack 50s linear infinite;
+	}
+	.bg-pattern-front 
+	{
+    background: url("../images/pattern.png") top center repeat;
+    background-size:contain;
+    animation: bgScrollFront 50s linear infinite;
+	}
+	.bg-gradient 
+	{   
+	height: 800px;
+	background-image: -moz-linear-gradient(0deg, rgba(80,196,214,0.90) 0%, rgba(82,113,209,0.90) 100%); /* ff3.6+ */
+	background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(80,196,214,0.90)), color-stop(100%, rgba(82,113,209,0.90))); /* safari4+,chrome */
+	background-image: -webkit-linear-gradient(0deg, rgba(80,196,214,0.90) 0%, rgba(82,113,209,0.90) 100%); /* safari5.1+,chrome10+ */
+	background-image: -o-linear-gradient(0deg, rgba(80,196,214,0.90) 0%, rgba(82,113,209,0.90) 100%); /* opera 11.10+ */
+	background-image: -ms-linear-gradient(0deg, rgba(80,196,214,0.90) 0%, rgba(82,113,209,0.90) 100%); /* ie10+ */
+	background-image: linear-gradient(90deg, rgba(80,196,214,0.90) 0%, rgba(82,113,209,0.90) 100%); /* w3c */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#50c4d6', endColorstr='#5271d1',GradientType=1 ); /* ie6-9 */
+	}
+
+}
