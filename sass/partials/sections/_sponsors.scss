@@ -1,7 +1,0 @@
-.section--sponsors{
-  @extend %section;
-	background-color: section-color(sponsors);
-	@include when(XSMinus) {
-	padding-bottom:100px;
-	}
-}
