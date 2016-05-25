@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
 {% block content %}
 
 <!-- Home Section   -->
@@ -24,8 +25,8 @@
           <a class = "section--home__button_apply" href="{% url 'new' %}">APPLY NOW</a>
           {% endif %}
       <h3 class="section--home__heading_location">13-14 AUGUST, NIT SURAT</h3>
-
-
+      
+      
         </div><!-- .bg-gradient -->
     </div>       <!-- .bg-pattern-front -->
  </div>      <!-- .bg-pattern-back -->
