@@ -75,7 +75,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 14, ../sass/partials/_placeholders.scss */
-.section__heading--about, .section__heading--faq, .section__heading--schedule {
+.section__heading--about, .section__heading--faq, .section__heading--schedule, .section--sponsors .title {
   color: #FFFFFF;
   font-family: Bold;
   font-size: 4rem;
@@ -161,8 +161,8 @@ body {
 
 /* line 8, ../sass/partials/sections/_home.scss */
 .section--home__logo {
-  width: 545px;
-  height: 232px;
+  width: 452px;
+  height: 200px;
   background: url("../images/logo_inout.png") no-repeat;
   position: absolute;
   top: 37%;
@@ -607,13 +607,147 @@ a:active {
 
 /* line 1, ../sass/partials/sections/_sponsors.scss */
 .section--sponsors {
-  background-color: #FFFFFF;
+  height: auto !important;
+  max-height: initial;
+  padding: 20px;
+}
+/* line 10, ../sass/partials/sections/_sponsors.scss */
+.section--sponsors .title {
+  color: #34495e;
+  padding-top: 20px;
 }
 @media only screen and (max-width: 453px) {
-  /* line 1, ../sass/partials/sections/_sponsors.scss */
-  .section--sponsors {
-    padding-bottom: 100px;
+  /* line 10, ../sass/partials/sections/_sponsors.scss */
+  .section--sponsors .title {
+    margin-left: 10px;
+    font-size: 3.5rem;
   }
+}
+/* line 20, ../sass/partials/sections/_sponsors.scss */
+.section--sponsors .description {
+  margin-bottom: 45px;
+  text-align: center;
+}
+/* line 23, ../sass/partials/sections/_sponsors.scss */
+.section--sponsors .description .sponsor, .section--sponsors .description .prime_sponsor, .section--sponsors .description .platinum_sponsor, .section--sponsors .description .gold_sponsor, .section--sponsors .description .silver_sponsor, .section--sponsors .description .bronze_sponsor {
+  display: inline-block;
+  width: auto;
+  height: 90px;
+  margin: 30px;
+}
+@media screen and (max-width: 600px) {
+  /* line 23, ../sass/partials/sections/_sponsors.scss */
+  .section--sponsors .description .sponsor, .section--sponsors .description .prime_sponsor, .section--sponsors .description .platinum_sponsor, .section--sponsors .description .gold_sponsor, .section--sponsors .description .silver_sponsor, .section--sponsors .description .bronze_sponsor {
+    height: 60px;
+  }
+}
+@media screen and (max-width: 485px) {
+  /* line 23, ../sass/partials/sections/_sponsors.scss */
+  .section--sponsors .description .sponsor, .section--sponsors .description .prime_sponsor, .section--sponsors .description .platinum_sponsor, .section--sponsors .description .gold_sponsor, .section--sponsors .description .silver_sponsor, .section--sponsors .description .bronze_sponsor {
+    height: 40px;
+  }
+}
+/* line 36, ../sass/partials/sections/_sponsors.scss */
+.section--sponsors .description .prime_sponsor {
+  height: 120px;
+}
+@media screen and (max-width: 600px) {
+  /* line 36, ../sass/partials/sections/_sponsors.scss */
+  .section--sponsors .description .prime_sponsor {
+    height: 80px;
+  }
+}
+@media screen and (max-width: 485px) {
+  /* line 36, ../sass/partials/sections/_sponsors.scss */
+  .section--sponsors .description .prime_sponsor {
+    height: 60px;
+  }
+}
+@media only screen and (max-width: 453px) {
+  /* line 48, ../sass/partials/sections/_sponsors.scss */
+  .section--sponsors .description .platinum_sponsor {
+    height: 80px;
+  }
+}
+/* line 56, ../sass/partials/sections/_sponsors.scss */
+.section--sponsors .description .gold_sponsor {
+  height: 120px;
+}
+@media screen and (max-width: 600px) {
+  /* line 56, ../sass/partials/sections/_sponsors.scss */
+  .section--sponsors .description .gold_sponsor {
+    height: 40px;
+  }
+}
+@media screen and (max-width: 485px) {
+  /* line 56, ../sass/partials/sections/_sponsors.scss */
+  .section--sponsors .description .gold_sponsor {
+    height: 30px;
+  }
+}
+/* line 68, ../sass/partials/sections/_sponsors.scss */
+.section--sponsors .description .silver_sponsor {
+  height: 80px;
+}
+@media screen and (max-width: 600px) {
+  /* line 68, ../sass/partials/sections/_sponsors.scss */
+  .section--sponsors .description .silver_sponsor {
+    height: 40px;
+  }
+}
+@media screen and (max-width: 485px) {
+  /* line 68, ../sass/partials/sections/_sponsors.scss */
+  .section--sponsors .description .silver_sponsor {
+    height: 30px;
+  }
+}
+/* line 80, ../sass/partials/sections/_sponsors.scss */
+.section--sponsors .description .bronze_sponsor {
+  height: 50px;
+}
+@media screen and (max-width: 600px) {
+  /* line 80, ../sass/partials/sections/_sponsors.scss */
+  .section--sponsors .description .bronze_sponsor {
+    height: 40px;
+  }
+}
+@media screen and (max-width: 485px) {
+  /* line 80, ../sass/partials/sections/_sponsors.scss */
+  .section--sponsors .description .bronze_sponsor {
+    height: 30px;
+  }
+}
+/* line 95, ../sass/partials/sections/_sponsors.scss */
+.section--sponsors p {
+  font-size: 1.5em;
+  padding-bottom: 1pc;
+  line-height: normal;
+  color: #FEC537;
+  text-align: center;
+  color: #303030;
+  margin-top: 40px;
+}
+@media screen and (max-width: 720px) {
+  /* line 95, ../sass/partials/sections/_sponsors.scss */
+  .section--sponsors p {
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 410px) {
+  /* line 95, ../sass/partials/sections/_sponsors.scss */
+  .section--sponsors p {
+    font-size: 1.2em;
+  }
+}
+/* line 113, ../sass/partials/sections/_sponsors.scss */
+.section--sponsors a {
+  text-decoration: none;
+  color: #34495e;
+}
+/* line 117, ../sass/partials/sections/_sponsors.scss */
+.section--sponsors a:hover {
+  color: black;
+  text-decoration: line;
 }
 
 /* line 1, ../sass/partials/sections/_footer.scss */

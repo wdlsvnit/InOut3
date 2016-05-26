@@ -1,19 +1,17 @@
 .section--sponsors{
-
-@extend %section;
- height : auto !important;
- max-height:initial;
+  height : auto;
 		
 		padding: 20px;
 	
 
-		.title {
+		h1.title {
 			@extend %section__heading;
 			color  : #34495e;
 			padding-top : 20px;
 			@include when(XSMinus){
 			margin-left:10px;
 			font-size:3.5rem;
+			text-align:left;
 			}
 		}
 
@@ -47,8 +45,12 @@
 
 			.platinum_sponsor {
 				@extend .sponsor;
-				@include when(XSMinus) {
+				height : 180px;
+				@media screen and (max-width : $third_breakpoint) {
 					height : 80px;
+				}
+				@media screen and (max-width : $fourth_breakpoint) {
+					height : 60px;
 				}
 
 			}
@@ -90,10 +92,27 @@
 		}
 
 
-		
+		.content__sponsors {
+			// @extend .inner_content;
+			font-family : 'Source Sans Pro';
+			font-size : 1.2em;
+		}
+
+		.extra_info {
+			position : absolute;
+			bottom : 20px;
+			left : 50%;
+			margin-left : -260px;
+			@media screen and (max-width : $second_breakpoint) {
+			}
+			@media screen and (max-width : 410px) {
+				margin-left  : -196px;
+			}
+
+		}
 
 		p {
-			font-size : 1.5em;
+			  font-size : 1.5em;
     		padding-bottom : 1pc;
     		line-height : normal;
     		color : #FEC537;
@@ -109,14 +128,35 @@
 
 		}
 
+		.button__contact {
+			// @extend .button;
+
+			line-height : 75px;
+			width : 350px;
+			//background: $color_button_contact;
+			box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.33), inset 0px -3px 0px 0px rgba(0,0,0,0.21);
+			font-family: Quicksand;
+			font-size: 24px;
+			text-shadow : 0px 1px rgba(0, 0, 0, 0.15);
+			color : white;
+			margin : 0 auto;
+			margin-top : 10px;
+			transition : all 0.15s;
+
+			&:hover {
+				box-shadow: 0px 7px 20px 0px rgba(0,0,0,0.4), inset 0px -3px 0px 0px rgba(0,0,0,0.21);
+				transition : all 0.2s cubic-bezier(.12,.64,.59,1.47);
+				// transform : scale(1.07);
+			}
+
+			@media screen and (max-width : 470px) {
+				width : 270px;
+				font-size : 18px;
+			}
+		}
 
 		a {
 			text-decoration : none;
-			color:#34495e;
-		}
-		a:hover{
-		color:black;
-		text-decoration:line;
 		}
 
 }
