@@ -1,7 +1,122 @@
 .section--sponsors{
-  @extend %section;
-	background-color: section-color(sponsors);
-	@include when(XSMinus) {
-	padding-bottom:100px;
-	}
+
+@extend %section;
+ height : auto !important;
+ max-height:initial;
+		
+		padding: 20px;
+	
+
+		.title {
+			@extend %section__heading;
+			color  : #34495e;
+			padding-top : 20px;
+			@include when(XSMinus){
+			margin-left:10px;
+			font-size:3.5rem;
+			}
+		}
+
+		.description {
+			margin-bottom : 45px;
+			text-align : center;
+			.sponsor {
+				display : inline-block;
+				width : auto;
+				height : 90px;
+				margin : 30px;
+				@media screen and (max-width : $third_breakpoint) {
+					height : 60px;
+				}
+				@media screen and (max-width : $fourth_breakpoint) {
+					height : 40px;
+				}
+			}
+
+			.prime_sponsor {
+				@extend .sponsor;
+				height : 120px;
+				@media screen and (max-width : $third_breakpoint) {
+					height : 80px;
+				}
+				@media screen and (max-width : $fourth_breakpoint) {
+					height : 60px;
+				}
+	
+			}
+
+			.platinum_sponsor {
+				@extend .sponsor;
+				@include when(XSMinus) {
+					height : 80px;
+				}
+
+			}
+
+			.gold_sponsor {
+				@extend .sponsor;
+				height : 120px;
+				@media screen and (max-width : $third_breakpoint) {
+					height : 40px;
+				}
+				@media screen and (max-width : $fourth_breakpoint) {
+					height : 30px;
+				}
+
+			}
+
+			.silver_sponsor {
+				@extend .sponsor;
+				height : 80px;
+				@media screen and (max-width : $third_breakpoint) {
+					height : 40px;
+				}
+				@media screen and (max-width : $fourth_breakpoint) {
+					height : 30px;
+				}
+
+			}
+
+			.bronze_sponsor {
+				@extend .sponsor;
+				height : 50px;
+				@media screen and (max-width : $third_breakpoint) {
+					height : 40px;
+				}
+				@media screen and (max-width : $fourth_breakpoint) {
+					height : 30px;
+				}
+			}
+		}
+
+
+		
+
+		p {
+			font-size : 1.5em;
+    		padding-bottom : 1pc;
+    		line-height : normal;
+    		color : #FEC537;
+    		text-align : center;
+    		color : #303030;
+    		margin-top : 40px;
+			@media screen and (max-width : $second_breakpoint) {
+				font-size : 1.5em;
+			}
+			@media screen and (max-width : 410px) {
+				font-size : 1.2em;
+			}
+
+		}
+
+
+		a {
+			text-decoration : none;
+			color:#34495e;
+		}
+		a:hover{
+		color:black;
+		text-decoration:line;
+		}
+
 }
