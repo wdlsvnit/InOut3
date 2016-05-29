@@ -65,7 +65,7 @@ def home_view(request):
             new_team.save()
 
             ''' 
-            TODO: Send an email to the provided address
+                 Send an email to the provided address
                  with the team url and other instructions.
             '''
             send_team_registration_email(new_team)
@@ -93,7 +93,7 @@ def team_view(request,team_url_id):
             new_team_participant.team = team 
             new_team_participant.save()
             '''
-            TODO : Send an email to the participant confirming the registration and other instructions.
+            Send an email to the participant confirming the registration and other instructions.
             '''
             send_participant_registration_email(new_team_participant)
             return HttpResponseRedirect('/new/'+team_url_id)
@@ -139,7 +139,7 @@ def send_email(subject,from_email,to_email,email_template_html,email_template_tx
     text_content = render_to_string(email_template_txt, context)
     html_content = render_to_string(email_template_html, context)
     headers = {'X-Priority':1}
-    if subject and to_email and from_email :
+    if subject and to_email and from_email and settings.DEBUG==False:
         try:
             msg=EmailMultiAlternatives(subject, text_content, from_email, to_email,headers = headers)
             msg.attach_alternative(html_content,"text/html")
