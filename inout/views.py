@@ -15,7 +15,7 @@ from allaccess.models import Provider, AccountAccess
 
 from django.contrib.auth import authenticate, login, logout
 from django.core.urlresolvers import reverse
-from django.http import Http404, HttpResponse
+from django.http import Http404, HttpResponse, JsonResponse
 from django.shortcuts import redirect,render
 from django.views.generic import RedirectView, View
 from django.http import HttpResponseRedirect
@@ -72,7 +72,7 @@ def home_view(request):
             return HttpResponseRedirect('/new/'+new_team.url_id)
 
         else:
-            return render(request,'inout/index.html',{'form':form})
+            return JsonResponse(form.errors.as_json(),safe=False)
     form = TeamForm()
     return render(request,'inout/index.html',{'form':form})
 
