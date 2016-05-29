@@ -50,8 +50,8 @@
     var xhttp = new XMLHttpRequest();
     var form = document.forms[0];
     var csrftoken = form.elements[0].value;
-    var params = {"name":form.elements[1].value,"email" : form.elements[2].value};
- 
+    var params = "name="+form.elements[1].value+"&email="+form.elements[2].value;
+    console.log(params);
   xhttp.onreadystatechange = function() {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
       //Handle the error response
@@ -60,6 +60,7 @@
   };
   xhttp.open("POST", "/new/", true);
   xhttp.setRequestHeader("X-CSRFToken",csrftoken );
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
   xhttp.send(params);
   }
 </script>

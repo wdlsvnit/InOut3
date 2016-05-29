@@ -59,6 +59,7 @@ def home_view(request):
     '''
     if request.method =='POST':
         form = TeamForm(request.POST)
+        print(request.POST)
         if form.is_valid():
             new_team = form.save(commit=False)
             new_team.url_id = get_short_code()
@@ -73,6 +74,7 @@ def home_view(request):
 
         else:
             return JsonResponse(form.errors.as_json(),safe=False)
+            #return render(request,'inout/index.html',{'form':form})
     form = TeamForm()
     return render(request,'inout/index.html',{'form':form})
 
