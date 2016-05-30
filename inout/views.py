@@ -70,11 +70,14 @@ def home_view(request):
                  with the team url and other instructions.
             '''
             send_team_registration_email(new_team)
-            return HttpResponseRedirect('/new/'+new_team.url_id)
+            response_dict = {"success":1,"team_id":new_team.url_id}
+            return JsonResponse(response_dict)
+            #return HttpResponseRedirect('/new/'+new_team.url_id)
 
         else:
-            return JsonResponse(form.errors.as_json(),safe=False)
-            #return render(request,'inout/index.html',{'form':form})
+            error_dict = form.errors
+            error_dict["success"] = 0
+            return JsonResponse(error_dict)
     form = TeamForm()
     return render(request,'inout/index.html',{'form':form})
 

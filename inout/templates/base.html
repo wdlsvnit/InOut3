@@ -54,8 +54,14 @@
     console.log(params);
   xhttp.onreadystatechange = function() {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
-      //Handle the error response
-      console.log(xhttp.responseText);
+      
+      var dataObject = JSON.parse(xhttp.responseText);
+      if (dataObject["success"]==1){
+        window.location = "/new/" + dataObject["team_id"];
+      }
+      else{
+        //Handle the error response
+      }
     }
   };
   xhttp.open("POST", "/new/", true);
