@@ -1,0 +1,172 @@
+<script>
+  function submitForm(){
+    var xhttp = new XMLHttpRequest();
+    // xhttp.responseType = 'json';
+    var form = document.forms[0];
+    var csrftoken = form.elements[0].value;
+    var params = "name="+form.elements[1].value+"&email="+form.elements[2].value;
+
+    console.log(params);
+ 
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      //Handle the error response
+   
+      // console.log(xhttp.responseJson);
+      data = xhttp.responseText;
+var dataObject = JSON.stringify(data);
+document.getElementById("id_email").value=dataObject["email"][0]["message"];
+document.getElementById("id_name").value=dataObject["name"][0]["message"];
+
+console.log(dataObject["email"][0]["message"]);
+// console.log(dataObject["name"][0]["message"]);
+// document.getElementById("id_email").value=dataObject["email"][0]["message"];
+// document.getElementById("id_name").value=dataObject["name"][0]["message"];
+if (dataObject["email"][0]["message"]!="null") {
+// document.getElementById("error_1_id_email").innerHTML=dataObject["email"][0]["message"];
+document.getElementById("id_email").value=dataObject["email"][0]["message"];
+// $("#div_id_email").append("<p id="error_1_id_email">This exist bro</p>");
+// $('#div_id_email').html("<div id='error_1_id_email' class='section__content--text'>Team with this Email already exists.</div>");
+
+// $('#error_1_id_email').html("<div class='section__content--text'>Team with this Email already exists.</div>");
+
+// $('#email').attr('placeholder',dataObject["email"][0]["message"]);
+
+
+
+};
+
+
+
+if (dataObject["name"][0]["message"]!="null") {
+document.getElementById("id_name").value=dataObject["name"][0]["message"];
+// $('#div_id_name').html("<div id='error_1_id_name' class='section__content--text'>Team with this Name already exists.</div>");
+
+// $('p #error_1_id_name').html("<div class='help-block'>Team with this name already exists.</div>");
+// <p id="error_1_id_email" class="help-block"><strong>Team with this Email already exists.</strong></p>
+
+// $("#error_1_id_name :last").remove();
+// $('#name').attr('placeholder',dataObject["name"][0]["message"]);
+
+};
+
+}
+}
+     xhttp.open("POST", "/new/", true);
+  xhttp.setRequestHeader("X-CSRFToken",csrftoken );
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+  xhttp.send(params);
+  };
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function submitForm() {
+    var xhttp = new XMLHttpRequest();
+    var form = document.forms[0];
+    var csrftoken = form.elements[0].value;
+    var params = "name=" + form.elements[1].value + "&email=" + form.elements[2].value;
+    
+    console.log(params);
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+ 
+            var dataObject = JSON.parse(xhttp.responseText);
+ 
+            if (dataObject["success"] == 1) {
+                window.location = "/new/" + dataObject["team_id"];
+            } else {
+ 
+ 
+                data = JSON.parse(xhttp.responseText);
+ 
+                console.log(data);
+                if (data.hasOwnProperty('email')) {
+                    // document.getElementById("id_email").value = data["email"][0];
+                    // console.log(data["email"][0]);
+
+                    // $("#div_id_email").append('<p id="error_1_id_email" class="section__content--text">This email is taken</p>');
+
+
+// $("#div_id_email").html('<p id="error_1_id_email" class="section__content--text">Team with this Email already exists.</p>');
+
+
+
+// $("#error_1_id_email").append('This email is taken');
+
+
+$("<div class='abc'></div>").appendTo("#div_id_email");
+
+if ($(".abc").length > 0){
+  $('.abc').remove();
+  $("<div class='abc'></div>").appendTo("#div_id_email");
+  $(".abc").append('<p id="error_1_id_email" class="section__content--text">This email is taken</p>');
+}
+else
+{
+    $(".abc").html('<p id="error_1_id_email" class="section__content--text">This email is taken</p>'); 
+}
+
+// $('#error_1_id_email .bcd').remove();
+
+
+
+
+// $("<div class='abc'></div>").appendTo("#div_id_email");
+ // $(".abc").html('').html('<p id="error_1_id_email" class="section__content--text">This email is taken</p>');
+
+
+
+// document.getElementById("id_email").value=data["email"][0];
+
+
+
+                }
+ 
+                if (data.hasOwnProperty('name')) {
+                    // document.getElementById("id_name").value = data["name"][0];
+                    //                     console.log(data["name"][0]);
+
+                    // $('#div_id_name').html('<div id='error_1_id_name' class='section__content--text'>Team with this Email already exists.</div>');
+
+
+               // $("#div_id_name").html('<p id="error_1_id_name" class="section__content--text">Team with this Name already exists.</p>');
+
+$("<div class='bcd'></div>").appendTo("#div_id_name");
+
+if ($(".bcd").length > 0){
+  $('.bcd').remove();
+  $("<div class='bcd'></div>").appendTo("#div_id_name");
+  $(".bcd").append('<p id="error_1_id_name" class="section__content--text">This Team name is taken</p>');
+}
+else
+{
+    $(".bcd").html('<p id="error_1_id_name" class="section__content--text">This Team name is taken</p>'); 
+}
+
+
+
+
+// document.getElementById("id_name").value=data["name"][0];
+
+                }
+            }
+        }
+    };
+    xhttp.open("POST", "/new/", true);
+    xhttp.setRequestHeader("X-CSRFToken", csrftoken);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+    xhttp.send(params);
+}

@@ -1,0 +1,32 @@
+.sass-cache/
+
+*.pyc
+media/
+inout/migrations/
+db.sqlite3
+
+### Node ###
+
+# Dependency directory
+node_modules/
+
+### Bower ###
+bower_components
+.bower-cache
+.bower-registry
+.bower-tmp
+src/vendor
+
+### IntelliJ ###
+.idea
+*.iml
+
+### Sass ###
+.sass-cache
+*.css.map
+
+### Project specifics ###
+app/dist
+
+### gulp deploy ###
+.publish
