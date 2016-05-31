@@ -131,67 +131,6 @@ function swtichNavigationModeIfNeeded() {
 
 
 
-// For Apply now modal
-function submitForm() {
-      var xhttp = new XMLHttpRequest();
-      var form = document.forms[0];
-      var csrftoken = form.elements[0].value;
-      var params = "name=" + form.elements[1].value + "&email=" + form.elements[2].value;
-      console.log(params);
-      xhttp.onreadystatechange = function() {
-          if (xhttp.readyState == 4 && xhttp.status == 200) {
- 
-              data = JSON.parse(xhttp.responseText);
- 
-              if (data["success"] == 1) {
-                  window.location = "/new/" + data["team_id"];
-              } else {
- 
-                  console.log(data);
-                  if (data.hasOwnProperty('email')) {
-                      $("<div class='error_email'></div>").appendTo("#div_id_email");
-                      if ($(".error_email").length > 0) {
-                          $('.error_email').remove();
-                          $("<div class='error_email'></div>").appendTo("#div_id_email");
-                          $(".error_email").append('<p id="error_id_email" class="section__content--text">This email is taken</p>');
-                      } else {
-                          $(".error_email").html('<p id="error_id_email" class="section__content--text">This email is taken</p>');
-                      }
-                  }
-
-                  else
-                  {
-                    $('.error_email').remove();
-
-                  }
-
-                  if (data.hasOwnProperty('name')) {
- 
-                      $("<div class='error_name'></div>").appendTo("#div_id_name");
- 
-                      if ($(".error_name").length > 0) {
-                          $('.error_name').remove();
-                          $("<div class='error_name'></div>").appendTo("#div_id_name");
-                          $(".error_name").append('<p id="error_id_name" class="section__content--text">This Team name is taken</p>');
-                      } else {
-                          $(".error_name").html('<p id="error_id_name" class="section__content--text">This Team name is taken</p>');
-                      }
-                  }
-
-                  else
-                  {
-                    $('.error_name').remove();
-
-                  }
-
-              }
-          }
-      };
-      xhttp.open("POST", "/new/", true);
-      xhttp.setRequestHeader("X-CSRFToken", csrftoken);
-      xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
-      xhttp.send(params);
-  }
 
 
 
