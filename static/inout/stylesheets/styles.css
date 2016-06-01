@@ -296,6 +296,243 @@ body {
   /* ie6-9 */
 }
 
+.modal {
+  position: fixed;
+  top: -50px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  display: none;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity .15s linear;
+}
+
+.modal-signup .modal-dialog,
+.modal-dialog {
+  width: 768px !important;
+  margin-top: 120px;
+  /*display: -webkit-box;*/
+}
+
+.modal-signup .modal-content,
+.modal-content {
+  position: relative;
+  box-shadow: none;
+  overflow: hidden;
+  border: 0;
+}
+
+.modal-signup .modal-content .welcome-screen,
+.modal-content .welcome-screen {
+  width: 324px;
+  float: left;
+  display: block;
+  background-color: #F38375;
+  color: #ffffff;
+  padding: 35px 40px;
+  height: 100%;
+  position: absolute;
+  /* border-radius: 7px 0 0 7px; */
+}
+
+.welcome ul {
+  position: absolute;
+  bottom: 35px;
+  font-family: Regular;
+  color: #fff;
+}
+
+.welcome ul > li {
+  font-size: 1.8em;
+  padding: 12px;
+  line-height: 22px;
+}
+
+.welcome ul > li:before {
+  font: normal normal normal 14px/1 FontAwesome;
+  content: "\f05d";
+  margin-right: 10px;
+}
+
+.modal-signup h3,
+.modal-login h3 {
+  margin: 0;
+  font-weight: 500;
+}
+
+/*.dash-rl {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  font-size: 10px;
+  color: #CCC;
+  margin: 7px 0;
+}
+.dash-rl:before,
+.dash-rl:after {
+  content: "";
+  position: absolute;
+  border-top: 1px solid #CCC;
+  top: 7px;
+  width: 47%;
+}
+.dash-rl:before {
+  right: 53%;
+}
+.dash-rl:after {
+  left: 53%;
+}*/
+.register form {
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.register .input-group {
+  border: 1px solid #CCC;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.register form .form-control {
+  height: 47px;
+  /* padding: 27px; */
+  background-color: #EEEEEE;
+  border-radius: 3px;
+  box-shadow: none;
+  font-size: 12px;
+  margin-left: 61px;
+  width: 290px;
+}
+
+.register form .input-group .form-control {
+  height: 47px;
+  padding: 12px;
+  background-color: #EEEEEE;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/*.signup-login-screen form .input-group .input-group-addon {
+  border: 0;
+  border-radius: 0;
+}*/
+.modal-signup form .checkbox label {
+  font-size: .68em;
+  line-height: 20px;
+}
+
+.modal-login form p {
+  font-size: 0.9em;
+  margin: 0;
+}
+
+/*.register .row {
+    margin-right: -7px;
+    margin-left: -7px;
+}*/
+/*.register .col-md-3,
+.welcome .col-md-6,
+.welcome .col-md-9 {
+  padding-right: 7px;
+  padding-left: 7px;
+}
+*/
+.register .btn-primary {
+  font-size: 1.8em;
+  border: none;
+  font-weight: 500;
+  background: #f38375;
+  /*margin-top:20px;*/
+  padding: 5px 8px 5px 6px;
+  font-family: Regular;
+  width: 136px;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0 !important;
+  background-color: #000;
+}
+
+#div_id_name, #div_id_email {
+  font-family: Regular;
+  font-size: 2.0rem;
+  color: white;
+  line-height: 3rem;
+}
+
+.close {
+  opacity: 1;
+  position: absolute;
+  top: 10px;
+  right: 19px;
+}
+
+.control-labels {
+  display: none;
+}
+
+.welcome {
+  height: 500px;
+  background: #F2777A;
+}
+
+.modal--heading {
+  font-family: Bold;
+  font-size: 2.9rem;
+  text-align: center;
+  margin: 0px 0px 30px 0px;
+  letter-spacing: 0.02rem;
+}
+
+.register {
+  height: 500px;
+  /*padding:35px;*/
+  background: #fffff;
+}
+
+.control-label {
+  display: none;
+}
+
+.welcome h1 {
+  padding-top: 40px;
+}
+
+#error_id_name, #error_id_email {
+  color: #e21515 !important;
+  font-size: 1.7rem;
+  margin-left: 60px;
+}
+
+.reg-form {
+  margin-top: 160px;
+  font-family: Regular;
+  font-size: 2rem;
+}
+
+hr {
+  margin-top: 9px;
+  margin-bottom: 20px;
+  border: 0;
+  width: 40%;
+  padding: 14px;
+  border-top: 12px solid #f4f4f4;
+}
+
 .section--about {
   height: auto;
   max-height: none;
@@ -795,241 +1032,4 @@ a:active {
 @font-face {
   font-family: "Bold";
   src: url("../fonts/proximanova-bold-webfont.eot?") format("eot"), url("../fonts/proximanova-bold-webfont.woff") format("woff"), url("../fonts/proximanova-bold-webfont.ttf") format("truetype"), url("../fonts/proximanova-bold-webfont.svg#Bold") format("svg");
-}
-
-.modal {
-    position: fixed;
-    top: -50px;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 0;
-    display: none;
-    overflow: hidden;
-    -webkit-overflow-scrolling: touch;
-    outline: 0;
-}
-
-
-.fade {
-    opacity: 0;
-    -webkit-transition: opacity .15s linear;
-    -o-transition: opacity .15s linear;
-    transition: opacity .15s linear;
-}
-.modal-signup .modal-dialog,
-.modal-dialog {
-  width: 768px !important;
-  margin-top: 120px;
-  /*display: -webkit-box;*/
-}
-
-.modal-signup .modal-content,
- .modal-content {
-  position: relative;
-  box-shadow: none;
-  overflow: hidden;
-  border: 0;
-}
-.modal-signup .modal-content .welcome-screen,
-.modal-content .welcome-screen  {
-  width: 324px;
-  float: left;
-  display: block;
-  background-color: #F38375;
-  color: #ffffff;
-  padding: 35px 40px;
-  height: 100%;
-  position: absolute;
-  /* border-radius: 7px 0 0 7px; */
-}
-
-.welcome ul {
-  
-position: absolute;
-  
-bottom: 35px;
-font-family: Regular;
-color: #fff;
-}
-
-.welcome ul > li {
-  font-size: 1.8em;
-    padding: 12px;
-    line-height: 22px;
-}
-
-.welcome ul > li:before {
-  font: normal normal normal 14px/1 FontAwesome;
-  content: "\f05d";
-  margin-right: 10px;
-}
-
-
-
-.modal-signup h3,
-.modal-login h3 {
-  margin: 0;
-  font-weight: 500;
-}
-
-/*.dash-rl {
-  display: inline-block;
-  position: relative;
-  text-align: center;
-  width: 100%;
-  font-size: 10px;
-  color: #CCC;
-  margin: 7px 0;
-}
-.dash-rl:before,
-.dash-rl:after {
-  content: "";
-  position: absolute;
-  border-top: 1px solid #CCC;
-  top: 7px;
-  width: 47%;
-}
-.dash-rl:before {
-  right: 53%;
-}
-.dash-rl:after {
-  left: 53%;
-}*/
-
-.register form {
-  margin-top: 30px;
-  margin-bottom: 0;
-}
-
-
-
-.register .input-group {
-  border: 1px solid #CCC;
-  border-radius: 3px;
-  overflow: hidden;
-}
-
-.register form .form-control {
-        height: 47px;
-    /* padding: 27px; */
-    background-color: #EEEEEE;
-    border-radius: 3px;
-    box-shadow: none;
-    font-size: 12px;
-    margin-left: 61px;
-    width: 290px;
-}
-
-.register form .input-group .form-control {
-    height: 47px;
-    padding: 12px;
-    background-color: #EEEEEE;
-    border: 0;
-    border-radius: 0;
-    box-shadow: none;
-}
-
-/*.signup-login-screen form .input-group .input-group-addon {
-  border: 0;
-  border-radius: 0;
-}*/
-.modal-signup form .checkbox label {
-    font-size: .68em;
-    line-height: 20px;
-}
-
-
-
-
-.modal-login form  p {
-  font-size: 0.9em;
-  margin: 0;
-}
-
-
-/*.register .row {
-    margin-right: -7px;
-    margin-left: -7px;
-}*/
-
-/*.register .col-md-3,
-.welcome .col-md-6,
-.welcome .col-md-9 {
-  padding-right: 7px;
-  padding-left: 7px;
-}
-*/
-.register .btn-primary {
-font-size: 1.8em;
-    border: none;
-    font-weight: 500;
-    background: #f38375;
-    /*margin-top:20px;*/
-    padding: 5px 8px 5px 6px;
-    font-family: Regular;
-    width:136px;
-}
-
-.modal-backdrop {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-     z-index: 0 !important; 
-    background-color: #000;
-}
-
-#div_id_name, #div_id_email{
-   font-family: Regular;
-  font-size: 2.0rem;
-  color: white;
-  line-height: 3rem;
-}
-
-.close{
-  opacity: 1;
-      position: absolute;
-    top: 10px;
-    right: 19px;
-}
-
-.control-labels{
-  display: none;
-}
-
-.welcome{
-  height: 500px;
-  background: #F2777A;
-}
-
-.modal--heading{
-
-    font-family: Bold;
-    font-size: 2.9rem;
-    text-align: center;
-     margin: 0px 0px 30px 0px; 
-     letter-spacing: 0.02rem; 
-}
-
-.register{
-
-  height: 500px;
-  /*padding:35px;*/
-  background: #fffff;
-
-}
-
-.control-label{
-  display: none;
-}
-.welcome h1{
-padding-top: 40px;
-}
-
-#error_id_name, #error_id_email {
-  color:#e21515 !important;
-  font-size:1.7rem;
-  margin-left:60px;
 }
