@@ -467,7 +467,7 @@ body {
   background-color: #000;
 }
 
-#div_id_name, #div_id_email {
+.register .form-group {
   font-family: Regular;
   font-size: 2.0rem;
   color: white;
@@ -481,7 +481,7 @@ body {
   right: 19px;
 }
 
-.control-labels {
+.register .control-label {
   display: none;
 }
 
@@ -504,10 +504,6 @@ body {
   background: #fffff;
 }
 
-.control-label {
-  display: none;
-}
-
 .welcome h1 {
   padding-top: 40px;
 }
@@ -528,9 +524,73 @@ hr {
   margin-top: 9px;
   margin-bottom: 20px;
   border: 0;
-  width: 40%;
+  width: 45%;
   padding: 14px;
-  border-top: 12px solid #f4f4f4;
+  border-top: 12px solid #F2777A;
+}
+
+.registration-form {
+  background: linear-gradient(10deg, #50c4d6 0%, #5271d1 100%);
+}
+
+.registration-form .form-control {
+  width: 100%;
+  height: 44px;
+  padding: 12px 18px;
+  font-family: Regular;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #5277d1;
+  border-radius: 6px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.registration-form textarea.form-control {
+  height: auto;
+}
+
+.regheader {
+  width: 100vw;
+  position: fixed;
+  height: 17vh;
+  top: 3%;
+  background: #50a6d4;
+  z-index: 1000;
+  padding-top: 53px;
+  padding-left: 40%;
+}
+
+.regheader li {
+  margin-right: 10px !important;
+  font-size: 4rem;
+}
+
+.regheader .social_icon {
+  font-size: 3rem !important;
+}
+
+.teamdata {
+  position: fixed;
+  font-family: Regular;
+  color: beige;
+  font-size: 2.4rem;
+}
+
+.btn-submit {
+  color: #fff;
+  background-color: #337ab7;
+  font-size: 1.2em;
+  border: none;
+  font-weight: 500;
+  background: #f38375;
+  margin-top: 20px;
+  padding: 5px 8px 5px 8px;
+  font-family: Regular;
+  width: 140px;
 }
 
 .section--about {

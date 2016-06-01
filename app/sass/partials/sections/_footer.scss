@@ -29,11 +29,15 @@ background: -o-linear-gradient(0deg, rgba(80,196,214,1) 0%, rgba(82,113,209,1) 1
 background: -ms-linear-gradient(0deg, rgba(80,196,214,1) 0%, rgba(82,113,209,1) 100%); /* ie10+ */
 background: linear-gradient(90deg, rgba(80,196,214,1) 0%, rgba(82,113,209,1) 100%); /* w3c */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#50c4d6', endColorstr='#5271d1',GradientType=1 ); /* ie6-9 */
-padding: 20px 0 10px 0;
+padding: 20px 0 20px 0;
 
 	a
 	{
 	color: #fff;
+	&:hover{
+	
+	color:#337ab7;
+	}
 	}
 
     .footer--text

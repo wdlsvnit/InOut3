@@ -68,9 +68,9 @@ function submitForm() {
                       if ($(".error_email").length > 0) {
                           $('.error_email').remove();
                           $("<div class='error_email'></div>").appendTo("#div_id_email");
-                          $(".error_email").append('<p id="error_id_email" class="section__content--text">This email is taken</p>');
+                          $(".error_email").append('<p id="error_id_email" class="section__content--text">Team with this Email already exists.</p>');
                       } else {
-                          $(".error_email").html('<p id="error_id_email" class="section__content--text">This email is taken</p>');
+                          $(".error_email").html('<p id="error_id_email" class="section__content--text">Team with this Email already exists.</p>');
                       }
                   }
 
@@ -87,9 +87,9 @@ function submitForm() {
                       if ($(".error_name").length > 0) {
                           $('.error_name').remove();
                           $("<div class='error_name'></div>").appendTo("#div_id_name");
-                          $(".error_name").append('<p id="error_id_name" class="section__content--text">This Team name is taken</p>');
+                          $(".error_name").append('<p id="error_id_name" class="section__content--text">Team with this Name already exists.</p>');
                       } else {
-                          $(".error_name").html('<p id="error_id_name" class="section__content--text">This Team name is taken</p>');
+                          $(".error_name").html('<p id="error_id_name" class="section__content--text">Team with this Name already exists.</p>');
                       }
                   }
 
