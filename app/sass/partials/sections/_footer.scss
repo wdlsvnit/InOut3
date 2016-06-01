@@ -5,6 +5,13 @@
     height: auto !important;
     max-height: auto !important;
     padding: 0 !important;
+    @include when(SMinus) {
+	min-width:auto;
+	}
+
+	@include when(XSMinus) {
+	min-width:auto;
+	}
 }
 
 .section--footer__logo 

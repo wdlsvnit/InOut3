@@ -55,7 +55,8 @@ function submitForm() {
       console.log(params);
       xhttp.onreadystatechange = function() {
           if (xhttp.readyState == 4 && xhttp.status == 200) {
- 
+  
+    
               data = JSON.parse(xhttp.responseText);
  
               if (data["success"] == 1) {
@@ -68,9 +69,12 @@ function submitForm() {
                       if ($(".error_email").length > 0) {
                           $('.error_email').remove();
                           $("<div class='error_email'></div>").appendTo("#div_id_email");
-                          $(".error_email").append('<p id="error_id_email" class="section__content--text">Team with this Email already exists.</p>');
+                          $(".error_email").append('<p id="error_id_email" class="section__content--text"></p>');
+                          document.getElementById("error_id_email").innerHTML = data["email"][0];
+
                       } else {
-                          $(".error_email").html('<p id="error_id_email" class="section__content--text">Team with this Email already exists.</p>');
+                            $(".error_email").append('<p id="error_id_email" class="section__content--text"></p>');
+                          document.getElementById("error_id_email").innerHTML = data["email"][0];
                       }
                   }
 
@@ -87,10 +91,12 @@ function submitForm() {
                       if ($(".error_name").length > 0) {
                           $('.error_name').remove();
                           $("<div class='error_name'></div>").appendTo("#div_id_name");
-                          $(".error_name").append('<p id="error_id_name" class="section__content--text">Team with this Name already exists.</p>');
+                           $(".error_name").append('<p id="error_id_name" class="section__content--text"></p>');
+                          document.getElementById("error_id_name").innerHTML = data["name"][0];
+
                       } else {
-                          $(".error_name").html('<p id="error_id_name" class="section__content--text">Team with this Name already exists.</p>');
-                      }
+                          $(".error_name").append('<p id="error_id_name" class="section__content--text"></p>');
+                          document.getElementById("error_id_name").innerHTML = data["name"][0];                      }
                   }
 
                   else

@@ -54,17 +54,32 @@
 {% block nav %}
 <!-- Detached navigation bar -->
 
-<!-- <ul class="regheaderleft section--home__social_links">
-      <li><a href = "https://twitter.com/inout_svnit" target = "_blank"><i class="fa fa-home fa-2x social_icon"></i></a></li>
- 
+<!-- <ul class="section--home__social_links regheader">
+<li><a href = "https://hackinout.co/" target = "_blank"><i class="fa fa-home fa-2x social_icon"></i></a></li>
+      <li><a href = "https://twitter.com/inout_svnit" target = "_blank"><i class="fa fa-twitter fa-2x social_icon"></i></a></li>
+      <li><a href = "https://www.facebook.com/inout.svnit" target = "_blank"><i class="fa fa-facebook fa-2x social_icon"></i></a></li>
+      <li><a href = "https://medium.com/@InOut" target = "_blank"><i class="fa fa-medium fa-2x social_icon"></i></a></li>
       </ul> -->
 
-<ul class="section--home__social_links regheader">
+
+   <div class="container-fluid header">
+                            <div class="row">
+                               
+
+                                   <ul class="section--home__social_links regheader">
 <li><a href = "https://hackinout.co/" target = "_blank"><i class="fa fa-home fa-2x social_icon"></i></a></li>
       <li><a href = "https://twitter.com/inout_svnit" target = "_blank"><i class="fa fa-twitter fa-2x social_icon"></i></a></li>
       <li><a href = "https://www.facebook.com/inout.svnit" target = "_blank"><i class="fa fa-facebook fa-2x social_icon"></i></a></li>
       <li><a href = "https://medium.com/@InOut" target = "_blank"><i class="fa fa-medium fa-2x social_icon"></i></a></li>
       </ul>
+                                
+                                    </div>
+                                    </div>
+
+
+
+
+
 
 {% endblock %}
 
@@ -82,7 +97,7 @@
 <div class="col-lg-3">
 <div class="teamdata"> 
 
-<center><img src="http://howtheworldseesyou.com/wp-content/uploads/2015/01/Team-Members-Icon.png" width="30%"></center>
+<center><img src="{% static "inout/images/Registerteam.png" %}" width="auto"></center>
 
  <center><h1 class = "title">{{team_name}}</h1>
  <h1>Registered participants:</h2>
