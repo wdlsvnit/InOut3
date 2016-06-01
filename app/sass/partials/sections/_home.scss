@@ -429,12 +429,7 @@ width: 100vw;
 	font-size:3rem !important;
 
 }
-.teamdata{
-	position: fixed;
-    font-family: Regular;
-    color: beige;
-    font-size: 2.4rem;
-}
+
 
 .btn-submit{
     color: #fff;
@@ -447,5 +442,34 @@ width: 100vw;
     padding: 5px 8px 5px 8px;
     font-family: Regular;
     width: 140px;
+
+}
+
+
+
+
+
+.teamdata {
+	position: fixed;
+    font-family: Regular;
+    color: beige;
+    font-size: 2.4rem;
+
+	@include when(SMinus) {
+	position:relative !important;
+	}
+
+	@include when(XSMinus) {
+	position:relative !important;
+	}
+
+	@include when(LMinus) {
+	position:relative !important;
+	}
+	
+	@media screen and (max-width : $third_breakpoint) {
+					position:relative !important;
+				}
+
 
 }
