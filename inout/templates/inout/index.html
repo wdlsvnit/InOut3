@@ -31,11 +31,12 @@ id="doregister" data-toggle="modal" data-target=".modal-signup" >Apply now</a> -
           {% endif %}
       <h3 class="section--home__heading_location">13-14 AUGUST, NIT SURAT</h3>
 
-<div class="col-lg-12 modal fade modal-signup" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="display: none;">
+<div class="row">
+<div class="col-lg-12 col-xs-12 modal fade modal-signup" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="display: none;">
     <div class="modal-dialog">
-      <div class="modal-content">
-
-        <div class="col-lg-5 welcome">
+      <div class="modal-content col-lg-12">
+      <div class="row">
+        <div class="col-lg-5 col-xs-12 welcome">
 
           <h1 class="modal--heading">Welcome Hackers</h1>
           <ul class="list-unstyled">
@@ -60,7 +61,7 @@ id="doregister" data-toggle="modal" data-target=".modal-signup" >Apply now</a> -
         
        <!--  </div> -->
 
-            <form method="post" action="/new/" enctype="multipart/form-data" class="bootstrap3">
+            <form method="post" action="/new/" class="text-center col-lg-10 col-lg-offset-1 col-sm-6 col-sm-offset-3 col-xs-12" enctype="multipart/form-data" class="bootstrap3">
   {% csrf_token %}
 {{ form|crispy}}
 <center>
@@ -70,7 +71,13 @@ id="doregister" data-toggle="modal" data-target=".modal-signup" >Apply now</a> -
                     <!--  </form> -->
         </div>
       </div>
+
+
+
+      </div>
     </div>
+  </div>
+
   </div>
 <!-- form end -->
 

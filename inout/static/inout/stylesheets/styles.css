@@ -808,7 +808,7 @@ a:active {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 0;
+  z-index: 1200;
   display: none;
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
@@ -824,7 +824,12 @@ a:active {
 .modal-dialog {
   width: 768px !important;
   margin-top: 120px;
-  /*display: -webkit-box;*/
+}
+@media only screen and (max-width: 453px) {
+  .modal-signup .modal-dialog,
+  .modal-dialog {
+    width: 90vw !important;
+  }
 }
 
 .modal-signup .modal-content,
@@ -833,6 +838,12 @@ a:active {
   box-shadow: none;
   overflow: hidden;
   border: 0;
+}
+@media (min-width: 454px) and (max-width: 767px) {
+  .modal-signup .modal-content,
+  .modal-content {
+    width: 90vw;
+  }
 }
 
 .modal-signup .modal-content .welcome-screen,
@@ -848,57 +859,25 @@ a:active {
   /* border-radius: 7px 0 0 7px; */
 }
 
-.welcome ul {
-  position: absolute;
-  bottom: 35px;
-  font-family: Regular;
-  color: #fff;
-}
-
-.welcome ul > li {
-  font-size: 1.8em;
-  padding: 12px;
-  line-height: 22px;
-}
-
-.welcome ul > li:before {
-  font: normal normal normal 14px/1 FontAwesome;
-  content: "\f05d";
-  margin-right: 10px;
-}
-
 .modal-signup h3,
 .modal-login h3 {
   margin: 0;
   font-weight: 500;
 }
 
-/*.dash-rl {
-  display: inline-block;
-  position: relative;
-  text-align: center;
-  width: 100%;
-  font-size: 10px;
-  color: #CCC;
-  margin: 7px 0;
-}
-.dash-rl:before,
-.dash-rl:after {
-  content: "";
-  position: absolute;
-  border-top: 1px solid #CCC;
-  top: 7px;
-  width: 47%;
-}
-.dash-rl:before {
-  right: 53%;
-}
-.dash-rl:after {
-  left: 53%;
-}*/
 .register form {
   margin-top: 30px;
   margin-bottom: 0;
+}
+@media (min-width: 454px) and (max-width: 767px) {
+  .register form {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+    width: 100%;
+  }
 }
 
 .register .input-group {
@@ -912,10 +891,11 @@ a:active {
   /* padding: 27px; */
   background-color: #EEEEEE;
   border-radius: 3px;
+  font-family: Regular;
+  font-size: 1.8rem;
   box-shadow: none;
-  font-size: 12px;
-  margin-left: 61px;
-  width: 290px;
+  /*margin-left: 61px;*/
+  /*width: 290px;*/
 }
 
 .register form .input-group .form-control {
@@ -927,10 +907,6 @@ a:active {
   box-shadow: none;
 }
 
-/*.signup-login-screen form .input-group .input-group-addon {
-  border: 0;
-  border-radius: 0;
-}*/
 .modal-signup form .checkbox label {
   font-size: .68em;
   line-height: 20px;
@@ -941,17 +917,6 @@ a:active {
   margin: 0;
 }
 
-/*.register .row {
-    margin-right: -7px;
-    margin-left: -7px;
-}*/
-/*.register .col-md-3,
-.welcome .col-md-6,
-.welcome .col-md-9 {
-  padding-right: 7px;
-  padding-left: 7px;
-}
-*/
 .register .btn-primary {
   font-size: 1.8em;
   border: none;
@@ -961,6 +926,7 @@ a:active {
   padding: 5px 8px 5px 6px;
   font-family: Regular;
   width: 136px;
+  margin-bottom: 13px;
 }
 
 .modal-backdrop {
@@ -991,16 +957,11 @@ a:active {
   display: none;
 }
 
-.welcome {
-  height: 500px;
-  background: #F2777A;
-}
-
 .modal--heading {
   font-family: Bold;
   font-size: 2.9rem;
   text-align: center;
-  margin: 0px 0px 30px 0px;
+  margin: 0px 0px 10px 0px;
   letter-spacing: 0.02rem;
 }
 
@@ -1009,18 +970,56 @@ a:active {
   padding-top: 60px;
   background: #fffff;
 }
+@media only screen and (max-width: 453px) {
+  .register {
+    width: auto !important;
+  }
+}
 .register img {
   width: 218px;
 }
 
+.welcome {
+  height: 500px;
+  background: #F2777A;
+}
+@media only screen and (max-width: 453px) {
+  .welcome {
+    display: none;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .welcome {
+    display: none;
+  }
+}
 .welcome h1 {
   padding-top: 40px;
+}
+.welcome ul {
+  position: absolute;
+  bottom: 35px;
+  font-family: Regular;
+  color: #fff;
+}
+
+.welcome ul > li {
+  font-size: 1.8em;
+  padding: 12px;
+  line-height: 22px;
+}
+
+.welcome ul > li:before {
+  font: normal normal normal 14px/1 FontAwesome;
+  content: "\f05d";
+  margin-right: 10px;
 }
 
 #error_id_name, #error_id_email {
   color: #e21515 !important;
   font-size: 1.7rem;
-  margin-left: 60px;
+  text-align: left;
+  /* margin-left:60px;*/
 }
 
 .reg-form {

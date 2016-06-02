@@ -4,7 +4,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 0;
+    z-index: 1200;
     display: none;
     overflow: hidden;
     -webkit-overflow-scrolling: touch;
@@ -22,7 +22,9 @@
 .modal-dialog {
   width: 768px !important;
   margin-top: 120px;
-  /*display: -webkit-box;*/
+  @include when(XSMinus){
+  width:90vw !important;
+  }
 }
 
 .modal-signup .modal-content,
@@ -31,6 +33,10 @@
   box-shadow: none;
   overflow: hidden;
   border: 0;
+  @media (min-width: 454px) and (max-width: 767px){
+    width:90vw;
+    }
+
 }
 .modal-signup .modal-content .welcome-screen,
 .modal-content .welcome-screen  {
@@ -45,26 +51,7 @@
   /* border-radius: 7px 0 0 7px; */
 }
 
-.welcome ul {
-  
-position: absolute;
-  
-bottom: 35px;
-font-family: Regular;
-color: #fff;
-}
 
-.welcome ul > li {
-  font-size: 1.8em;
-    padding: 12px;
-    line-height: 22px;
-}
-
-.welcome ul > li:before {
-  font: normal normal normal 14px/1 FontAwesome;
-  content: "\f05d";
-  margin-right: 10px;
-}
 
 
 
@@ -74,33 +61,19 @@ color: #fff;
   font-weight: 500;
 }
 
-/*.dash-rl {
-  display: inline-block;
-  position: relative;
-  text-align: center;
-  width: 100%;
-  font-size: 10px;
-  color: #CCC;
-  margin: 7px 0;
-}
-.dash-rl:before,
-.dash-rl:after {
-  content: "";
-  position: absolute;
-  border-top: 1px solid #CCC;
-  top: 7px;
-  width: 47%;
-}
-.dash-rl:before {
-  right: 53%;
-}
-.dash-rl:after {
-  left: 53%;
-}*/
+
 
 .register form {
   margin-top: 30px;
   margin-bottom: 0;
+@media (min-width: 454px) and (max-width: 767px){
+          position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float:left;
+    width:100%;
+    }
 }
 
 
@@ -116,10 +89,11 @@ color: #fff;
     /* padding: 27px; */
     background-color: #EEEEEE;
     border-radius: 3px;
+    font-family: Regular;
+    font-size: 1.8rem;
     box-shadow: none;
-    font-size: 12px;
-    margin-left: 61px;
-    width: 290px;
+    /*margin-left: 61px;*/
+    /*width: 290px;*/
 }
 
 .register form .input-group .form-control {
@@ -131,10 +105,7 @@ color: #fff;
     box-shadow: none;
 }
 
-/*.signup-login-screen form .input-group .input-group-addon {
-  border: 0;
-  border-radius: 0;
-}*/
+
 .modal-signup form .checkbox label {
     font-size: .68em;
     line-height: 20px;
@@ -149,18 +120,7 @@ color: #fff;
 }
 
 
-/*.register .row {
-    margin-right: -7px;
-    margin-left: -7px;
-}*/
 
-/*.register .col-md-3,
-.welcome .col-md-6,
-.welcome .col-md-9 {
-  padding-right: 7px;
-  padding-left: 7px;
-}
-*/
 .register .btn-primary {
 font-size: 1.8em;
     border: none;
@@ -170,6 +130,7 @@ font-size: 1.8em;
     padding: 5px 8px 5px 6px;
     font-family: Regular;
     width:136px;
+    margin-bottom:13px;
 }
 
 .modal-backdrop {
@@ -200,17 +161,14 @@ font-size: 1.8em;
   display: none;
 }
 
-.welcome{
-  height: 500px;
-  background: #F2777A;
-}
+
 
 .modal--heading{
 
     font-family: Bold;
     font-size: 2.9rem;
     text-align: center;
-     margin: 0px 0px 30px 0px; 
+     margin: 0px 0px 10px 0px; 
      letter-spacing: 0.02rem; 
 }
 
@@ -219,22 +177,60 @@ font-size: 1.8em;
   height: 500px;
   padding-top:60px;
   background: #fffff;
+
+  @include when(XSMinus){
+  width:auto !important;
+  }
+ 
  img{
  width:218px;
  }
 }
 
 
-
-
-.welcome h1{
-padding-top: 40px;
+.welcome{
+  height: 500px;
+  background: #F2777A;
+  @include when(XSMinus){
+  display:none;
+  }
+   @include when(SMinus){
+  display:none;
+  }
+  h1
+  {
+  padding-top: 40px;
+  }
+  ul 
+  {
+  position: absolute;
+  bottom: 35px;
+  font-family: Regular;
+  color: #fff;
+  }
 }
+
+
+
+.welcome ul > li {
+  font-size: 1.8em;
+    padding: 12px;
+    line-height: 22px;
+}
+
+.welcome ul > li:before {
+  font: normal normal normal 14px/1 FontAwesome;
+  content: "\f05d";
+  margin-right: 10px;
+}
+
+
 
 #error_id_name, #error_id_email {
   color:#e21515 !important;
   font-size:1.7rem;
-  margin-left:60px;
+  text-align:left;
+ /* margin-left:60px;*/
 }
 
 .reg-form{
