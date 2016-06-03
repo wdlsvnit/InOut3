@@ -3,6 +3,7 @@ module.exports = {
 	output: {
 		filename: './inout/static/inout/js/bundle.js'
 	},
+	watch:true,
 	module: {
 		loaders: [
 			{
