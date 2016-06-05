@@ -29,4 +29,4 @@ requests==2.7.0
 requests-oauthlib==0.5.0
 sparkpost==1.2.0
 sqlparse==0.1.16
-razorpay==0.1.0
+razorpay==0.1.3
