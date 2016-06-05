@@ -27,8 +27,9 @@ urlpatterns = [
     #url(r'^accounts/profile/$',UserDash),
     #url(r'^accounts/logout/$',logout_view),
     #url(r'^accounts/', include('allaccess.urls')),
-    url(r'^$',Index),
+    url(r'^$',home_view),
     url(r'^new/(?P<team_url_id>(\w{6}))/$',team_view),
     url(r'^new/$',home_view, name='new'),
-    url(r'^closed/',closed,name='closed')
+    url(r'^closed/',closed,name='closed'),
+    url(r'^sponsorship/',include('sponsorship.urls'))
 ]

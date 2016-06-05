@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     'inout',
     'crispy_forms',
     'django_object_actions',
+    'sponsorship',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -178,3 +179,6 @@ SPARKPOST_OPTIONS = {
 
 
 EMAIL_BACKEND = 'sparkpost.django.email_backend.SparkPostEmailBackend'
+
+RAZORPAY_KEY_ID = 'rzp_test_M3fhRvVHaEVv6e'
+RAZORPAY_KEY_SECRET = 'i3cbwGle4o5ax39xFWfIhMh0'

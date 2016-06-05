@@ -44,6 +44,7 @@ INSTALLED_APPS = (
     'inout',
     'crispy_forms',
     'django_object_actions',
+    'sponsorship',
 )
 
 INSTALLED_APPS += (
@@ -165,3 +166,6 @@ SPARKPOST_OPTIONS = {
 
 SPARKPOST_API_KEY = os.environ['SPARKPOST_API_KEY']
 EMAIL_BACKEND = 'sparkpost.django.email_backend.SparkPostEmailBackend'
+
+RAZORPAY_KEY_ID = os.environ['RAZORPAY_KEY_ID']
+RAZORPAY_KEY_SECRET = os.environ['RAZORPAY_KEY_SECRET']

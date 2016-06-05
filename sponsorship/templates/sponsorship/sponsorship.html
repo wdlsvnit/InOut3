@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="section--home" id="inout">
+    <div class="bg-pattern-back">
+            <div class="bg-pattern-front">
+                <div class="bg-gradient">
+
+    <ul class="section--home__social_links">
+      <li><a href = "https://twitter.com/inout_svnit" target = "_blank"><i class="fa fa-twitter fa-2x social_icon"></i></a></li>
+      <li><a href = "https://www.facebook.com/inout.svnit" target = "_blank"><i class="fa fa-facebook fa-2x social_icon"></i></a></li>
+      <li><a href = "https://medium.com/@InOut" target = "_blank"><i class="fa fa-medium fa-2x social_icon"></i></a></li>
+      </ul> <!-- End of social_links -->
+     <!--  <img src="images/pattern_brackets_home.png" alt="Brackets all over" class = "section--home__pattern_brackets"> -->
+      <div class="section--home__logo"></div>
+      <!-- Apply now button -->
+        
+          <a class = "section--home__button_apply" id="doregister" class="text-uppercase"  data-toggle="modal" data-target=".modal-signup">APPLY NOW</a>
+
+      <h3 class="section--home__heading_location">13-14 AUGUST, NIT SURAT</h3>
+     <center class = "section--home__button_apply" >  <p>  {{ success }}</p>
+{% if sponsor %}
+<form action="/sponsorship/pay/{{sponsor.id}}/" method="POST">
+<!-- Note that the amount is in paise 5000 = 50 INR -->
+<script
+    src="https://checkout.razorpay.com/v1/checkout.js"
+    data-key="rzp_test_M3fhRvVHaEVv6e"
+    data-amount="{{sponsor.sponsorship_amount}}"
+    data-buttontext="Pay with Razorpay"
+    data-name="InOut 3.0"
+    data-description="InOut sponsorship."
+    data-image="https://hackinout.co/static/inout/images/main_inout_logo.png"
+    data-prefill.name="{{ sponsor.name }}"
+    data-prefill.email="{{ sponsor.email }}"
+    data-theme.color="#6C9DE1"
+></script>
+{% csrf_token %}
+
+</form></center>
+{% endif %}
+</div><!-- .bg-gradient -->
+    </div>       <!-- .bg-pattern-front -->
+ </div>      <!-- .bg-pattern-back -->
+
+    </div>
+
+    <!-- End of Home Section -->
+{% endblock %}
+
+

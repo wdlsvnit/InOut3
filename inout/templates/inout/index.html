@@ -17,18 +17,9 @@
      <!--  <img src="images/pattern_brackets_home.png" alt="Brackets all over" class = "section--home__pattern_brackets"> -->
       <div class="section--home__logo"></div>
       <!-- Apply now button -->
-          {% if user and not app_status %}
-          <a class = "section--home__button_apply">Under review</a>
-          {% elif user and app_status %}
-          <a class = "section--home__button_apply">Approved</a>
-          {% else %}
+        
           <a class = "section--home__button_apply" id="doregister" class="text-uppercase"  data-toggle="modal" data-target=".modal-signup">APPLY NOW</a>
 
-
-<!-- <a class = "section--home__button_apply text-uppercase"
-id="doregister" data-toggle="modal" data-target=".modal-signup" >Apply now</a> -->
-
-          {% endif %}
       <h3 class="section--home__heading_location">13-14 AUGUST, NIT SURAT</h3>
 
 <div class="row">
