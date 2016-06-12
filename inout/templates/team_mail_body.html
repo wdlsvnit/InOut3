@@ -106,7 +106,7 @@
   @tip Set the background color and top border for your email. You may want to choose colors that match your company's branding.
   */
     body,#bodyTable{
-      /*@editable*/background-color:#61636f;
+      /*@editable*/background-color:#f4f8ff;
     }
   /*
   @tab Page
@@ -252,7 +252,7 @@
   @tip Set the styling for your email's header links. Choose a color that helps them stand out from your text.
   */
     #templateHeader .mcnTextContent a,#templateHeader .mcnTextContent p a{
-      /*@editable*/color:#2BAADF;
+      /*@editable*/color:#434d60;
       /*@editable*/font-weight:normal;
       /*@editable*/text-decoration:underline;
     }
@@ -262,7 +262,7 @@
   @tip Set the background color and borders for your email's body area.
   */
     #templateBody{
-      /*@editable*/background-color:#323440;
+      /*@editable*/background-color:#f4f8ff;
       /*@editable*/border-top:0;
       /*@editable*/border-bottom:2px solid #EAEAEA;
       /*@editable*/padding-top:0;
@@ -286,7 +286,7 @@
   @tip Set the styling for your email's body links. Choose a color that helps them stand out from your text.
   */
     #templateBody .mcnTextContent a,#templateBody .mcnTextContent p a{
-      /*@editable*/color:#2BAADF;
+      /*@editable*/color:#434d60;
       /*@editable*/font-weight:normal;
       /*@editable*/text-decoration:underline;
     }
@@ -296,7 +296,7 @@
   @tip Set the background color and borders for your email's footer area.
   */
     #templateFooter{
-      /*@editable*/background-color:#FAFAFA;
+      /*@editable*/background-color:#f4f8ff;
       /*@editable*/border-top:0;
       /*@editable*/border-bottom:0;
       /*@editable*/padding-top:9px;
@@ -544,10 +544,10 @@
                 <td valign="top" style="padding:0px" class="mcnImageBlockInner">
                     <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" class="mcnImageContentContainer" style="min-width:100%;">
                         <tbody><tr>
-                            <td class="mcnImageContent" valign="top" style="padding-right: 0px; padding-left: 0px; padding-top: 0; padding-bottom: 0; text-align:center;">
+                            <td class="mcnImageContent" valign="top" style="padding-right: 0px; padding-left: 0px; padding-top: 0; padding-bottom: 0; text-align:center;                                                                                                                                                                                                                                                                                                                                                                                                                ">
 
 
-                                        <img align="center" alt="" src="https://gallery.mailchimp.com/92edaf8cceb48367de8440317/images/7e86c533-65b8-47f3-bd29-6e9c17977fdd.png" width="600" style="max-width:636px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                        <img align="center" alt="" src="./../static/inout/images/mail/email.png" width="600" style="max-width:636px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
 
 
                             </td>
@@ -569,12 +569,10 @@
 
                         <td valign="top" class="mcnTextContent" style="padding: 9px 18px;color: #FFFFFF;">
 
-                            <h1 style="text-align: center;"><font color="#ffffff">Congratulations {{ team_name }}!</font></h1>
+                            <h2 style="text-align: center;"><font color="#434d60">Congratulations your team&nbsp;{{ team_name }} has been successfully registered!</font></h2>
 
-<p style="text-align: center;color: #FFFFFF;">
-You have successfully registered  your team for InOut.
-Please follow this link for completing participant registration https://hackinout.co/new/{{team_url}} .
-Share the above url with your team members so that they can complete their registration.</p>
+<p style="text-align: center;color: #434d60;">You are now one step closer to attending InOut.</p>
+
                         </td>
                     </tr>
                 </tbody></table>
@@ -628,7 +626,7 @@ Share the above url with your team members so that they can complete their regis
 
                         <td valign="top" class="mcnTextContent" style="padding-top:9px; padding-right: 18px; padding-bottom: 9px; padding-left: 18px;">
 
-                            <span style="color:#FFFFFF"></span><br>
+                            <span style="color:#434d60">Now it’s time for you as a member of {{ team_name }} to register yourself. Click the below link to do just that. Don’t keep us waiting!</span><br>
 &nbsp;
                         </td>
                     </tr>
@@ -645,7 +643,7 @@ Share the above url with your team members so that they can complete their regis
                     <tbody>
                         <tr>
                             <td align="center" valign="middle" class="mcnButtonContent" style="font-family: Arial; font-size: 16px; padding: 15px;">
-                                <a class="mcnButton " title="RSVP Now" href="https://inout-rsvp.typeform.com/to/p11rht" target="_blank" style="font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">RSVP Now</a>
+                                <a class="mcnButton " title="RSVP Now" href="https://hackinout.co/new/{{ team_url }}" target="_blank" style="font-weight: bold;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">Team Registration</a>
                             </td>
                         </tr>
                     </tbody>
@@ -664,15 +662,13 @@ Share the above url with your team members so that they can complete their regis
                         <td valign="top" class="mcnTextContent" style="padding: 9px 18px; line-height: normal;">
 
                             <br>
-<span style="color:#FFFFFF"><span style="line-height:20.8px">If for any reason you're not able to, your spot will be given to the next hacker in the wait list.<br>
+<span style="color:#434d60"><span style="line-height:20.8px">Share the same unique link with your potential team mates only to register them in your team. Remember there can be max 3 members in each team.<br>
 <br>
-We understand how vital documentations are while developing.&nbsp;</span><span style="line-height:20.8px">We have partnered with Kapeli</span><span style="line-height:20.8px">&nbsp;to&nbsp;make sure that you get to the docs you need as fast as possible.&nbsp;</span></span><a href="https://kapeli.com/inout" style="line-height: 20.8px;" target="_blank"><span style="color:#FFFFFF">Click here to download offline docs (13 MB)</span></a><span style="color:#FFFFFF"><span style="line-height:20.8px">&nbsp;.<br>
+If you have any questions or clarifications you can simply reply to this email or check out the FAQ section on our&nbsp;</span></span><strong style="line-height:20.8px"><a href="https://hackinout.co" target="_blank"><span style="color:#434d60">website</span></a></strong><span style="color:#434d60"><span style="line-height:20.8px">.</span><br>
 <br>
-If you have any questions or clarifications you can simply reply to this email or check out the FAQ section on our&nbsp;</span></span><strong style="line-height:20.8px"><a href="https://hackinout.co" target="_blank"><span style="color:#FFFFFF">website</span></a></strong><span style="color:#FFFFFF"><span style="line-height:20.8px">.</span><br>
+<span style="line-height:20.8px">Be sure to like our&nbsp;</span></span><strong style="line-height:20.8px"><a href="https://www.facebook.com/inout.svnit" target="_blank"><span style="color:#434d60">Facebook</span></a></strong><span style="line-height:20.8px"><span style="color:#434d60">&nbsp;page and follow us on </span><a href="https://twitter.com/InOut_SVNIT" target="_blank"><span style="color:#434d60">Twitter</span></a><span style="color:#434d60">&nbsp;to receive important updates.</span></span><br style="line-height: 20.8px;">
 <br>
-<span style="line-height:20.8px">Be sure to like our&nbsp;</span></span><strong style="line-height:20.8px"><a href="https://www.facebook.com/inout.svnit" target="_blank"><span style="color:#FFFFFF">Facebook</span></a></strong><span style="line-height:20.8px"><span style="color:#FFFFFF">&nbsp;page and follow us on </span><a href="https://twitter.com/InOut_SVNIT" target="_blank"><span style="color:#FFFFFF">Twitter</span></a><span style="color:#FFFFFF">&nbsp;to receive important updates.</span></span><br style="line-height: 20.8px;">
-<br>
-<span style="color:#FFFFFF"><span style="line-height:20.8px">Cheers!</span><br style="line-height: 20.8px;">
+<span style="color:#434d60"><span style="line-height:20.8px">Cheers!</span><br style="line-height: 20.8px;">
 <span style="line-height:20.8px">Team InOut</span></span>
                         </td>
                     </tr>
@@ -702,7 +698,8 @@ If you have any questions or clarifications you can simply reply to this email o
             </td>
         </tr>
     </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width:100%;">
+</table>
+<!-- <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageBlock" style="min-width:100%;">
     <tbody class="mcnImageBlockOuter">
             <tr>
                 <td valign="top" style="padding:9px" class="mcnImageBlockInner">
@@ -720,7 +717,8 @@ If you have any questions or clarifications you can simply reply to this email o
                 </td>
             </tr>
     </tbody>
-</table><table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnFollowBlock">
+</table> -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnFollowBlock">
     <tbody class="mcnFollowBlockOuter">
         <tr>
             <td align="center" valign="top" style="padding:9px" class="mcnFollowBlockInner">
@@ -784,14 +782,14 @@ If you have any questions or clarifications you can simply reply to this email o
 
                                                 <tbody><tr>
                                                     <td align="center" valign="top" class="mcnFollowIconContent" style="padding-right:0; padding-bottom:5px;">
-                                                        <a href="http://hackinout.co" target="_blank"><img src="http://cdn-images.mailchimp.com/icons/social-block-v2/dark-link-96.png" alt="Website" class="mcnFollowBlockIcon" width="48" style="width:48px; max-width:48px; display:block;"></a>
+                                                        <a href="https://hackinout.co" target="_blank"><img src="http://cdn-images.mailchimp.com/icons/social-block-v2/dark-link-96.png" alt="Website" class="mcnFollowBlockIcon" width="48" style="width:48px; max-width:48px; display:block;"></a>
                                                     </td>
                                                 </tr>
 
 
                                                 <tr>
                                                     <td align="center" valign="top" class="mcnFollowTextContent" style="padding-right:0; padding-bottom:9px;">
-                                                        <a href="http://hackinout.co" target="_blank" style="color: #656565;">Website</a>
+                                                        <a href="https://hackinout.co" target="_blank" style="color: #656565;">Website</a>
                                                     </td>
                                                 </tr>
 

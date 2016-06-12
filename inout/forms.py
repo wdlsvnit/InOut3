@@ -18,8 +18,8 @@ class TeamForm(forms.ModelForm):
         model = Team
         exclude = ['url_id','registration_date','application_status']
         widgets = {
-            'name': forms.TextInput(attrs={'placeholder':"Team name"}),
-            'email': forms.TextInput(attrs={'placeholder':"Team email"}),
+            'name': forms.TextInput(attrs={'placeholder':"Team Name"}),
+            'email': forms.TextInput(attrs={'placeholder':"Team Email"}),
         }
         error_messages = {
         'name' : {'max_length':"Team name can be maximum 30 characters.",},
