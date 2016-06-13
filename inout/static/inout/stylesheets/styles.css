@@ -156,7 +156,7 @@ body {
     background: url("../images/logo_inout_xsmall.png") no-repeat;
     position: absolute;
     top: 40%;
-    left: 50%;
+    left: 52%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -203,8 +203,9 @@ body {
 @media only screen and (max-width: 453px) {
   .section--home__heading_location {
     font-size: 1.4rem;
+    letter-spacing: 0.2px;
     position: absolute;
-    top: 54%;
+    top: 58%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -652,7 +653,7 @@ a:active {
   }
 }
 .section--sponsors p {
-  font-size: 2.3em;
+  font-size: 2.3rem;
   padding-bottom: 3pc;
   line-height: normal;
   color: #FEC537;
@@ -662,12 +663,12 @@ a:active {
 }
 @media screen and (max-width: 720px) {
   .section--sponsors p {
-    font-size: 1.5em;
+    font-size: 2.5rem;
   }
 }
 @media screen and (max-width: 410px) {
   .section--sponsors p {
-    font-size: 1.2em;
+    font-size: 2.2rem;
   }
 }
 .section--sponsors a {
@@ -684,16 +685,6 @@ a:active {
   height: auto !important;
   max-height: auto !important;
   padding: 0 !important;
-}
-@media only screen and (max-width: 575px) {
-  .section--footer {
-    min-width: auto;
-  }
-}
-@media only screen and (max-width: 453px) {
-  .section--footer {
-    min-width: auto;
-  }
 }
 
 .section--footer__logo {

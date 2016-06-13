@@ -93,7 +93,7 @@
 		
 
 		p {
-			font-size : 2.3em;
+			font-size : 2.3rem;
     		padding-bottom : 3pc;
     		line-height : normal;
     		color : #FEC537;
@@ -101,10 +101,10 @@
     		color : #303030;
     		margin-top : 40px;
 			@media screen and (max-width : $second_breakpoint) {
-				font-size : 1.5em;
+				font-size : 2.5rem;
 			}
 			@media screen and (max-width : 410px) {
-				font-size : 1.2em;
+				font-size : 2.2rem;
 			}
 
 		}

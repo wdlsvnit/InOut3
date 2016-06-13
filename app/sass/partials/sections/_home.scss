@@ -21,7 +21,7 @@
 		width: 352px;
 		height: 135px;
 		background: url('../images/logo_inout_xsmall.png') no-repeat;
-		@include centerer(true, true, 0%, -10%);
+		@include centerer(true, true, 2%, -10%);
 	}
 
 
@@ -51,7 +51,8 @@
 
 	@include when(XSMinus) {
 		font-size: 1.4rem;
-		@include centerer(true, true, 0%, 4%);
+		letter-spacing: 0.2px;
+		@include centerer(true, true, 0%, 8%);
 	}
 
 
