@@ -1,4 +1,5 @@
 from django import forms
+from django.utils.translation import ugettext_lazy as _
 
 from inout.models import InoutUserLink, Team, Participant
 
@@ -28,6 +29,13 @@ class ParticipantForm(forms.ModelForm):
     class Meta:
          model = Participant
          exclude = ['registration_date','team']
+         labels = {
+            'school': _('Institute'),
+        }
+         help_texts = {
+            'graduation': _('e.g. If passing in 2017 please enter your Graduation Date as 30/05/2017 .'),
+            'email':_('Participant email can be same as team email but should be unique for all participants.'),
+        }
          widgets = {
             'graduation':forms.TextInput(attrs={'type':'date'}),
             'date_of_birth':forms.TextInput(attrs={'type':'date'}),
