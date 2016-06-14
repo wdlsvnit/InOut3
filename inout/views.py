@@ -110,7 +110,7 @@ def team_view(request,team_url_id):
 def send_team_registration_email(team):
     team_name = team.name
     team_url  = team.url_id
-    subject = team_name +': Registration successfull !'
+    subject = team_name +': Team Registration successfull!'
     from_email = "Team InOut <"+settings.DEFAULT_FROM_EMAIL+">"
     to_email = [ team.email ]
     context = {
@@ -125,7 +125,7 @@ def send_team_registration_email(team):
 
 def send_participant_registration_email(participant):
     participant_name = participant.full_name
-    subject = participant_name +': Registration successfull !'
+    subject = participant_name +': Participant Registration successfull!'
     from_email = "Team InOut <"+settings.DEFAULT_FROM_EMAIL+">"
     to_email = [ participant.email ]
     context = {
