@@ -18,7 +18,7 @@ from django.contrib import admin
 
 from django.contrib.auth.decorators import login_required
 
-from inout.views import CustomCallback,UserDash,Index,logout_view,closed,home_view,team_view
+from inout.views import CustomCallback,UserDash,Index,logout_view,closed,home_view,team_view,campus
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -31,5 +31,6 @@ urlpatterns = [
     url(r'^new/(?P<team_url_id>(\w{6}))/$',team_view),
     url(r'^new/$',home_view, name='new'),
     url(r'^closed/',closed,name='closed'),
-    url(r'^sponsorship/',include('sponsorship.urls'))
+    url(r'^sponsorship/',include('sponsorship.urls')),
+    url(r'^campus/',campus, name="campus")
 ]

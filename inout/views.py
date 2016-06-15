@@ -317,3 +317,7 @@ class CustomCallback(OAuthCallback):
         new.participant = new_user
         new.save()
         return new_user
+
+
+def campus(request):
+        return render(request,'inout/campus.html')
