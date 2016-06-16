@@ -492,6 +492,17 @@ a:active {
   transition: all 0.5s;
 }
 
+@media only screen and (max-width: 575px) {
+  .xscol {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .xscol {
+    width: 100%;
+  }
+}
+
 .section--schedule {
   background-color: #34495e;
   max-height: none;

@@ -136,3 +136,13 @@ a:active {
   transform: rotate(0deg);
   transition: all 0.5s;
 }
+.xscol{
+
+  @include when(SMinus){
+  width:100%;
+  }
+
+  @include when(XSMinus){
+  width:100%;
+  }
+}
