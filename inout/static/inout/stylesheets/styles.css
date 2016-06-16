@@ -70,7 +70,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-size: 4rem;
   text-align: center;
   margin: 0px 0px 40px 0px;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.3rem;
 }
 @media only screen and (max-width: 575px) {
   .section__heading--about, .section__heading--faq, .section__heading--schedule, .section--sponsors .title {
@@ -355,6 +355,12 @@ body {
 
 .section__heading--faq {
   margin-bottom: 80px;
+}
+@media only screen and (max-width: 575px) {
+  .section__heading--faq {
+    margin-left: 50px;
+    width: 77%;
+  }
 }
 
 .wrap {

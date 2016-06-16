@@ -11,6 +11,10 @@
 .section__heading--faq {
   @extend %section__heading;
   margin-bottom : 80px;
+  @include when(SMinus) {
+  margin-left:50px;
+  width:77%;
+  }
 }
 
 .wrap {
@@ -141,7 +145,7 @@ a:active {
   @include when(SMinus){
   width:100%;
   }
-
+  
   @include when(XSMinus){
   width:100%;
   }
