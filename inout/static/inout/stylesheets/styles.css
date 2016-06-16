@@ -59,7 +59,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: 100vh;
   position: relative;
   max-height: 800px;
-  min-width: 450px;
+  min-width: 320px;
   overflow: hidden;
   padding-bottom: 150px;
 }
@@ -105,7 +105,7 @@ body {
   width: 70%;
   margin: 100px auto 0px auto;
 }
-@media only screen and (max-width: 453px) {
+@media only screen and (max-width: 350px) {
   .section__content {
     width: 88%;
   }
@@ -125,7 +125,7 @@ body {
   color: #FFFFFF;
 }
 
-@media only screen and (max-width: 453px) {
+@media only screen and (max-width: 350px) {
   .section--home {
     padding-bottom: 100px;
   }
@@ -149,7 +149,7 @@ body {
     background: url("../images/logo_inout_small.png") no-repeat;
   }
 }
-@media only screen and (max-width: 453px) {
+@media only screen and (max-width: 350px) {
   .section--home__logo {
     width: 352px;
     height: 135px;
@@ -188,6 +188,7 @@ body {
   font-size: 2rem;
   color: #fff;
   letter-spacing: 2px;
+  text-align: center;
 }
 @media only screen and (max-width: 575px) {
   .section--home__heading_location {
@@ -200,10 +201,12 @@ body {
     transform: translate(-50%, -50%);
   }
 }
-@media only screen and (max-width: 453px) {
+@media only screen and (max-width: 350px) {
   .section--home__heading_location {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    font-family: Regular;
     letter-spacing: 0.2px;
+    line-height: 15px;
     position: absolute;
     top: 58%;
     left: 50%;
@@ -302,7 +305,7 @@ body {
   max-height: none;
   background-color: #6C9DE1;
 }
-@media only screen and (max-width: 453px) {
+@media only screen and (max-width: 350px) {
   .section--about {
     padding-bottom: 100px;
   }
@@ -319,7 +322,7 @@ body {
   height: auto;
   max-height: none;
 }
-@media only screen and (max-width: 453px) {
+@media only screen and (max-width: 350px) {
   .section--faq {
     padding-bottom: 100px;
   }
@@ -469,7 +472,7 @@ a:active {
   max-height: none;
   height: auto;
 }
-@media only screen and (max-width: 453px) {
+@media only screen and (max-width: 350px) {
   .section--schedule {
     padding-bottom: 100px;
   }
@@ -488,7 +491,7 @@ a:active {
   margin-bottom: 30px;
   border-radius: 4px;
 }
-@media only screen and (max-width: 453px) {
+@media only screen and (max-width: 350px) {
   .schedule__heading--left, .schedule__heading--right {
     text-align: center;
   }
@@ -500,7 +503,7 @@ a:active {
   font-size: 2.4rem;
   margin: 0px 8px 0px 8px;
 }
-@media only screen and (max-width: 453px) {
+@media only screen and (max-width: 350px) {
   .schedule__item__icon, .schedule__item__time, .schedule__item__event {
     font-size: 1.90rem;
   }
@@ -514,10 +517,10 @@ a:active {
   background-color: #91A786;
 }
 
-@media only screen and (max-width: 453px) {
+@media only screen and (max-width: 350px) {
   .schedule__list {
     text-align: left;
-    margin-left: 10%;
+    margin-left: -10%;
   }
 }
 
@@ -526,6 +529,12 @@ a:active {
   background-repeat: no-repeat;
   background-position: 1.7% 50%;
   padding: 3px 0px 3px 10px;
+}
+@media only screen and (max-width: 350px) {
+  .schedule__item--morning, .schedule__item--noon, .schedule__item--evening, .schedule__item--night {
+    background-image: none !important;
+    padding: 3px 0px 3px 3px;
+  }
 }
 
 .schedule__item--morning {
@@ -546,6 +555,7 @@ a:active {
 }
 
 .schedule__item__icon {
+  display: inline-block;
   vertical-align: super;
 }
 
@@ -555,9 +565,19 @@ a:active {
   min-width: 100px;
   text-align: right;
 }
+@media only screen and (max-width: 350px) {
+  .schedule__item__time {
+    font-size: 1.5rem;
+  }
+}
 
 .schedule__item__event {
   color: white;
+}
+@media only screen and (max-width: 350px) {
+  .schedule__item__event {
+    font-size: 1.5rem;
+  }
 }
 
 .section--sponsors {
@@ -569,7 +589,7 @@ a:active {
   color: #34495e;
   padding-top: 20px;
 }
-@media only screen and (max-width: 453px) {
+@media only screen and (max-width: 350px) {
   .section--sponsors .title {
     margin-left: 10px;
     font-size: 3.5rem;
@@ -608,9 +628,9 @@ a:active {
     height: 60px;
   }
 }
-@media only screen and (max-width: 453px) {
+@media only screen and (max-width: 350px) {
   .section--sponsors .description .platinum_sponsor {
-    height: 80px;
+    height: 45px !important;
   }
 }
 .section--sponsors .description .gold_sponsor {
@@ -693,7 +713,7 @@ a:active {
   padding-bottom: 15px;
   margin: auto;
 }
-@media only screen and (max-width: 453px) {
+@media only screen and (max-width: 350px) {
   .section--footer__logo {
     width: 50%;
   }
@@ -731,7 +751,7 @@ a:active {
   margin: 0 auto;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
   z-index: 999;
-  min-width: 450px;
+  min-width: 320px;
 }
 @media only screen and (max-width: 575px) {
   .navigation {
@@ -816,7 +836,7 @@ a:active {
   width: 768px !important;
   margin-top: 120px;
 }
-@media only screen and (max-width: 453px) {
+@media only screen and (max-width: 350px) {
   .modal-signup .modal-dialog,
   .modal-dialog {
     width: 90vw !important;
@@ -961,7 +981,7 @@ a:active {
   padding-top: 60px;
   background: #fffff;
 }
-@media only screen and (max-width: 453px) {
+@media only screen and (max-width: 350px) {
   .register {
     width: auto !important;
   }
@@ -974,7 +994,7 @@ a:active {
   height: 500px;
   background: #F2777A;
 }
-@media only screen and (max-width: 453px) {
+@media only screen and (max-width: 350px) {
   .welcome {
     display: none;
   }
@@ -1068,7 +1088,7 @@ hr {
     padding-left: 29%;
   }
 }
-@media only screen and (max-width: 453px) {
+@media only screen and (max-width: 350px) {
   .regheader {
     padding-left: 24%;
   }
@@ -1091,7 +1111,7 @@ hr {
     left: 47%;
   }
 }
-@media only screen and (max-width: 453px) {
+@media only screen and (max-width: 350px) {
   .header .section--home__social_links {
     left: 46%;
   }
@@ -1121,7 +1141,7 @@ hr {
     position: relative !important;
   }
 }
-@media only screen and (max-width: 453px) {
+@media only screen and (max-width: 350px) {
   .teamdata {
     position: relative !important;
   }
@@ -1141,7 +1161,7 @@ hr {
     width: 200px;
   }
 }
-@media only screen and (max-width: 453px) {
+@media only screen and (max-width: 350px) {
   .teamdata img {
     width: 174px !important;
   }

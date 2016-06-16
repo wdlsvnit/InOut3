@@ -48,7 +48,7 @@
 			.platinum_sponsor {
 				@extend .sponsor;
 				@include when(XSMinus) {
-					height : 80px;
+					height : 45px !important;
 				}
 
 			}

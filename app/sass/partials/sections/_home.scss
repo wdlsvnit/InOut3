@@ -43,6 +43,7 @@
 	font-size: 2rem;
 	color: #fff;
 	letter-spacing: 2px;
+		text-align: center;
 
 	@include when(SMinus) {
 		font-size: 1.5rem;
@@ -50,8 +51,10 @@
 	}
 
 	@include when(XSMinus) {
-		font-size: 1.4rem;
+		font-size: 1.2rem;
+		font-family : Regular;
 		letter-spacing: 0.2px;
+		line-height: 15px;
 		@include centerer(true, true, 0%, 8%);
 	}
 

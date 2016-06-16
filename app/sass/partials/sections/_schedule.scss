@@ -48,9 +48,9 @@
 }
 
 .schedule__list {
-@include when(XSMinus) {
-	text-align : left;
-	margin-left : 10%
+	@include when(XSMinus) {
+		text-align : left;
+		margin-left: -10%;
 	}
 }
 
@@ -58,7 +58,11 @@
 	margin : 0px 0px 20px 0px;
 	background-repeat : no-repeat;
 	background-position: 1.7% 50%;
-  	padding: 3px 0px 3px 10px;
+	padding: 3px 0px 3px 10px;
+	@include when(XSMinus){
+		background-image: none !important;
+		padding: 3px 0px 3px 3px;
+	}
 }
 
 .schedule__item--morning {
@@ -84,6 +88,7 @@
 
 .schedule__item__icon {
 	@extend %schedule__list_item;
+	display: inline-block;
 	vertical-align: super;
 }
 
@@ -93,10 +98,16 @@
 	margin-left: 30px;
 	min-width: 100px;
 	text-align: right;
+	@include when(XSMinus) {
+		font-size: 1.5rem;
+	}
 
 }
 
 .schedule__item__event {
 	@extend %schedule__list_item;
 	color: rgba(255, 255, 255, 1);
+	@include when(XSMinus) {
+		font-size: 1.5rem;
+	}
 }
