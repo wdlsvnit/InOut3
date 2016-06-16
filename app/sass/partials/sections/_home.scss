@@ -12,18 +12,30 @@
 	@include centerer(true, true, 0%, -13%);
 
 	@include when(SMinus) {
-		width: 470px;
-		height: 186px;
-		background: url('../images/logo_inout_small.png') no-repeat;
+		width: 284px;
+		height: 121px;
+		background: url('../images/logo_inout_smallnew.png') no-repeat;
 	}
 
 	@include when(XSMinus) {
-		width: 352px;
-		height: 135px;
-		background: url('../images/logo_inout_xsmall.png') no-repeat;
-		@include centerer(true, true, 2%, -10%);
+		width: 264px;
+		height: 112px;
+		background: url('../images/logo_inout_xsmallnew.png') no-repeat;
+		@include centerer(true, true, -2%, -10%);
 	}
 
+	@media screen and (min-width:550px) and (max-width:$M)
+			{
+			width:450px;
+			height:192px;
+			left:48%;
+			background: url('../images/logo_inout_small.png') no-repeat;
+			}
+
+@media screen and (min-width:350px) and (max-width:550px)
+			{
+			top:40% !important;
+			}
 
 }
 
@@ -42,22 +54,23 @@
 	font-family : Bold;
 	font-size: 2rem;
 	color: #fff;
+	width: 390px;
 	letter-spacing: 2px;
-		text-align: center;
+	text-align: center;
 
 	@include when(SMinus) {
-		font-size: 1.5rem;
+		font-size: 1.65rem;
 		@include centerer(true, true, 0%, 5%);
 	}
 
 	@include when(XSMinus) {
-		font-size: 1.2rem;
-		font-family : Regular;
+		font-size: 1.8rem;
+		font-family : Bold;
+		color:#fff;
 		letter-spacing: 0.2px;
 		line-height: 15px;
-		@include centerer(true, true, 0%, 8%);
+		@include centerer(true, true, 0%, 2%);
 	}
-
 
 }
 

@@ -72,6 +72,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin: 0px 0px 40px 0px;
   letter-spacing: 0.5rem;
 }
+@media only screen and (max-width: 575px) {
+  .section__heading--about, .section__heading--faq, .section__heading--schedule, .section--sponsors .title {
+    font-size: 3rem;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .section__heading--about, .section__heading--faq, .section__heading--schedule, .section--sponsors .title {
+    font-size: 3rem;
+  }
+}
 
 .section--home__button_apply {
   background: #000000;
@@ -144,22 +154,35 @@ body {
 }
 @media only screen and (max-width: 575px) {
   .section--home__logo {
-    width: 470px;
-    height: 186px;
-    background: url("../images/logo_inout_small.png") no-repeat;
+    width: 284px;
+    height: 121px;
+    background: url("../images/logo_inout_smallnew.png") no-repeat;
   }
 }
 @media only screen and (max-width: 350px) {
   .section--home__logo {
-    width: 352px;
-    height: 135px;
-    background: url("../images/logo_inout_xsmall.png") no-repeat;
+    width: 264px;
+    height: 112px;
+    background: url("../images/logo_inout_xsmallnew.png") no-repeat;
     position: absolute;
     top: 40%;
-    left: 52%;
+    left: 48%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+  }
+}
+@media screen and (min-width: 550px) and (max-width: 820px) {
+  .section--home__logo {
+    width: 450px;
+    height: 192px;
+    left: 48%;
+    background: url("../images/logo_inout_small.png") no-repeat;
+  }
+}
+@media screen and (min-width: 350px) and (max-width: 550px) {
+  .section--home__logo {
+    top: 40% !important;
   }
 }
 
@@ -187,12 +210,13 @@ body {
   font-family: Bold;
   font-size: 2rem;
   color: #fff;
+  width: 390px;
   letter-spacing: 2px;
   text-align: center;
 }
 @media only screen and (max-width: 575px) {
   .section--home__heading_location {
-    font-size: 1.5rem;
+    font-size: 1.65rem;
     position: absolute;
     top: 55%;
     left: 50%;
@@ -203,12 +227,13 @@ body {
 }
 @media only screen and (max-width: 350px) {
   .section--home__heading_location {
-    font-size: 1.2rem;
-    font-family: Regular;
+    font-size: 1.8rem;
+    font-family: Bold;
+    color: #fff;
     letter-spacing: 0.2px;
     line-height: 15px;
     position: absolute;
-    top: 58%;
+    top: 52%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -523,6 +548,22 @@ a:active {
     margin-left: -10%;
   }
 }
+@media screen and (min-width: 351px) and (max-width: 376px) {
+  .schedule__list {
+    margin-left: -2px !important;
+  }
+}
+@media screen and (min-width: 377px) and (max-width: 490px) {
+  .schedule__list {
+    text-align: left;
+    margin-left: 0px !important;
+  }
+}
+@media screen and (width: 350px) {
+  .schedule__list {
+    margin-left: -2px !important;
+  }
+}
 
 .schedule__item--morning, .schedule__item--noon, .schedule__item--evening, .schedule__item--night {
   margin: 0px 0px 20px 0px;
@@ -532,8 +573,18 @@ a:active {
 }
 @media only screen and (max-width: 350px) {
   .schedule__item--morning, .schedule__item--noon, .schedule__item--evening, .schedule__item--night {
-    background-image: none !important;
+    background-position: 16% 50%;
     padding: 3px 0px 3px 3px;
+  }
+}
+@media screen and (min-width: 350px) and (max-width: 490px) {
+  .schedule__item--morning, .schedule__item--noon, .schedule__item--evening, .schedule__item--night {
+    padding: 3px 0px 3px 3px;
+  }
+}
+@media screen and (width: 350px) {
+  .schedule__item--morning, .schedule__item--noon, .schedule__item--evening, .schedule__item--night {
+    background-image: none !important;
   }
 }
 
@@ -544,6 +595,16 @@ a:active {
 .schedule__item--noon {
   background-image: url("../images/icon_sun_noon.png");
   background-position: 0% 50%;
+}
+@media only screen and (max-width: 350px) {
+  .schedule__item--noon {
+    background-position: 15% 50%;
+  }
+}
+@media screen and (width: 350px) {
+  .schedule__item--noon {
+    background-image: none !important;
+  }
 }
 
 .schedule__item--evening {
@@ -570,6 +631,12 @@ a:active {
     font-size: 1.5rem;
   }
 }
+@media screen and (min-width: 350px) and (max-width: 490px) {
+  .schedule__item__time {
+    font-size: 1.8rem;
+    margin-left: 0;
+  }
+}
 
 .schedule__item__event {
   color: white;
@@ -577,6 +644,16 @@ a:active {
 @media only screen and (max-width: 350px) {
   .schedule__item__event {
     font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 350px) and (max-width: 378px) {
+  .schedule__item__event {
+    font-size: 1.5rem !important;
+  }
+}
+@media screen and (min-width: 378px) and (max-width: 490px) {
+  .schedule__item__event {
+    font-size: 1.8rem;
   }
 }
 
@@ -592,7 +669,7 @@ a:active {
 @media only screen and (max-width: 350px) {
   .section--sponsors .title {
     margin-left: 10px;
-    font-size: 3.5rem;
+    font-size: 2.2rem;
   }
 }
 .section--sponsors .description {
@@ -630,7 +707,12 @@ a:active {
 }
 @media only screen and (max-width: 350px) {
   .section--sponsors .description .platinum_sponsor {
-    height: 45px !important;
+    height: 40px !important;
+  }
+}
+@media screen and (min-width: 350px) and (max-width: 490px) {
+  .section--sponsors .description .platinum_sponsor {
+    height: 40px !important;
   }
 }
 .section--sponsors .description .gold_sponsor {

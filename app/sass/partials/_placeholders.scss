@@ -18,6 +18,12 @@
 	text-align: center;
 	margin: 0px 0px 40px 0px;
 	letter-spacing: 0.5rem;
+	@include when(SMinus) {
+	font-size: 3rem;
+	}
+	@include when(XSMinus) {
+	font-size: 3rem;
+	}
 }
 
 %button {

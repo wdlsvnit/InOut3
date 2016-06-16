@@ -52,6 +52,18 @@
 		text-align : left;
 		margin-left: -10%;
 	}
+	@media screen and (min-width:351px) and (max-width:376px){
+	margin-left:-2px !important;
+	}
+
+	@media screen and (min-width:377px) and (max-width:490px){
+		text-align: left;
+		margin-left:0px !important;
+	}
+
+	@media screen and (width:350px){
+	margin-left:-2px !important;
+	}
 }
 
 %schedule__item {
@@ -60,8 +72,15 @@
 	background-position: 1.7% 50%;
 	padding: 3px 0px 3px 10px;
 	@include when(XSMinus){
-		background-image: none !important;
+		background-position: 16% 50%;
 		padding: 3px 0px 3px 3px;
+	}
+	@media screen and (min-width:350px) and (max-width:490px){
+	padding: 3px 0px 3px 3px;
+	}
+
+	@media screen and (width:350px){
+	background-image:none !important;
 	}
 }
 
@@ -74,6 +93,12 @@
 	@extend %schedule__item;
 	background-image: url('../images/icon_sun_noon.png');
 	background-position: 0% 50%;
+	@include when(XSMinus){
+	background-position: 15% 50%;
+	}
+	@media screen and (width:350px){
+	background-image:none !important;
+	}
 }
 
 .schedule__item--evening {
@@ -101,6 +126,10 @@
 	@include when(XSMinus) {
 		font-size: 1.5rem;
 	}
+	@media screen and (min-width:350px) and (max-width:490px){
+	font-size:1.8rem;
+	margin-left:0;
+	}
 
 }
 
@@ -109,5 +138,11 @@
 	color: rgba(255, 255, 255, 1);
 	@include when(XSMinus) {
 		font-size: 1.5rem;
+	}
+		@media screen and (min-width:350px) and (max-width:378px){
+	font-size:1.5rem !important;
+	}
+	@media screen and (min-width:378px) and (max-width:490px){
+	font-size:1.8rem;
 	}
 }
