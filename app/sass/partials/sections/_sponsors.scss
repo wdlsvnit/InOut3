@@ -17,9 +17,102 @@
 			}
 		}
 
-		.description {
-			margin-bottom : 45px;
-			text-align : center;
+.sponsor{
+	width:100% !important;
+}
+
+		.box {
+  width: 100%;
+  margin-bottom:45px;
+
+
+.row {
+  margin: 20px auto;
+}
+
+.five {
+  display: block;
+  float: left;
+  margin: 0;
+  max-height: 100px;
+  width: 13%;
+  margin-left:6%;
+}
+
+
+.five2 {
+  display: block;
+  float: left;
+  margin: 0;
+  max-height: 100px;
+  width: 13%;
+  margin-left:6%;
+}
+
+.four {
+  display: block;
+  float: left;
+  margin: 0;
+  width: 25%;
+}
+
+.three {
+  display: block;
+  float: left;
+  width: 25%;
+}
+.three:first-child {
+  margin-left: 12.5%;
+}
+
+.two {
+  display: block;
+  float: left;
+  width: 20%;
+}
+.two:first-child {
+  margin-left: 30%;
+}
+
+
+
+.two2 {
+  display: block;
+  float: left;
+  width: 20%;
+}
+.two2:first-child {
+  margin-left: 30%;
+}
+
+.one {
+  text-align: center;
+  display: block;
+  margin: 20px auto;
+  width: 35%;
+}
+
+img {
+  width: 100%;
+  position: relative;
+  padding: 2%;
+  top: 50%;
+  transform: translateY(-50%);
+  @include when(XSMinus){
+  padding:0px !important;
+  }
+  @include when(SMinus){
+  padding:0px !important;
+  }
+}
+.img-md{
+  width:75% !important;
+}
+.logogitlab{
+  width: 80% !important
+}
+
+
 			.sponsor {
 				display : inline-block;
 				width : auto;
@@ -32,67 +125,7 @@
 					height : 40px;
 				}
 			}
-
-			.prime_sponsor {
-				@extend .sponsor;
-				height : 120px;
-				@media screen and (max-width : $third_breakpoint) {
-					height : 80px;
-				}
-				@media screen and (max-width : $fourth_breakpoint) {
-					height : 60px;
-				}
-	
-			}
-
-			.platinum_sponsor {
-				@extend .sponsor;
-				@include when(XSMinus) {
-					height : 40px !important;
-				}
-			@media screen and (min-width:350px) and (max-width:490px)
-			{
-			height: 40px !important;
-			}
-			}
-
-			.gold_sponsor {
-				@extend .sponsor;
-				height : 120px;
-				@media screen and (max-width : $third_breakpoint) {
-					height : 40px;
-				}
-				@media screen and (max-width : $fourth_breakpoint) {
-					height : 30px;
-				}
-
-			}
-
-			.silver_sponsor {
-				@extend .sponsor;
-				height : 80px;
-				@media screen and (max-width : $third_breakpoint) {
-					height : 40px;
-				}
-				@media screen and (max-width : $fourth_breakpoint) {
-					height : 30px;
-				}
-
-			}
-
-			.bronze_sponsor {
-				@extend .sponsor;
-				height : 50px;
-				@media screen and (max-width : $third_breakpoint) {
-					height : 40px;
-				}
-				@media screen and (max-width : $fourth_breakpoint) {
-					height : 30px;
-				}
-			}
 		}
-
-
 		
 
 		p {

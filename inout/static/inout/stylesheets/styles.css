@@ -689,86 +689,107 @@ a:active {
     font-size: 2.2rem;
   }
 }
-.section--sponsors .description {
-  margin-bottom: 45px;
-  text-align: center;
+.section--sponsors .sponsor {
+  width: 100% !important;
 }
-.section--sponsors .description .sponsor, .section--sponsors .description .prime_sponsor, .section--sponsors .description .platinum_sponsor, .section--sponsors .description .gold_sponsor, .section--sponsors .description .silver_sponsor, .section--sponsors .description .bronze_sponsor {
+.section--sponsors .box {
+  width: 100%;
+  margin-bottom: 45px;
+}
+.section--sponsors .box .row {
+  margin: 20px auto;
+}
+.section--sponsors .box .five {
+  display: block;
+  float: left;
+  margin: 0;
+  max-height: 100px;
+  width: 13%;
+  margin-left: 6%;
+}
+.section--sponsors .box .five2 {
+  display: block;
+  float: left;
+  margin: 0;
+  max-height: 100px;
+  width: 13%;
+  margin-left: 6%;
+}
+.section--sponsors .box .four {
+  display: block;
+  float: left;
+  margin: 0;
+  width: 25%;
+}
+.section--sponsors .box .three {
+  display: block;
+  float: left;
+  width: 25%;
+}
+.section--sponsors .box .three:first-child {
+  margin-left: 12.5%;
+}
+.section--sponsors .box .two {
+  display: block;
+  float: left;
+  width: 20%;
+}
+.section--sponsors .box .two:first-child {
+  margin-left: 30%;
+}
+.section--sponsors .box .two2 {
+  display: block;
+  float: left;
+  width: 20%;
+}
+.section--sponsors .box .two2:first-child {
+  margin-left: 30%;
+}
+.section--sponsors .box .one {
+  text-align: center;
+  display: block;
+  margin: 20px auto;
+  width: 35%;
+}
+.section--sponsors .box img {
+  width: 100%;
+  position: relative;
+  padding: 2%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+@media only screen and (max-width: 350px) {
+  .section--sponsors .box img {
+    padding: 0px !important;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .section--sponsors .box img {
+    padding: 0px !important;
+  }
+}
+.section--sponsors .box .img-md {
+  width: 75% !important;
+}
+.section--sponsors .box .logogitlab {
+  width: 80% !important;
+}
+.section--sponsors .box .sponsor {
   display: inline-block;
   width: auto;
   height: 90px;
   margin: 30px;
 }
 @media screen and (max-width: 600px) {
-  .section--sponsors .description .sponsor, .section--sponsors .description .prime_sponsor, .section--sponsors .description .platinum_sponsor, .section--sponsors .description .gold_sponsor, .section--sponsors .description .silver_sponsor, .section--sponsors .description .bronze_sponsor {
+  .section--sponsors .box .sponsor {
     height: 60px;
   }
 }
 @media screen and (max-width: 485px) {
-  .section--sponsors .description .sponsor, .section--sponsors .description .prime_sponsor, .section--sponsors .description .platinum_sponsor, .section--sponsors .description .gold_sponsor, .section--sponsors .description .silver_sponsor, .section--sponsors .description .bronze_sponsor {
+  .section--sponsors .box .sponsor {
     height: 40px;
-  }
-}
-.section--sponsors .description .prime_sponsor {
-  height: 120px;
-}
-@media screen and (max-width: 600px) {
-  .section--sponsors .description .prime_sponsor {
-    height: 80px;
-  }
-}
-@media screen and (max-width: 485px) {
-  .section--sponsors .description .prime_sponsor {
-    height: 60px;
-  }
-}
-@media only screen and (max-width: 350px) {
-  .section--sponsors .description .platinum_sponsor {
-    height: 40px !important;
-  }
-}
-@media screen and (min-width: 350px) and (max-width: 490px) {
-  .section--sponsors .description .platinum_sponsor {
-    height: 40px !important;
-  }
-}
-.section--sponsors .description .gold_sponsor {
-  height: 120px;
-}
-@media screen and (max-width: 600px) {
-  .section--sponsors .description .gold_sponsor {
-    height: 40px;
-  }
-}
-@media screen and (max-width: 485px) {
-  .section--sponsors .description .gold_sponsor {
-    height: 30px;
-  }
-}
-.section--sponsors .description .silver_sponsor {
-  height: 80px;
-}
-@media screen and (max-width: 600px) {
-  .section--sponsors .description .silver_sponsor {
-    height: 40px;
-  }
-}
-@media screen and (max-width: 485px) {
-  .section--sponsors .description .silver_sponsor {
-    height: 30px;
-  }
-}
-.section--sponsors .description .bronze_sponsor {
-  height: 50px;
-}
-@media screen and (max-width: 600px) {
-  .section--sponsors .description .bronze_sponsor {
-    height: 40px;
-  }
-}
-@media screen and (max-width: 485px) {
-  .section--sponsors .description .bronze_sponsor {
-    height: 30px;
   }
 }
 .section--sponsors p {

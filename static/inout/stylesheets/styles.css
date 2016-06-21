@@ -70,7 +70,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-size: 4rem;
   text-align: center;
   margin: 0px 0px 40px 0px;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.3rem;
 }
 @media only screen and (max-width: 575px) {
   .section__heading--about, .section__heading--faq, .section__heading--schedule, .section--sponsors .title {
@@ -356,6 +356,12 @@ body {
 .section__heading--faq {
   margin-bottom: 80px;
 }
+@media only screen and (max-width: 575px) {
+  .section__heading--faq {
+    margin-left: 50px;
+    width: 77%;
+  }
+}
 
 .wrap {
   /* box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);*/
@@ -490,6 +496,17 @@ a:active {
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
   transition: all 0.5s;
+}
+
+@media only screen and (max-width: 575px) {
+  .xscol {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .xscol {
+    width: 100%;
+  }
 }
 
 .section--schedule {
@@ -672,85 +689,186 @@ a:active {
     font-size: 2.2rem;
   }
 }
-.section--sponsors .description {
-  margin-bottom: 45px;
-  text-align: center;
+.section--sponsors .sponsor, .section--sponsors .box .prime_sponsor, .section--sponsors .box .platinum_sponsor, .section--sponsors .box .gold_sponsor, .section--sponsors .box .silver_sponsor, .section--sponsors .box .bronze_sponsor {
+  width: 100% !important;
 }
-.section--sponsors .description .sponsor, .section--sponsors .description .prime_sponsor, .section--sponsors .description .platinum_sponsor, .section--sponsors .description .gold_sponsor, .section--sponsors .description .silver_sponsor, .section--sponsors .description .bronze_sponsor {
+.section--sponsors .box {
+  width: 100%;
+  margin-bottom: 45px;
+}
+.section--sponsors .box .row {
+  margin: 20px auto;
+}
+.section--sponsors .box .five {
+  display: block;
+  float: left;
+  margin: 0;
+  max-height: 100px;
+  width: 13%;
+  margin-left: 6%;
+}
+.section--sponsors .box .five2 {
+  display: block;
+  float: left;
+  margin: 0;
+  max-height: 100px;
+  width: 13%;
+  margin-left: 6%;
+}
+.section--sponsors .box .four {
+  display: block;
+  float: left;
+  margin: 0;
+  width: 25%;
+}
+.section--sponsors .box .three {
+  display: block;
+  float: left;
+  width: 25%;
+}
+.section--sponsors .box .three:first-child {
+  margin-left: 12.5%;
+}
+.section--sponsors .box .two {
+  display: block;
+  float: left;
+  width: 20%;
+}
+.section--sponsors .box .two:first-child {
+  margin-left: 30%;
+}
+.section--sponsors .box .two2 {
+  display: block;
+  float: left;
+  width: 20%;
+}
+.section--sponsors .box .two2:first-child {
+  margin-left: 30%;
+}
+.section--sponsors .box .one {
+  text-align: center;
+  display: block;
+  margin: 20px auto;
+  width: 35%;
+}
+.section--sponsors .box img {
+  width: 100%;
+  position: relative;
+  padding: 2%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+@media only screen and (max-width: 350px) {
+  .section--sponsors .box img {
+    padding: 0px !important;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .section--sponsors .box img {
+    padding: 0px !important;
+  }
+}
+.section--sponsors .box .img-md {
+  width: 75% !important;
+}
+.section--sponsors .box .logogitlab {
+  width: 80% !important;
+}
+.section--sponsors .box .sponsor, .section--sponsors .box .prime_sponsor, .section--sponsors .box .platinum_sponsor, .section--sponsors .box .gold_sponsor, .section--sponsors .box .silver_sponsor, .section--sponsors .box .bronze_sponsor {
   display: inline-block;
   width: auto;
   height: 90px;
   margin: 30px;
 }
 @media screen and (max-width: 600px) {
-  .section--sponsors .description .sponsor, .section--sponsors .description .prime_sponsor, .section--sponsors .description .platinum_sponsor, .section--sponsors .description .gold_sponsor, .section--sponsors .description .silver_sponsor, .section--sponsors .description .bronze_sponsor {
+  .section--sponsors .box .sponsor, .section--sponsors .box .prime_sponsor, .section--sponsors .box .platinum_sponsor, .section--sponsors .box .gold_sponsor, .section--sponsors .box .silver_sponsor, .section--sponsors .box .bronze_sponsor {
     height: 60px;
   }
 }
 @media screen and (max-width: 485px) {
-  .section--sponsors .description .sponsor, .section--sponsors .description .prime_sponsor, .section--sponsors .description .platinum_sponsor, .section--sponsors .description .gold_sponsor, .section--sponsors .description .silver_sponsor, .section--sponsors .description .bronze_sponsor {
+  .section--sponsors .box .sponsor, .section--sponsors .box .prime_sponsor, .section--sponsors .box .platinum_sponsor, .section--sponsors .box .gold_sponsor, .section--sponsors .box .silver_sponsor, .section--sponsors .box .bronze_sponsor {
     height: 40px;
   }
 }
-.section--sponsors .description .prime_sponsor {
-  height: 120px;
+.section--sponsors .box .prime_sponsor {
+  height: 60px;
+  margin-top: 45px !important;
+  verical-align: middle;
 }
 @media screen and (max-width: 600px) {
-  .section--sponsors .description .prime_sponsor {
+  .section--sponsors .box .prime_sponsor {
     height: 80px;
   }
 }
 @media screen and (max-width: 485px) {
-  .section--sponsors .description .prime_sponsor {
+  .section--sponsors .box .prime_sponsor {
     height: 60px;
   }
 }
+.section--sponsors .box .platinum_sponsor {
+  height: 60px;
+  margin-top: 45px !important;
+  verical-align: middle;
+}
 @media only screen and (max-width: 350px) {
-  .section--sponsors .description .platinum_sponsor {
+  .section--sponsors .box .platinum_sponsor {
     height: 40px !important;
   }
 }
 @media screen and (min-width: 350px) and (max-width: 490px) {
-  .section--sponsors .description .platinum_sponsor {
+  .section--sponsors .box .platinum_sponsor {
     height: 40px !important;
   }
 }
-.section--sponsors .description .gold_sponsor {
-  height: 120px;
+.section--sponsors .box .gold_sponsor {
+  height: 60px;
+  verical-align: middle;
+  height: 60px;
+  padding-left: 86px;
+  padding-right: 50px;
+  white-space: nowrap;
+  margin-top: 50px !important;
+  margin: 0;
+  word-wrap: normal;
 }
 @media screen and (max-width: 600px) {
-  .section--sponsors .description .gold_sponsor {
+  .section--sponsors .box .gold_sponsor {
     height: 40px;
   }
 }
 @media screen and (max-width: 485px) {
-  .section--sponsors .description .gold_sponsor {
+  .section--sponsors .box .gold_sponsor {
     height: 30px;
   }
 }
-.section--sponsors .description .silver_sponsor {
-  height: 80px;
+.section--sponsors .box .silver_sponsor {
+  height: 60px;
+  margin-top: 50px !important;
 }
 @media screen and (max-width: 600px) {
-  .section--sponsors .description .silver_sponsor {
+  .section--sponsors .box .silver_sponsor {
     height: 40px;
   }
 }
 @media screen and (max-width: 485px) {
-  .section--sponsors .description .silver_sponsor {
+  .section--sponsors .box .silver_sponsor {
     height: 30px;
   }
 }
-.section--sponsors .description .bronze_sponsor {
+.section--sponsors .box .bronze_sponsor {
   height: 50px;
+  margin-top: 45px !important;
+  margin-bottom: 50px !important;
 }
 @media screen and (max-width: 600px) {
-  .section--sponsors .description .bronze_sponsor {
+  .section--sponsors .box .bronze_sponsor {
     height: 40px;
   }
 }
 @media screen and (max-width: 485px) {
-  .section--sponsors .description .bronze_sponsor {
+  .section--sponsors .box .bronze_sponsor {
     height: 30px;
   }
 }
