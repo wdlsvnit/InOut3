@@ -35,8 +35,12 @@
   float: left;
   margin: 0;
   max-height: 100px;
+  // margin-left:6%;
   width: 13%;
-  margin-left:6%;
+    margin-right: -11%;
+    margin-left: 13%;
+
+
 }
 
 
@@ -71,7 +75,7 @@
   width: 20%;
 }
 .two:first-child {
-  margin-left: 30%;
+  margin-left: 32%;
 }
 
 
@@ -82,7 +86,7 @@
   width: 20%;
 }
 .two2:first-child {
-  margin-left: 30%;
+  margin-left: 31%;
 }
 
 .one {
@@ -111,13 +115,28 @@ img {
 .logo_gitlab{
   width: 50% !important;
 }
+.logo_github{
+	margin-left:-28% !important;
+}
+.logo_do{
+	margin-left:-18% !important;
+}
 .logo_tweeter{
 	width:66% !important;
+
+	margin-left:-5%;
+}
+.logo_meteor{
+	margin-left:-16% !important;
 }
 .logo_keen{
 	width:60% !important;
-}
 
+	margin-left:21% !important;
+}
+.logo_cl {
+	width:60% !important;
+}
 
 			.sponsor {
 				display : inline-block;
