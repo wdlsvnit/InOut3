@@ -773,8 +773,14 @@ a:active {
 .section--sponsors .box .img-md {
   width: 75% !important;
 }
-.section--sponsors .box .logogitlab {
-  width: 80% !important;
+.section--sponsors .box .logo_gitlab {
+  width: 50% !important;
+}
+.section--sponsors .box .logo_tweeter {
+  width: 66% !important;
+}
+.section--sponsors .box .logo_keen {
+  width: 60% !important;
 }
 .section--sponsors .box .sponsor {
   display: inline-block;
