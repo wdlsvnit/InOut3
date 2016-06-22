@@ -165,5 +165,12 @@
     background-color: #f4f8ff;
 }
 html, body {
-    font-family: 'Open Sans', sans-serif, Helvetica, Arial, "Trebuchet MS", Verdana;
+    font-family: 'Open Sans', sans-serif, Helvetica, Arial, "Trebuchet MS", Verdana !important;
+    line-height: 3rem;    
+}
+.section__content--text{
+    color:rgba(0, 0, 0, 0.74) !important;
+}
+a{
+    cursor: pointer !important;
 }

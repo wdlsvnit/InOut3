@@ -705,7 +705,8 @@ a:active {
   margin: 0;
   max-height: 100px;
   width: 13%;
-  margin-left: 6%;
+  margin-right: -11%;
+  margin-left: 13%;
 }
 .section--sponsors .box .five2 {
   display: block;
@@ -735,7 +736,7 @@ a:active {
   width: 20%;
 }
 .section--sponsors .box .two:first-child {
-  margin-left: 30%;
+  margin-left: 32%;
 }
 .section--sponsors .box .two2 {
   display: block;
@@ -743,7 +744,7 @@ a:active {
   width: 20%;
 }
 .section--sponsors .box .two2:first-child {
-  margin-left: 30%;
+  margin-left: 31%;
 }
 .section--sponsors .box .one {
   text-align: center;
@@ -773,8 +774,28 @@ a:active {
 .section--sponsors .box .img-md {
   width: 75% !important;
 }
-.section--sponsors .box .logogitlab {
+.section--sponsors .box .logo_gitlab {
   width: 50% !important;
+}
+.section--sponsors .box .logo_github {
+  margin-left: -28% !important;
+}
+.section--sponsors .box .logo_do {
+  margin-left: -18% !important;
+}
+.section--sponsors .box .logo_tweeter {
+  width: 66% !important;
+  margin-left: -5%;
+}
+.section--sponsors .box .logo_meteor {
+  margin-left: -16% !important;
+}
+.section--sponsors .box .logo_keen {
+  width: 60% !important;
+  margin-left: 21% !important;
+}
+.section--sponsors .box .logo_cl {
+  width: 60% !important;
 }
 .section--sponsors .box .sponsor {
   display: inline-block;
@@ -835,7 +856,17 @@ a:active {
 }
 @media only screen and (max-width: 350px) {
   .section--footer__logo {
-    width: 50%;
+    width: 50% !important;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .section--footer__logo {
+    width: 50% !important;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .section--footer__logo {
+    width: 50% !important;
   }
 }
 
