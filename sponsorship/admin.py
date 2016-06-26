@@ -48,7 +48,7 @@ class SponsorAdmin(DjangoObjectActions,admin.ModelAdmin):
 
     def capture_payment(self,request,obj):
         razor = razorpay.Client(auth=(settings.RAZORPAY_KEY_ID, settings.RAZORPAY_KEY_SECRET))
-        capture = razor.payment.capture(obj.razorpay_payment_id, obj.sponsorship_amount)
+        capture = razor.payment.capture(obj.razorpay_payment_id, obj.sponsorship_amount+"00")
         if capture['error_code']==None:
              obj.razorpay_capture_status = True
              obj.save()
