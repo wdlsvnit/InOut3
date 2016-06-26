@@ -1030,6 +1030,7 @@ a:active {
 .register form {
   margin-top: 30px;
   margin-bottom: 0;
+  min-height: 100vh;
 }
 @media (min-width: 454px) and (max-width: 767px) {
   .register form {
