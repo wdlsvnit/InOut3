@@ -8,6 +8,7 @@ from .models import Sponsor
 
 def index(request,sponsor_id):
     sponsor = Sponsor.objects.get(id = int(sponsor_id))
+    sponsorship = sponsor.sponsorship_amount + "00"
     if request.method == "POST":
         razor = razorpay.Client(auth=(settings.RAZORPAY_KEY_ID, settings.RAZORPAY_KEY_SECRET))
         payment = razor.payment.fetch(request.POST.get("razorpay_payment_id"))
@@ -20,7 +21,7 @@ def index(request,sponsor_id):
             return render(request,'sponsorship/sponsorship.html',{"success": success})
         else:
             success = "Payment Failed."
-            return render(request,'sponsorship/sponsorship.html',{"success": success,'sponsor':sponsor})
+            return render(request,'sponsorship/sponsorship.html',{"success": success,'sponsor':sponsor,'sponsorship_amount':sponsorship})
         
     else:
-        return render(request,'sponsorship/sponsorship.html',{'sponsor':sponsor})
+        return render(request,'sponsorship/sponsorship.html',{'sponsor':sponsor,'sponsorship_amount':sponsorship})
