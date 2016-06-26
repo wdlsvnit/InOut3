@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "basesponsors.html" %}
 {% block content %}
 <div class="section--home" id="inout">
     <div class="bg-pattern-back">
@@ -14,13 +14,14 @@
       <div class="section--home__logo"></div>
       <!-- Apply now button -->
         
-          <a class = "section--home__button_apply" id="doregister" class="text-uppercase"  data-toggle="modal" data-target=".modal-signup">APPLY NOW</a>
+          <!-- <a class = "section--home__button_apply" id="doregister" class="text-uppercase"  data-toggle="modal" data-target=".modal-signup">APPLY NOW</a> -->
 
-      <h3 class="section--home__heading_location">13-14 AUGUST, NIT SURAT</h3>
-     <center class = "section--home__button_apply" >  <p>  {{ success }}</p>
+      <h3 class="section--home__heading_location">{{ success }}</h3>
+     <!-- <center class = "section--home__button_apply" >  <p>  </p> -->
 {% if sponsor %}
 <form action="/sponsorship/pay/{{sponsor.id}}/" method="POST">
 <!-- Note that the amount is in paise 5000 = 50 INR -->
+
 <script
     src="https://checkout.razorpay.com/v1/checkout.js"
     data-key="rzp_live_L0RhOOxgR21GCi"
@@ -28,7 +29,7 @@
     data-buttontext="Pay with Razorpay"
     data-name="InOut 3.0"
     data-description="InOut sponsorship."
-    data-image="https://hackinout.co/static/inout/images/main_inout_logo.png"
+    data-image="https://hackinout.co/static/inout/images/inout_pay.jpg"
     data-prefill.name="{{ sponsor.name }}"
     data-prefill.email="{{ sponsor.email }}"
     data-theme.color="#6C9DE1"
