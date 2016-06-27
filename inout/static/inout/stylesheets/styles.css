@@ -1202,6 +1202,7 @@ hr {
 
 .registration-form {
   background: linear-gradient(10deg, #50c4d6 0%, #5271d1 100%);
+  min-height: 100vh;
 }
 
 .registration-form .form-control {

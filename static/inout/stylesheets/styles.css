@@ -338,7 +338,7 @@ body {
 
 .section__content--text__code {
   color: #7936B9;
-  font-size: 2.4rem;
+  font-size: 2.0rem;
   font-family: 'Courier', 'mono';
 }
 
@@ -1030,6 +1030,7 @@ a:active {
 .register form {
   margin-top: 30px;
   margin-bottom: 0;
+  min-height: 100vh;
 }
 @media (min-width: 454px) and (max-width: 767px) {
   .register form {
@@ -1201,6 +1202,7 @@ hr {
 
 .registration-form {
   background: linear-gradient(10deg, #50c4d6 0%, #5271d1 100%);
+  min-height: 100vh;
 }
 
 .registration-form .form-control {
