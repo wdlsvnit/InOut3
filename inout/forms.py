@@ -26,6 +26,8 @@ class TeamForm(forms.ModelForm):
         'name' : {'max_length':"Team name can be maximum 30 characters.",},
         }
 class ParticipantForm(forms.ModelForm):
+    graduation = forms.DateField(required=True,input_formats=['%Y-%m-%d','%m/%d/%Y','%m/%d/%y','%d/%m/%Y'],help_text='e.g. If passing in 2017 please enter your Graduation Date as 30/05/2017 .')    
+    date_of_birth = forms.DateField(required=True,input_formats=['%Y-%m-%d','%m/%d/%Y','%m/%d/%y','%d/%m/%Y'],help_text='e.g. 30/05/1995 .')    
     class Meta:
          model = Participant
          exclude = ['registration_date','team']
