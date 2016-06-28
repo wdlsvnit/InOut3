@@ -1,4 +1,4 @@
-Thankyou {{ sponsor_name }} for agreeing to sponsor us!
+Thanks {{ sponsor_name }} for Sponsoring us!
 
-Please follow this link for completing sponsorship payment https://hackinout.co/sponsorship/pay/{{id}}/ .
+Please follow this link for completing Sponsorship Payment: https://hackinout.co/sponsorship/pay/{{id}}/ 
 

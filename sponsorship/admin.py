@@ -19,7 +19,7 @@ class SponsorAdmin(DjangoObjectActions,admin.ModelAdmin):
     list_display =('name','email','payment_status','sponsorship_amount','razorpay_capture_status')
     
     def send_payment_link(self,request,obj):
-        subject = 'Thank you for agreeing to sponsor us. Payment link inside ! '
+        subject = 'Thanks for Sponsoring us. Payment link inside! '
         from_email = "Team InOut <"+settings.DEFAULT_FROM_EMAIL+">"
         to_email = [ obj.email ]
         context = {
