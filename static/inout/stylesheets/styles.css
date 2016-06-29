@@ -794,6 +794,10 @@ a:active {
   width: 60% !important;
   margin-left: 21% !important;
 }
+.section--sponsors .box .logo_gdg {
+  margin-top: -3px !important;
+  width: 88% !important;
+}
 .section--sponsors .box .logo_cl {
   width: 60% !important;
 }
