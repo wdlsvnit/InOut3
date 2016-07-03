@@ -725,10 +725,10 @@ a:active {
 .section--sponsors .box .three {
   display: block;
   float: left;
-  width: 25%;
+  width: 20%;
 }
 .section--sponsors .box .three:first-child {
-  margin-left: 12.5%;
+  margin-left: 18.5%;
 }
 .section--sponsors .box .two {
   display: block;
