@@ -12,8 +12,8 @@ from .models import InoutUser,InoutUserLink ,Team, Participant
 
 import os
 import sys
-admin.site.register(Team)
-admin.site.register(Participant)
+
+
 @admin.register(InoutUser)
 class InoutUserAdmin(admin.ModelAdmin):
     list_display = ('full_name','application_status','email')
@@ -68,3 +68,21 @@ class ProfileAdmin(DjangoObjectActions,admin.ModelAdmin):
     approve_user.short_description = "Approve user participation"  # optional
 
     objectactions = ('approve_user', )
+
+
+class ParticipantInline(admin.StackedInline):
+    model = Participant
+    max_num = 3
+    
+
+@admin.register(Team)
+class TeamAdmin(DjangoObjectActions,admin.ModelAdmin):
+    inlines = [ParticipantInline,]
+    list_display = ('team','approval_status')
+    search_fields = ('name','email')
+
+    def team(self,obj):
+        return obj.__str__()
+    def approval_status(self,obj):
+        return obj.application_status
+    approval_status.allow_tags = True
