@@ -148,11 +148,35 @@ def send_email(subject,from_email,to_email,email_template_html,email_template_tx
             msg.send()
         except BadHeaderError:
             return HttpResponse('Invalid header found.')
+
+def team_approve_view(request,team_url_id):
+    if request.user.is_superuser:
+        team = Team.objects.get(pk = team_url_id)
+        participants = team.participants.all()
+        team_name = team.name
+        subject = 'You\'re in!'
+        from_email = "Team InOut <"+settings.DEFAULT_FROM_EMAIL+">"
+        to_email = [ team.email ]
+        for participant in participants:
+            to_email.append(participant.email)
+        context = {
+
+                 "team_name": team_name,
+                 "url_id":team_url_id
+            }
+
+        email_template_html = "mail_body.html"
+        email_template_txt  = "mail_body.txt"
+        send_email(subject,from_email,to_email,email_template_html,email_template_txt,context)
+        team.approval_email_status = True
+        team.save()
+        return HttpResponseRedirect('/admin/inout/team/')
+    else:
+        return HttpResponseRedirect('/')
+
 ''' 
 Below code is for the old registration process involving MLH.
 '''
-
-
 
 @xframe_options_exempt
 def Index(request):

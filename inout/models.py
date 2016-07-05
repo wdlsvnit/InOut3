@@ -56,6 +56,8 @@ class Team(models.Model):
     # Application status of the Team
     application_status=models.BooleanField(default=False)
 
+    approval_email_status = models.BooleanField(default=False)
+
     def __str__(self):
         return self.name+" | "+self.email+" | "+self.registration_date.ctime()+" | "+ self.application_status.__str__()
      

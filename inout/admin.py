@@ -78,11 +78,16 @@ class ParticipantInline(admin.StackedInline):
 @admin.register(Team)
 class TeamAdmin(DjangoObjectActions,admin.ModelAdmin):
     inlines = [ParticipantInline,]
-    list_display = ('team','approval_status')
+    list_display = ('team','approval_status','email_status','send_email')
+    list_filter = ('application_status','approval_email_status')
     search_fields = ('name','email')
-
+    def send_email(self, obj):
+    	return format_html("<a href='/new/approve/{url}'>Send</a>", url=obj.url_id)
+    def email_status(self,obj):
+        return obj.approval_email_status
     def team(self,obj):
         return obj.__str__()
     def approval_status(self,obj):
         return obj.application_status
     approval_status.allow_tags = True
+    save_on_top = True
