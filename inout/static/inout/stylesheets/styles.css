@@ -801,6 +801,9 @@ a:active {
 .section--sponsors .box .logo_cl {
   width: 60% !important;
 }
+.section--sponsors .box .logo_ptbn {
+  width: 42% !important;
+}
 .section--sponsors .box .sponsor {
   display: inline-block;
   width: auto;
