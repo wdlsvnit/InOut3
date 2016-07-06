@@ -803,6 +803,7 @@ a:active {
 }
 .section--sponsors .box .logo_ptbn {
   width: 42% !important;
+  margin-top: 30px !important;
 }
 .section--sponsors .box .sponsor {
   display: inline-block;
