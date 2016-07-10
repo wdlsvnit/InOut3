@@ -13,6 +13,7 @@ from .models import InoutUser,InoutUserLink ,Team, Participant
 import os
 import sys
 
+admin.site.register(Participant)
 
 @admin.register(InoutUser)
 class InoutUserAdmin(admin.ModelAdmin):
