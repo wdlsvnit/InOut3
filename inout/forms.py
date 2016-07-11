@@ -17,7 +17,7 @@ class InoutUserForm(forms.ModelForm):
 class TeamForm(forms.ModelForm):
     class Meta:
         model = Team
-        exclude = ['url_id','registration_date','application_status']
+        exclude = ['url_id','registration_date','application_status','approval_email_status']
         widgets = {
             'name': forms.TextInput(attrs={'placeholder':"Team Name"}),
             'email': forms.TextInput(attrs={'placeholder':"Team Email"}),
