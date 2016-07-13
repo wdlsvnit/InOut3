@@ -794,10 +794,10 @@ a:active {
   margin-top: -7px;
 }
 .section--sponsors .box .logo_keen {
-  width: 40% !important;
+  width: 37% !important;
 }
 .section--sponsors .box .logo_kloudless {
-  width: 90%;
+  width: 87%;
   margin-left: -31px;
 }
 .section--sponsors .box .logo_gdg {
@@ -819,6 +819,7 @@ a:active {
 }
 .section--sponsors .box .logo_UXPin {
   width: 30%;
+  margin-left: -31px;
 }
 .section--sponsors .box .logo_wolfram {
   width: 60%;
