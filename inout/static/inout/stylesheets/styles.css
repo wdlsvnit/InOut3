@@ -812,8 +812,13 @@ a:active {
   margin-top: 30px !important;
 }
 .section--sponsors .box .logo_sendgrid {
-  width: 40% !important;
-  margin-top: -30px !important;
+  width: 65%;
+}
+.section--sponsors .box .logo_invision {
+  width: 55%;
+}
+.section--sponsors .box .logo_UXPin {
+  width: 30%;
 }
 .section--sponsors .box .logo_wolfram {
   width: 60%;
