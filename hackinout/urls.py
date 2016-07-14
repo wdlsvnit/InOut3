@@ -34,4 +34,5 @@ urlpatterns = [
     url(r'^closed/',closed,name='closed'),
     url(r'^sponsorship/',include('sponsorship.urls')),
     url(r'^campus/',campus, name="campus")
-]
+    ]
+handler404 = "inout.views.error404"
