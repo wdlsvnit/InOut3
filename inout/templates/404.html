@@ -54,16 +54,17 @@
   <link rel="stylesheet" href="{% static "inout/stylesheets/styles.css" %}">
   <style>
     .header-banner .static-image {
-    margin: auto;
+    margin: 0 auto;
     position: absolute;
     bottom: 0;
     left: 0;
 }
 .header-banner .footer-bubbles {
-    position: absolute;
+    position: relative !important;
     /* bottom: 0; */
-    left: 27%;
-    top: 27%;
+    left: 0;
+    top: 0;
+    margin: 0 auto !important;
     min-width: inherit !important;
     width: inherit !important;
 }
@@ -73,14 +74,14 @@ font-family: 'Montserrat' !important;
 font-size: 22pt !important;
 }
 .header-banner {
-    height: 675px !important;
+    height: 100vh !important;
     background-color: #ffffff !important; 
 }
 .link a{
   color: #2C9C9E !important;
   font-size: 10pt !important;
   text-decoration: none !important;
-  cursor: pointer; !important;
+  cursor: pointer !important;
 }
 .para {
 font-size: 14pt !important;
@@ -96,7 +97,7 @@ color:#545F67 !important;
   <p class="section__content--text text-center ">The page you were looking for does not exist.<p>
   <p class="section__content--text text-center link"><a href="https://hackinout.co">Take me back to homepage.</a><p>
 
-  <img class="footer-bubbles" src="./../../static/inout/images/header-banner/assets-11.png" alt="There is nothing here" />
+  <img class="footer-bubbles img-responsive text-center" src="./../../static/inout/images/header-banner/assets-11.png" alt="There is nothing here" />
   <img class="img-responsive static-image" src="./../../static/inout/images/header-banner/404footer.png" alt="Please go back" />
 </header>
 

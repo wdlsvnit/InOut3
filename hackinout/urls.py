@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-
+# import django.views.defaults
 from django.contrib.auth.decorators import login_required
 
 from inout.views import CustomCallback,UserDash,Index,logout_view,closed,home_view,team_view,campus,team_approve_view
@@ -34,5 +34,6 @@ urlpatterns = [
     url(r'^closed/',closed,name='closed'),
     url(r'^sponsorship/',include('sponsorship.urls')),
     url(r'^campus/',campus, name="campus")
+    # url(r'^404/$', django.views.defaults.page_not_found, )
     ]
 handler404 = "inout.views.error404"
