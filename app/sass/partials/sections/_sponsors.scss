@@ -130,6 +130,9 @@ img {
   margin-left: -19% !important;
   width: 127%;
   margin-top: -7px;
+  @include when(XSMinus) {
+  margin-top:-1px;
+  }
 }
 .logo_keen {
   width: 37% !important;
@@ -137,6 +140,9 @@ img {
 .logo_kloudless {
     width: 87%;
     margin-left: -31px;
+    @include when(XSMinus) {
+    margin-left:0px;
+    }
 }
 .logo_gdg {
   margin-top: -3px !important;
@@ -158,6 +164,9 @@ img {
 .logo_UXPin {
   width:30%;
   margin-left: -31px;
+  @include when(XSMinus) {
+  margin-left: 0px;
+  }
 }
 .logo_wolfram {
   width:60%;

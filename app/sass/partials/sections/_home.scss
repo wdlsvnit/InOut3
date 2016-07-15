@@ -130,7 +130,7 @@
 	}
 	.bg-gradient 
 	{   
-	height: 800px;
+	height: 100vh !important;
 	background-image: -moz-linear-gradient(0deg, rgba(80,196,214,0.90) 0%, rgba(82,113,209,0.90) 100%); /* ff3.6+ */
 	background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(80,196,214,0.90)), color-stop(100%, rgba(82,113,209,0.90))); /* safari4+,chrome */
 	background-image: -webkit-linear-gradient(0deg, rgba(80,196,214,0.90) 0%, rgba(82,113,209,0.90) 100%); /* safari5.1+,chrome10+ */

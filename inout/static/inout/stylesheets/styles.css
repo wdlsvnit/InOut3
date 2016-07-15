@@ -58,7 +58,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: 100vw;
   height: 100vh;
   position: relative;
-  max-height: 800px;
   min-width: 320px;
   overflow: hidden;
   padding-bottom: 150px;
@@ -313,7 +312,7 @@ body {
   animation: bgScrollFront 50s linear infinite;
 }
 #inout .bg-gradient {
-  height: 800px;
+  height: 100vh !important;
   /* ff3.6+ */
   /* safari4+,chrome */
   /* safari5.1+,chrome10+ */
@@ -793,12 +792,22 @@ a:active {
   width: 127%;
   margin-top: -7px;
 }
+@media only screen and (max-width: 350px) {
+  .section--sponsors .box .logo_meteor {
+    margin-top: -1px;
+  }
+}
 .section--sponsors .box .logo_keen {
   width: 37% !important;
 }
 .section--sponsors .box .logo_kloudless {
   width: 87%;
   margin-left: -31px;
+}
+@media only screen and (max-width: 350px) {
+  .section--sponsors .box .logo_kloudless {
+    margin-left: 0px;
+  }
 }
 .section--sponsors .box .logo_gdg {
   margin-top: -3px !important;
@@ -820,6 +829,11 @@ a:active {
 .section--sponsors .box .logo_UXPin {
   width: 30%;
   margin-left: -31px;
+}
+@media only screen and (max-width: 350px) {
+  .section--sponsors .box .logo_UXPin {
+    margin-left: 0px;
+  }
 }
 .section--sponsors .box .logo_wolfram {
   width: 60%;
