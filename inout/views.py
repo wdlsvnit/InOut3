@@ -346,5 +346,9 @@ class CustomCallback(OAuthCallback):
 def campus(request):
         return render(request,'inout/campus.html')
 
+
+def tracks(request):
+        return render(request,'inout/tracks.html')
+
 def error404(request):
     return render(request,'404.html', status=404)

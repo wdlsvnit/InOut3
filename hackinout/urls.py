@@ -18,7 +18,7 @@ from django.contrib import admin
 # import django.views.defaults
 from django.contrib.auth.decorators import login_required
 
-from inout.views import CustomCallback,UserDash,Index,logout_view,closed,home_view,team_view,campus,team_approve_view
+from inout.views import CustomCallback,UserDash,Index,logout_view,closed,home_view,team_view,campus,tracks,team_approve_view
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -33,7 +33,8 @@ urlpatterns = [
     url(r'^new/$',home_view, name='new'),
     url(r'^closed/',closed,name='closed'),
     url(r'^sponsorship/',include('sponsorship.urls')),
-    url(r'^campus/',campus, name="campus")
+    url(r'^campus/',campus, name="campus"),
+    url(r'^tracks/',tracks, name="tracks")    
     # url(r'^404/$', django.views.defaults.page_not_found, )
     ]
 handler404 = "inout.views.error404"

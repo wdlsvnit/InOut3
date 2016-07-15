@@ -1,0 +1,291 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<script>
+	!function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(
+	arguments)};d=s.createElement(q);q=s.getElementsByTagName(q)[0];
+	d.src='//d1l6p2sc9645hc.cloudfront.net/tracker.js';q.parentNode.
+	insertBefore(d,q)}(window,document,'script','_gs');
+	_gs('GSN-532958-W');
+	</script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>InOut 3.0 | Tracks</title>
+	<meta property="fb:app_id" content="349176421957919"/>
+	<meta property="og:title" content="InOut 3.0 | Aug 13-14 @ NIT Surat">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="https://hackinout.co/static/inout/images/fb-og.png">
+	<meta property="og:url" content="https://hackinout.co">
+	<meta property="og:description" content="InOut is one of India’s largest student run hackathon, characterized by remarkable rounds of intense coding and brainstorming! Come together for 30 hours with the brightest developers and designers to create something amazing.">
+	<meta name="description" content="InOut 3.0: NIT Surat presents India's largest student run Hackathon">
+	<meta name="keywords" content="hackathon, hackathon india, InOut, India, InOut svnit, svnit surat, nit surat, hackathon, gujarat, technology, startups, innovation, hacks"/>
+	<meta name="author" content="WebDev Labs, NIT Surat"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="robots" content="index,follow"/>
+	<meta name="revisit-after" content="2 days">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="theme-color" content="#ffffff">
+	<meta http-equiv="cache-control" content="public"/>
+	<meta http-equiv="expires" content="Fri, 10 June 2016, 00:00:00 GMT"/>
+	<link rel="apple-touch-icon" sizes="57x57" href="{% static "inout/images/apple-icon-57x57.png" %}">
+	<link rel="apple-touch-icon" sizes="60x60" href="{% static "inout/images/apple-icon-60x60.png" %}">
+	<link rel="apple-touch-icon" sizes="72x72" href="{% static "inout/images/apple-icon-72x72.png" %}">
+	<link rel="apple-touch-icon" sizes="76x76" href="{% static "inout/images/apple-icon-76x76.png" %}">
+	<link rel="apple-touch-icon" sizes="114x114" href="{% static "inout/images/apple-icon-114x114.png" %}">
+	<link rel="apple-touch-icon" sizes="120x120" href="{% static "inout/images/apple-icon-120x120.png" %}">
+	<link rel="apple-touch-icon" sizes="144x144" href="{% static "inout/images/apple-icon-144x144.png" %}">
+	<link rel="apple-touch-icon" sizes="152x152" href="{% static "inout/images/apple-icon-152x152.png" %}">
+	<link rel="apple-touch-icon" sizes="180x180" href="{% static "inout/images/apple-icon-180x180.png" %}">
+	<link rel="icon" type="image/png" sizes="192x192"  href="{% static "inout/images/android-icon-192x192.png" %}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{% static "inout/images/favicon-32x32.png" %}">
+	<link rel="icon" type="image/png" sizes="96x96" href="{% static "inout/images/favicon-96x96.png" %}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{% static "inout/images/favicon-16x16.png" %}">
+	<link rel="manifest" href="{% static "inout/images/manifest.json" %}">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="{% static "inout/stylesheets/campus.css" %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css" />
+	<link rel="stylesheet" href="{% static "inout/stylesheets/styles.css" %}">
+	<style>
+		.track-main-title {
+			margin-bottom: 10px !important;
+			color: #ffffff;
+			font-family: 'Brandon',Fallback, sans-serif;
+			font-size: 4em;
+			text-align: center;
+			margin-top: 300px !important;
+		}
+		.header-banner, .bgl-main {
+			background: #3F8DD8;
+		}
+		.inout-logo {
+			margin-top: 60px !important;
+		}
+		.inout-version {
+			color: #ffffff;
+			margin-top: 60px;
+			text-transform: uppercase;
+			font-family: 'Brandon',Fallback, sans-serif;
+			font-size: 1.3em;
+		}
+		.version {
+			display: inline-block;
+			color: rgb(31, 125, 216);
+			padding: 4px;
+			border-radius: 3.5px;
+			background-color: #ffffff;
+		}
+		.logo-footer {
+			margin-top:20vh;
+		}
+		.footer-title {
+			color: #ffffff;
+			font-family: 'Brandon',Fallback, sans-serif;
+			font-size: 4em;
+		}
+		.bgl-blue {
+			background: #F2F2F2;
+		}
+		@font-face {
+		font-family: Brandon;
+		src: url("{% static "inout/fonts/Brandon_bld.otf" %}");
+		}
+		.sub-title {
+		color: #3F8DD8;
+		font-family: 'Brandon', Fallback, sans-serif;
+		font-size: 1.6em;
+		}
+		.section--text {
+			font-family: 'Regular';
+			font-weight: 400;
+			font-size: 2.2em;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<header class="container-fluid header-banner">
+		<div class="row">
+			<div class="col-md-5 col-lg-5 col-lg-offset-1 col-xs-5 col-xs-offset-1">
+				<p class="inout-logo">
+					<a href="https://hackinout.co"><img class="inout-img" src="./../../static/inout/images/tracks/logo_InOut.png" alt="InOut logo" /></a>
+				</p></div>
+				<div class="col-md-5 col-lg-5 col-xs-5 text-right">
+					<p class="inout-version"> <span class="version">Third-edition</span>&nbsp;&nbsp;hackinout.co</p>
+				</div>
+				<h1 class="track-main-title">Things you would like to develop</h1>
+				<p class="section--text text-center"> InOut Tracks</p>
+			</div>
+		</div>
+		
+	</header>
+	<div class="container-fluid">
+		<div class="container">
+			<section class="section-2">
+				<div class="row">
+					<div class="col-md-4">
+						<img class="img-responsive" src="./../../static/inout/images/tracks/InOut_Tracks-02.png" alt="about" />
+					</div>
+					<div class="col-md-8 text-right">
+						<h2 class="sub-title">Build the internet For everything</h2>
+						<p class="section__content--text">A world of devices connected by internet opens up opportunities for us that were
+previously unthinkable. Innovative apps can be built that can allow devices to share
+data and take intelligent decisions.</p>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<div class="container-fluid bgl-blue">
+		<div class="container">
+			<section class="section-2">
+				<div class="row">
+					<div class="col-md-8">
+						<h2 class="sub-title">Digital reinvention of travel & transportation</h2>
+						<p class="section__content--text">Travel has been significantly disrupted in the last 5 years by digital technology. There
+are major technologies such as augmented reality that are poised to further disrupt
+the travel and transportation industry.
+
+						</p>
+					</div>
+					<div class="col-md-4 text-right">
+						<img class="img-responsive" src="./../../static/inout/images/tracks/InOut_Tracks-03.png" alt="about" />
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="container">
+			<section class="section-2">
+				<div class="row">
+					<div class="col-md-4">
+						<img class="img-responsive" src="./../../static/inout/images/tracks/InOut_Tracks-04.png" alt="about" />
+					</div>
+					<div class="col-md-8 text-right">
+						<h2 class="sub-title">Develop in pink of someone's Health</h2>
+						<p class="section__content--text">None of us need to search far for a friend or family member impacted by sickness or
+injury. At our most vulnerable moments, we are confronted with a healthcare system
+woefully incapable of meeting the current demands. We are calling on all hackers and
+sponsors to innovate for a healthier future.</p>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<div class="container-fluid bgl-blue">
+		<div class="container">
+			<section class="section-2">
+				<div class="row">
+					<div class="col-md-8">
+						<h2 class="sub-title">
+						Take the money and make it more easy & secure</h2>
+						<p class="section__content--text">
+							The financial services industry is facing a wave of digital disruption that is starting to
+reshape the sector. This industry is currently the second-biggest target for disruption,
+after health care.</p>
+					</div>
+					<div class="col-md-4 text-right">
+						<img class="img-responsive" src="./../../static/inout/images/tracks/InOut_Tracks-05.png" alt="about" />
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="container">
+			<section class="section-2">
+				<div class="row">
+					<div class="col-md-4">
+						<img class="img-responsive" src="./../../static/inout/images/tracks/InOut_Tracks-06.png" alt="about" />
+					</div>
+					<div class="col-md-8 text-right">
+						<h2 class="sub-title"> Enhance the economics of demand and supply over the web</h2>
+						<p class="section__content--text">Online commerce has changed everyone’s shopping behaviour. The ability to browse
+through millions of products and get them delivered while sitting at home is
+revolutionary. Some really innovative apps can be built to make this experience better
+and easier.</p>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<div class="container-fluid bgl-blue">
+		<div class="container">
+			<section class="section-2">
+				<div class="row">
+					<div class="col-md-8">
+						<h2 class="sub-title">Explore the VR and make world more better</h2>
+						<p class="section__content--text">VR technology is the extension of our minds. 3D and VR environment allow us to experience an entirely new side of imagination. We invite you to aid our imagination with your hands on approach towards VR exploration.</p>
+					</div>
+					<div class="col-md-4 text-right">
+						<img class="img-responsive" src="./../../static/inout/images/tracks/InOut_Tracks-07.png" alt="about" />
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="container">
+			<section class="section-2">
+				<div class="row">
+					<div class="col-md-4">
+						<img class="img-responsive" src="./../../static/inout/images/tracks/InOut_Tracks-08.png" alt="about" />
+					</div>
+					<div class="col-md-8 text-right">
+						<h2 class="sub-title">Build your Bot with Advance Al engine</h2>
+						<p class="section__content--text">Al and Bots: With the technology speeding up at fast rate, the requirement of emulation of human activities is also in demand. Given that Al Engine and bots are relatively simple to create and implement, come together to develop very powerful tool with the potential to influence every segment of the World Wide Web.
+						</p>
+						
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<div class="container-fluid bgl-main">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<section class="section-3">
+						<p class="footer-title">We are waiting for your amazing hacks!!</p>
+						<img class="logo-footer" src="./../../static/inout/images/tracks/logo_InOut.png" alt="Campus Envangelist Program" />
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="section--footer">
+		
+		<div class="container-fluid footer--content">
+			<div class="row">
+				<div class="col-lg-4 col-xs-12">
+					<p class="footer--text">Contact : <a href="mailto:mail@hackinout.co">mail@hackinout.co</a></p>
+				</div>
+				<div class="col-lg-4 col-xs-12">
+					<p class="footer--text"> <i class="fa fa-code"></i> with <i class="fa fa-heart beating-heart beat-the-heart"></i> at <a href="https://www.facebook.com/webdevlabs" target="_blank" title="WebDev Labs on facebook">WebDev Labs</a></p>
+				</div>
+				<div class="col-lg-4 col-xs-12">
+					<p class="footer--text">  <a href="http://hackcodeofconduct.org/inout" target="_blank">Code of Conduct</a></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Java Script -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"
+	></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-67591208-1', 'auto');
+	ga('send', 'pageview');
+	</script>
+</body>
+</html>
