@@ -783,9 +783,12 @@ a:active {
   margin-left: -18% !important;
   width: 120% !important;
 }
-.section--sponsors .box .logo_tweeter {
+.section--sponsors .box .logo_twitter {
   width: 66% !important;
   margin-left: -5%;
+}
+.section--sponsors .box .logo_exotel {
+  width: 60%;
 }
 .section--sponsors .box .logo_meteor {
   margin-left: -19% !important;
