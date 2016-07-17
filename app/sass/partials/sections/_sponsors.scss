@@ -128,6 +128,10 @@ img {
 }
 .logo_exotel {
   width:60%;
+  margin-left:-35px;
+  @include when(XSMinus) {
+  margin-left:0px;
+  } 
 }
 .logo_meteor{
   margin-left: -19% !important;

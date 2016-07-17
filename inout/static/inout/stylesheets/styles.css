@@ -789,6 +789,12 @@ a:active {
 }
 .section--sponsors .box .logo_exotel {
   width: 60%;
+  margin-left: -35px;
+}
+@media only screen and (max-width: 350px) {
+  .section--sponsors .box .logo_exotel {
+    margin-left: 0px;
+  }
 }
 .section--sponsors .box .logo_meteor {
   margin-left: -19% !important;
