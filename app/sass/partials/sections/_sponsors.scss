@@ -129,9 +129,12 @@ img {
 .logo_exotel {
   width:60%;
   margin-left:-35px;
-  @include when(XSMinus) {
-  margin-left:0px;
+  @include when(SMinus) {
+  margin-left:0px !important;
   } 
+  @include when(LMinus) {
+  margin-left:0px !important;
+  }
 }
 .logo_meteor{
   margin-left: -19% !important;
@@ -152,8 +155,27 @@ img {
     }
 }
 .logo_gdg {
-  margin-top: -3px !important;
   width: 88% !important;
+}
+
+.logo_intel {
+  width: 40% !important;
+  margin-left:30px;
+  @include when(XSMinus) {
+  margin-left:10px;
+  }
+}
+.logo_wingify {
+  margin-left:-70px;
+  @include when(LMinus) {
+  margin-left:0px;
+  }
+  @include when(XSMinus) {
+  margin-left:0px;
+  }
+  @include when(MSMinus) {
+  margin-left:0px;
+  }
 }
 .logo_cl {
 	width:60% !important;

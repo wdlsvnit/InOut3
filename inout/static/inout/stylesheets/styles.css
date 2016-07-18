@@ -791,9 +791,14 @@ a:active {
   width: 60%;
   margin-left: -35px;
 }
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 575px) {
   .section--sponsors .box .logo_exotel {
-    margin-left: 0px;
+    margin-left: 0px !important;
+  }
+}
+@media only screen and (max-width: 1140px) {
+  .section--sponsors .box .logo_exotel {
+    margin-left: 0px !important;
   }
 }
 .section--sponsors .box .logo_meteor {
@@ -819,8 +824,29 @@ a:active {
   }
 }
 .section--sponsors .box .logo_gdg {
-  margin-top: -3px !important;
   width: 88% !important;
+}
+.section--sponsors .box .logo_intel {
+  width: 40% !important;
+  margin-left: 30px;
+}
+@media only screen and (max-width: 350px) {
+  .section--sponsors .box .logo_intel {
+    margin-left: 10px;
+  }
+}
+.section--sponsors .box .logo_wingify {
+  margin-left: -70px;
+}
+@media only screen and (max-width: 1140px) {
+  .section--sponsors .box .logo_wingify {
+    margin-left: 0px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .section--sponsors .box .logo_wingify {
+    margin-left: 0px;
+  }
 }
 .section--sponsors .box .logo_cl {
   width: 60% !important;
