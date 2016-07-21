@@ -75,7 +75,7 @@
   width: 20%;
 }
 .two:first-child {
-  margin-left: 32%;
+  margin-left: 33%;
 }
 
 
@@ -163,9 +163,9 @@ img {
 
 .logo_intel {
   width: 40% !important;
-  margin-left:30px;
+  margin-left:50px;
   @include when(XSMinus) {
-  margin-left:10px;
+  margin-left:13px;
   }
 }
 .logo_wingify {
