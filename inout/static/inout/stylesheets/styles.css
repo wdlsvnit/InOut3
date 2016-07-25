@@ -701,19 +701,21 @@ a:active {
 .section--sponsors .box .five {
   display: block;
   float: left;
-  margin: 0;
   max-height: 100px;
-  width: 13%;
-  margin-right: -11%;
-  margin-left: 13%;
+  width: 12%;
+  margin-left: 1%;
 }
-.section--sponsors .box .five2 {
+.section--sponsors .box .five:first-child {
+  margin-left: 20%;
+}
+.section--sponsors .box .six {
   display: block;
   float: left;
-  margin: 0;
   max-height: 100px;
-  width: 13%;
-  margin-left: 6%;
+  width: 12%;
+}
+.section--sponsors .box .six:first-child {
+  margin-left: 14%;
 }
 .section--sponsors .box .four {
   display: block;
@@ -783,6 +785,23 @@ a:active {
   margin-left: -18% !important;
   width: 120% !important;
 }
+.section--sponsors .box .logo_branch {
+  margin-left: 30px;
+  margin-top: -10px;
+}
+@media only screen and (max-width: 575px) {
+  .section--sponsors .box .logo_branch {
+    margin-left: 10px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .section--sponsors .box .logo_branch {
+    margin-left: 9px;
+  }
+}
+.section--sponsors .box .logo_rethinkdb {
+  margin-left: 20px;
+}
 .section--sponsors .box .logo_twitter {
   width: 66% !important;
   margin-left: -5%;
@@ -808,7 +827,17 @@ a:active {
 }
 @media only screen and (max-width: 350px) {
   .section--sponsors .box .logo_meteor {
-    margin-top: -1px;
+    margin-top: -1px !important;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .section--sponsors .box .logo_meteor {
+    margin-top: -1px !important;
+  }
+}
+@media screen and (max-width: 485px) {
+  .section--sponsors .box .logo_meteor {
+    margin-top: -1px !important;
   }
 }
 .section--sponsors .box .logo_keen {
@@ -823,7 +852,7 @@ a:active {
 }
 @media only screen and (max-width: 350px) {
   .section--sponsors .box .logo_kloudless {
-    margin-left: 0px;
+    margin-left: -10px;
   }
 }
 .section--sponsors .box .logo_gdg {
@@ -835,7 +864,12 @@ a:active {
 }
 @media only screen and (max-width: 350px) {
   .section--sponsors .box .logo_intel {
-    margin-left: 13px;
+    margin-left: 0px !important;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .section--sponsors .box .logo_intel {
+    margin-left: 20px !important;
   }
 }
 .section--sponsors .box .logo_wingify {
@@ -868,9 +902,9 @@ a:active {
   width: 30%;
   margin-left: -31px;
 }
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 575px) {
   .section--sponsors .box .logo_UXPin {
-    margin-left: 0px;
+    margin-left: -10px;
   }
 }
 .section--sponsors .box .logo_wolfram {

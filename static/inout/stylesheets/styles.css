@@ -58,7 +58,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: 100vw;
   height: 100vh;
   position: relative;
-  max-height: 800px;
   min-width: 320px;
   overflow: hidden;
   padding-bottom: 150px;
@@ -313,7 +312,7 @@ body {
   animation: bgScrollFront 50s linear infinite;
 }
 #inout .bg-gradient {
-  height: 800px;
+  height: 100vh !important;
   /* ff3.6+ */
   /* safari4+,chrome */
   /* safari5.1+,chrome10+ */
@@ -702,19 +701,21 @@ a:active {
 .section--sponsors .box .five {
   display: block;
   float: left;
-  margin: 0;
   max-height: 100px;
-  width: 13%;
-  margin-right: -11%;
-  margin-left: 13%;
+  width: 12%;
+  margin-left: 1%;
 }
-.section--sponsors .box .five2 {
+.section--sponsors .box .five:first-child {
+  margin-left: 20%;
+}
+.section--sponsors .box .six {
   display: block;
   float: left;
-  margin: 0;
   max-height: 100px;
-  width: 13%;
-  margin-left: 6%;
+  width: 12%;
+}
+.section--sponsors .box .six:first-child {
+  margin-left: 14%;
 }
 .section--sponsors .box .four {
   display: block;
@@ -736,7 +737,7 @@ a:active {
   width: 20%;
 }
 .section--sponsors .box .two:first-child {
-  margin-left: 32%;
+  margin-left: 33%;
 }
 .section--sponsors .box .two2 {
   display: block;
@@ -784,25 +785,105 @@ a:active {
   margin-left: -18% !important;
   width: 120% !important;
 }
-.section--sponsors .box .logo_tweeter {
+.section--sponsors .box .logo_branch {
+  margin-left: 30px;
+  margin-top: -10px;
+}
+@media only screen and (max-width: 575px) {
+  .section--sponsors .box .logo_branch {
+    margin-left: 10px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .section--sponsors .box .logo_branch {
+    margin-left: 9px;
+  }
+}
+.section--sponsors .box .logo_rethinkdb {
+  margin-left: 20px;
+}
+.section--sponsors .box .logo_twitter {
   width: 66% !important;
   margin-left: -5%;
+}
+.section--sponsors .box .logo_exotel {
+  width: 60%;
+  margin-left: -35px;
+}
+@media only screen and (max-width: 575px) {
+  .section--sponsors .box .logo_exotel {
+    margin-left: 0px !important;
+  }
+}
+@media only screen and (max-width: 1140px) {
+  .section--sponsors .box .logo_exotel {
+    margin-left: 0px !important;
+  }
 }
 .section--sponsors .box .logo_meteor {
   margin-left: -19% !important;
   width: 127%;
   margin-top: -7px;
 }
+@media only screen and (max-width: 350px) {
+  .section--sponsors .box .logo_meteor {
+    margin-top: -1px !important;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .section--sponsors .box .logo_meteor {
+    margin-top: -1px !important;
+  }
+}
+@media screen and (max-width: 485px) {
+  .section--sponsors .box .logo_meteor {
+    margin-top: -1px !important;
+  }
+}
 .section--sponsors .box .logo_keen {
   width: 37% !important;
+}
+.section--sponsors .box .logo_teqip {
+  width: 50%;
 }
 .section--sponsors .box .logo_kloudless {
   width: 87%;
   margin-left: -31px;
 }
+@media only screen and (max-width: 350px) {
+  .section--sponsors .box .logo_kloudless {
+    margin-left: -10px;
+  }
+}
 .section--sponsors .box .logo_gdg {
-  margin-top: -3px !important;
   width: 88% !important;
+}
+.section--sponsors .box .logo_intel {
+  width: 40% !important;
+  margin-left: 50px;
+}
+@media only screen and (max-width: 350px) {
+  .section--sponsors .box .logo_intel {
+    margin-left: 0px !important;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .section--sponsors .box .logo_intel {
+    margin-left: 20px !important;
+  }
+}
+.section--sponsors .box .logo_wingify {
+  margin-left: -70px;
+}
+@media only screen and (max-width: 1140px) {
+  .section--sponsors .box .logo_wingify {
+    margin-left: 0px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .section--sponsors .box .logo_wingify {
+    margin-left: 0px;
+  }
 }
 .section--sponsors .box .logo_cl {
   width: 60% !important;
@@ -820,6 +901,11 @@ a:active {
 .section--sponsors .box .logo_UXPin {
   width: 30%;
   margin-left: -31px;
+}
+@media only screen and (max-width: 575px) {
+  .section--sponsors .box .logo_UXPin {
+    margin-left: -10px;
+  }
 }
 .section--sponsors .box .logo_wolfram {
   width: 60%;

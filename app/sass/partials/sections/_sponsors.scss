@@ -33,25 +33,29 @@
 .five {
   display: block;
   float: left;
-  margin: 0;
+  //margin: 0;
   max-height: 100px;
-  // margin-left:6%;
-  width: 13%;
-    margin-right: -11%;
-    margin-left: 13%;
+  width: 12%;
+  //margin-right: -10%;
+  margin-left: 1%;
+}
 
-
+.five:first-child {
+  margin-left: 20%;
 }
 
 
-.five2 {
+.six {
   display: block;
   float: left;
-  margin: 0;
   max-height: 100px;
-  width: 13%;
-  margin-left:6%;
+  width: 12%;
 }
+
+.six:first-child {
+  margin-left: 14%;
+}
+
 
 .four {
   display: block;
@@ -118,10 +122,25 @@ img {
 .logo_github{
 	margin-left:-28% !important;
 }
-.logo_do{
+.logo_do {
 	margin-left:-18% !important;
   width:120% !important;
 }
+.logo_branch {
+  margin-left: 30px;
+  margin-top: -10px;
+  @include when(SMinus) {
+  margin-left:10px;
+  }
+  @include when(XSMinus) {
+  margin-left:9px;
+  }
+}
+
+.logo_rethinkdb {
+  margin-left:20px;
+}
+
 .logo_twitter{
 	width:66% !important;
 	margin-left:-5%;
@@ -141,7 +160,14 @@ img {
   width: 127%;
   margin-top: -7px;
   @include when(XSMinus) {
-  margin-top:-1px;
+  margin-top:-1px !important;
+  }
+  @include when(SMinus) {
+  margin-top:-1px !important;
+  }
+  @media screen and (max-width : $fourth_breakpoint) {
+  margin-top:-1px !important;
+
   }
 }
 .logo_keen {
@@ -154,7 +180,7 @@ img {
     width: 87%;
     margin-left: -31px;
     @include when(XSMinus) {
-    margin-left:0px;
+    margin-left:-10px;
     }
 }
 .logo_gdg {
@@ -165,7 +191,10 @@ img {
   width: 40% !important;
   margin-left:50px;
   @include when(XSMinus) {
-  margin-left:13px;
+  margin-left:0px !important;
+  }
+  @include when(SMinus) {
+  margin-left:20px !important;
   }
 }
 .logo_wingify {
@@ -196,8 +225,8 @@ img {
 .logo_UXPin {
   width:30%;
   margin-left: -31px;
-  @include when(XSMinus) {
-  margin-left: 0px;
+  @include when(SMinus) {
+  margin-left: -10px;
   }
 }
 .logo_wolfram {
