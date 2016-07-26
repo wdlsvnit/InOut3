@@ -910,6 +910,12 @@ a:active {
 .section--sponsors .box .logo_wolfram {
   width: 60%;
 }
+.section--sponsors .box .logo_partner {
+  width: 50%;
+}
+.section--sponsors .box .logo_udacity {
+  margin-top: 5%;
+}
 .section--sponsors .box .sponsor {
   display: inline-block;
   width: auto;
