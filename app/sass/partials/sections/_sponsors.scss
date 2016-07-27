@@ -238,23 +238,26 @@ img {
 .logo_udacity {
   margin-top: 5%;
 }
+.merchandise {
+padding-top: 0px !important;
+margin-top: -10px;
+}
 
-			.sponsor {
-				display : inline-block;
-				width : auto;
-				height : 90px;
-				margin : 30px;
-				@media screen and (max-width : $third_breakpoint) {
-					height : 60px;
-				}
-				@media screen and (max-width : $fourth_breakpoint) {
-					height : 40px;
-				}
-			}
-		}
+.sponsor {
+  	display : inline-block;
+  	width : auto;
+  	height : 90px;
+  	margin : 30px;
+  	@media screen and (max-width : $third_breakpoint) {
+  		height : 60px;
+  	}
+  	@media screen and (max-width : $fourth_breakpoint) {
+  		height : 40px;
+  	}
+  }
+  }
 		
-
-		p {
+	p {
 			font-size : 2.3rem;
     		padding-bottom : 3pc;
     		line-height : normal;

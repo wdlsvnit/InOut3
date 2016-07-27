@@ -916,6 +916,10 @@ a:active {
 .section--sponsors .box .logo_udacity {
   margin-top: 5%;
 }
+.section--sponsors .box .merchandise {
+  padding-top: 0px !important;
+  margin-top: -10px;
+}
 .section--sponsors .box .sponsor {
   display: inline-block;
   width: auto;
