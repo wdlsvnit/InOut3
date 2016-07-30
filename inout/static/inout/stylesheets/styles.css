@@ -1124,10 +1124,22 @@ a:active {
   overflow: hidden;
   border: 0;
 }
-@media (min-width: 454px) and (max-width: 767px) {
-  .modal-signup .modal-content,
+
+@media only screen and (max-width: 350px) {
+  .modal-content {
+    display: none;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .modal-content {
+    width: 85vw;
+    top: 20%;
+  }
+}
+@media screen and (max-width: 800px) {
   .modal-content {
     width: 90vw;
+    top: 10%;
   }
 }
 
@@ -1141,7 +1153,6 @@ a:active {
   padding: 35px 40px;
   height: 100%;
   position: absolute;
-  /* border-radius: 7px 0 0 7px; */
 }
 
 .modal-signup h3,
@@ -1267,16 +1278,17 @@ a:active {
 
 .welcome {
   height: 500px;
+  padding-left: 0 !important;
   background: #F2777A;
 }
 @media only screen and (max-width: 350px) {
   .welcome {
-    display: none;
+    height: 300px;
   }
 }
 @media only screen and (max-width: 575px) {
   .welcome {
-    display: none;
+    height: 300px;
   }
 }
 .welcome h1 {
@@ -1445,6 +1457,48 @@ hr {
 @media only screen and (max-width: 1140px) {
   .teamdata img {
     width: 218px;
+  }
+}
+
+.closed_details {
+  position: absolute;
+  bottom: 10px;
+  line-height: 2.6rem;
+  padding: 23px;
+  font-size: 2.4rem;
+  font-family: Regular;
+  color: #fff;
+}
+@media only screen and (max-width: 350px) {
+  .closed_details {
+    font-size: 2.0rem !important;
+    top: 0px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .closed_details {
+    top: 30px;
+  }
+}
+
+.closed_gif img {
+  width: 104%;
+  height: 70%;
+}
+@media only screen and (max-width: 350px) {
+  .closed_gif img {
+    display: none;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .closed_gif img {
+    display: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  .closed_gif img {
+    width: 104%;
+    padding: 0;
   }
 }
 

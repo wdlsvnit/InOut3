@@ -9,6 +9,7 @@
     overflow: hidden;
     -webkit-overflow-scrolling: touch;
     outline: 0;
+
 }
 
 
@@ -33,11 +34,23 @@
   box-shadow: none;
   overflow: hidden;
   border: 0;
-  @media (min-width: 454px) and (max-width: 767px){
-    width:90vw;
-    }
+}
+
+.modal-content {
+  @include when(XSMinus){
+  display:none;
+  }
+ @include when(SMinus){
+  width:85vw;
+  top:20%;
+  }
+  @media screen and (max-width : 800px) {
+   width:90vw;
+   top:10%
+   }  
 
 }
+
 .modal-signup .modal-content .welcome-screen,
 .modal-content .welcome-screen  {
   width: 324px;
@@ -48,11 +61,7 @@
   padding: 35px 40px;
   height: 100%;
   position: absolute;
-  /* border-radius: 7px 0 0 7px; */
 }
-
-
-
 
 
 .modal-signup h3,
@@ -60,8 +69,6 @@
   margin: 0;
   font-weight: 500;
 }
-
-
 
 .register form {
   margin-top: 30px;
@@ -191,12 +198,13 @@ font-size: 1.8em;
 
 .welcome{
   height: 500px;
+  padding-left:0 !important;
   background: #F2777A;
   @include when(XSMinus){
-  display:none;
+   height:300px;
   }
    @include when(SMinus){
-  display:none;
+   height:300px;
   }
   h1
   {
@@ -386,3 +394,35 @@ hr {
 
 }
 
+
+.closed_details {
+ position: absolute;
+ bottom: 10px;
+ line-height: 2.6rem;
+ padding: 23px;
+ font-size: 2.4rem;
+ font-family: Regular;
+ color: #fff;
+ @include when(XSMinus){
+ font-size: 2.0rem !important;
+ top: 0px;
+ }
+  @include when(SMinus){
+  top:30px; 
+  }
+}
+
+.closed_gif img{
+  width:104%;
+  height:70%;
+  @include when(XSMinus){
+  display:none;
+  }
+  @include when(SMinus){
+  display:none
+  }
+ @media screen and (max-width : 800px) {
+  width:104%;
+  padding:0;
+  }  
+}
