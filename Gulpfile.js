@@ -11,6 +11,16 @@ var onError = function(err) {
     console.log(err);
 };
 
+var process     = require('child_process');
+// python manage.pr runserver
+
+gulp.task('Django', function(){
+  var spawn = process.spawn;
+  console.info('Starting Django server');
+  var PIPE = {stdio: 'inherit'};
+  spawn('python', ['manage.py','runserver'], PIPE);
+});
+
 gulp.task('Sass', function() {
 	gulp.src('app/sass/**/*.scss')
         .pipe(plugins.plumber({
@@ -31,12 +41,10 @@ gulp.task('Sass', function() {
         // .pipe(plugins.minifyCss({keepSpecialComments:0}))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('inout/static/inout/stylesheets'));
-        
-
 });
 
-gulp.task('watch', function() {
+gulp.task('watch',['Django'], function() {
     gulp.watch('app/sass/**/*.scss', ['Sass']);
 });
 
-gulp.task('default', ['Sass']);
+gulp.task('default', ['Sass','Django']);

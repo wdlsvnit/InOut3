@@ -920,6 +920,10 @@ a:active {
   padding-top: 0px !important;
   margin-top: -10px;
 }
+.section--sponsors .box .logo_coolbird {
+  width: 30%;
+  margin-top: 50px;
+}
 .section--sponsors .box .sponsor {
   display: inline-block;
   width: auto;
