@@ -19,3 +19,18 @@
     We will allow you to show your coding skills without getting worried about any mortal needs. We will take care of everything.
   </p>
 </div>
+
+## Installation
+
+```sh
+$ git clone https://github.com/WebDevLabs-SVNIT/InOut3
+$ cd InOut3
+$ npm install
+$ make yourvirtualenv
+$ workon yourvirtualenv
+$ pip install -r requirements.txt 
+$ gulp watch
+```
+gulp watch will run and watch two tasks -
+- `Django server`
+- `Sass` 
