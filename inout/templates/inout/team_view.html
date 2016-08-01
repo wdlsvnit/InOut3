@@ -116,14 +116,7 @@
 </div>
 <div class="col-lg-6 col-lg-offset-3">
   <div class="form-content">
-<form method="post" action="" enctype="multipart/form-data" class="bootstrap3">
-  {% csrf_token %}
-{{ form|crispy}}
-{% if participants|length >= 3 %}
-{% else %}
-<input class="btn btn-submit btn-primary" type="submit" value="Submit">
-{% endif %}
-</form>
+
 
 <br><br><br>
 </div>
