@@ -30,3 +30,7 @@ app/dist
 
 ### gulp deploy ###
 .publish
+
+// osx garbage
+*.DS_Store
+.DS_Store

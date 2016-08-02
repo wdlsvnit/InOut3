@@ -924,6 +924,11 @@ a:active {
   width: 30%;
   margin-top: 50px;
 }
+.section--sponsors .box .logo_ys {
+  width: 70%;
+  margin-top: 50px;
+  margin-left: 16%;
+}
 .section--sponsors .box .sponsor {
   display: inline-block;
   width: auto;
