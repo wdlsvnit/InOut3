@@ -142,6 +142,8 @@
 
 }
 
-
-
-
+// style alt tag when img fails to load
+img {
+	color: #34495e;
+    font-size: 26px;
+}
