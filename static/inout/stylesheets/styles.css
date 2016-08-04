@@ -324,6 +324,11 @@ body {
   /* ie6-9 */
 }
 
+img {
+  color: #34495e;
+  font-size: 26px;
+}
+
 .section--about {
   height: auto;
   max-height: none;
@@ -696,7 +701,10 @@ a:active {
   margin-bottom: 45px;
 }
 .section--sponsors .box .row {
-  margin: 20px auto;
+  margin: 35px auto;
+}
+.section--sponsors .box .second_row {
+  margin-top: -35px;
 }
 .section--sponsors .box .five {
   display: block;
@@ -721,7 +729,10 @@ a:active {
   display: block;
   float: left;
   margin: 0;
-  width: 25%;
+  width: 15%;
+}
+.section--sponsors .box .four:first-child {
+  margin-left: 25%;
 }
 .section--sponsors .box .three {
   display: block;
@@ -775,6 +786,13 @@ a:active {
 .section--sponsors .box .img-md {
   width: 75% !important;
 }
+.section--sponsors .box .logo_fb {
+  width: 100% !important;
+  margin-left: -18%;
+}
+.section--sponsors .box .logo_hp {
+  width: 100% !important;
+}
 .section--sponsors .box .logo_gitlab {
   width: 50% !important;
 }
@@ -785,8 +803,10 @@ a:active {
   margin-left: -18% !important;
   width: 120% !important;
 }
+.section--sponsors .box .logo_tcs {
+  margin-top: -5px;
+}
 .section--sponsors .box .logo_branch {
-  margin-left: 30px;
   margin-top: -10px;
 }
 @media only screen and (max-width: 575px) {
@@ -800,15 +820,15 @@ a:active {
   }
 }
 .section--sponsors .box .logo_rethinkdb {
-  margin-left: 20px;
+  margin-left: -25px;
 }
 .section--sponsors .box .logo_twitter {
   width: 66% !important;
   margin-left: -5%;
 }
 .section--sponsors .box .logo_exotel {
-  width: 60%;
-  margin-left: -35px;
+  width: 65% !important;
+  margin-left: 35px;
 }
 @media only screen and (max-width: 575px) {
   .section--sponsors .box .logo_exotel {
@@ -916,6 +936,19 @@ a:active {
 .section--sponsors .box .logo_udacity {
   margin-top: 5%;
 }
+.section--sponsors .box .merchandise {
+  padding-top: 0px !important;
+  margin-top: -10px;
+}
+.section--sponsors .box .logo_coolbird {
+  width: 30%;
+  margin-top: 50px;
+}
+.section--sponsors .box .logo_ys {
+  width: 70%;
+  margin-top: 50px;
+  margin-left: 16%;
+}
 .section--sponsors .box .sponsor {
   display: inline-block;
   width: auto;
@@ -934,7 +967,7 @@ a:active {
 }
 .section--sponsors p {
   font-size: 2.3rem;
-  padding-bottom: 3pc;
+  padding-bottom: 7pc;
   line-height: normal;
   color: #FEC537;
   text-align: center;
@@ -1120,10 +1153,22 @@ a:active {
   overflow: hidden;
   border: 0;
 }
-@media (min-width: 454px) and (max-width: 767px) {
-  .modal-signup .modal-content,
+
+@media only screen and (max-width: 350px) {
+  .modal-content {
+    display: none;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .modal-content {
+    width: 85vw;
+    top: 20%;
+  }
+}
+@media screen and (max-width: 800px) {
   .modal-content {
     width: 90vw;
+    top: 10%;
   }
 }
 
@@ -1137,7 +1182,6 @@ a:active {
   padding: 35px 40px;
   height: 100%;
   position: absolute;
-  /* border-radius: 7px 0 0 7px; */
 }
 
 .modal-signup h3,
@@ -1263,16 +1307,17 @@ a:active {
 
 .welcome {
   height: 500px;
+  padding-left: 0 !important;
   background: #F2777A;
 }
 @media only screen and (max-width: 350px) {
   .welcome {
-    display: none;
+    height: 300px;
   }
 }
 @media only screen and (max-width: 575px) {
   .welcome {
-    display: none;
+    height: 300px;
   }
 }
 .welcome h1 {
@@ -1441,6 +1486,48 @@ hr {
 @media only screen and (max-width: 1140px) {
   .teamdata img {
     width: 218px;
+  }
+}
+
+.closed_details {
+  position: absolute;
+  bottom: 10px;
+  line-height: 2.6rem;
+  padding: 23px;
+  font-size: 2.4rem;
+  font-family: Regular;
+  color: #fff;
+}
+@media only screen and (max-width: 350px) {
+  .closed_details {
+    font-size: 2.0rem !important;
+    top: 0px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .closed_details {
+    top: 30px;
+  }
+}
+
+.closed_gif img {
+  width: 104%;
+  height: 70%;
+}
+@media only screen and (max-width: 350px) {
+  .closed_gif img {
+    display: none;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .closed_gif img {
+    display: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  .closed_gif img {
+    width: 104%;
+    padding: 0;
   }
 }
 
