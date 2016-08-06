@@ -20,6 +20,8 @@
   </p>
 </div>
 
+### prerequisites
+`ruby gulp-cli compass`
 ## Installation
 
 ```sh
