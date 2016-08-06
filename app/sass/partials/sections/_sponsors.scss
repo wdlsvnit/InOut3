@@ -79,7 +79,7 @@
   width: 20%;
 }
 .three:first-child {
-  margin-left: 25%;
+  margin-left: 24%;
 }
 
 .two {
@@ -135,19 +135,24 @@ img {
 }
 
 .logo_gitlab{
-  width: 50% !important;
+  width: 45% !important;
+}
+.logo_jb{
+  width:75%;
 }
 .logo_github{
 	margin-left:-28% !important;
+  width:90%;
 }
 .logo_do {
 	margin-left:-18% !important;
-  width:120% !important;
+  width:105% !important;
 }
 .logo_tcs{
   margin-top:-5px;
 }
 .logo_branch {
+  width:72% !important;
   margin-top: -10px;
   @include when(SMinus) {
   margin-left:10px;
@@ -157,12 +162,17 @@ img {
   }
 }
 
+.logo_onion {
+  width:85%;
+}
+
 .logo_rethinkdb {
   margin-left:-25px;
+  width:65% !important;
 }
 
 .logo_twitter{
-	width:66% !important;
+	width:60% !important;
 	margin-left:-5%;
 }
 .logo_exotel {
@@ -175,9 +185,14 @@ img {
   margin-left:0px !important;
   }
 }
+
+.logo_tech{
+  width:85%;
+}
+
 .logo_meteor{
   margin-left: -19% !important;
-  width: 127%;
+  width: 110%;
   margin-top: -7px;
   @include when(XSMinus) {
   margin-top:-1px !important;
@@ -197,14 +212,14 @@ img {
   width:50%;
 }
 .logo_kloudless {
-    width: 87%;
+    width: 80%;
     margin-left: -31px;
     @include when(XSMinus) {
     margin-left:-10px;
     }
 }
 .logo_gdg {
-  width: 88% !important;
+  width: 100% !important;
 }
 
 .logo_intel {

@@ -746,7 +746,7 @@ a:active {
   width: 20%;
 }
 .section--sponsors .box .three:first-child {
-  margin-left: 25%;
+  margin-left: 24%;
 }
 .section--sponsors .box .two {
   display: block;
@@ -800,19 +800,24 @@ a:active {
   width: 100% !important;
 }
 .section--sponsors .box .logo_gitlab {
-  width: 50% !important;
+  width: 45% !important;
+}
+.section--sponsors .box .logo_jb {
+  width: 75%;
 }
 .section--sponsors .box .logo_github {
   margin-left: -28% !important;
+  width: 90%;
 }
 .section--sponsors .box .logo_do {
   margin-left: -18% !important;
-  width: 120% !important;
+  width: 105% !important;
 }
 .section--sponsors .box .logo_tcs {
   margin-top: -5px;
 }
 .section--sponsors .box .logo_branch {
+  width: 72% !important;
   margin-top: -10px;
 }
 @media only screen and (max-width: 575px) {
@@ -825,11 +830,15 @@ a:active {
     margin-left: 9px;
   }
 }
+.section--sponsors .box .logo_onion {
+  width: 85%;
+}
 .section--sponsors .box .logo_rethinkdb {
   margin-left: -25px;
+  width: 65% !important;
 }
 .section--sponsors .box .logo_twitter {
-  width: 66% !important;
+  width: 60% !important;
   margin-left: -5%;
 }
 .section--sponsors .box .logo_exotel {
@@ -846,9 +855,12 @@ a:active {
     margin-left: 0px !important;
   }
 }
+.section--sponsors .box .logo_tech {
+  width: 85%;
+}
 .section--sponsors .box .logo_meteor {
   margin-left: -19% !important;
-  width: 127%;
+  width: 110%;
   margin-top: -7px;
 }
 @media only screen and (max-width: 350px) {
@@ -873,7 +885,7 @@ a:active {
   width: 50%;
 }
 .section--sponsors .box .logo_kloudless {
-  width: 87%;
+  width: 80%;
   margin-left: -31px;
 }
 @media only screen and (max-width: 350px) {
@@ -882,7 +894,7 @@ a:active {
   }
 }
 .section--sponsors .box .logo_gdg {
-  width: 88% !important;
+  width: 100% !important;
 }
 .section--sponsors .box .logo_intel {
   width: 40% !important;
