@@ -710,11 +710,17 @@ a:active {
   display: block;
   float: left;
   max-height: 100px;
-  width: 12%;
+  width: 14%;
   margin-left: 1%;
 }
 .section--sponsors .box .five:first-child {
-  margin-left: 20%;
+  margin-left: 13%;
+}
+.section--sponsors .box .five_second {
+  width: 12% !important;
+}
+.section--sponsors .box .five_second:first-child {
+  margin-left: 15% !important;
 }
 .section--sponsors .box .six {
   display: block;

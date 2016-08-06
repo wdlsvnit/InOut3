@@ -3,9 +3,7 @@
 @extend %section;
  height : auto !important;
  max-height:initial;
-		
 		padding: 20px;
-	
 
 		.title {
 			@extend %section__heading;
@@ -36,17 +34,21 @@
 .five {
   display: block;
   float: left;
-  //margin: 0;
   max-height: 100px;
-  width: 12%;
-  //margin-right: -10%;
+  width: 14%;
   margin-left: 1%;
 }
 
 .five:first-child {
-  margin-left: 20%;
+  margin-left: 13%;
 }
 
+.five_second {
+  width:12% !important;
+}
+.five_second:first-child {
+  margin-left:15% !important;
+}
 
 .six {
   display: block;
