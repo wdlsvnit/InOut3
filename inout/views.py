@@ -350,5 +350,8 @@ def campus(request):
 def tracks(request):
         return render(request,'inout/tracks.html')
 
+def guides(request):
+        return render(request,'inout/guides.html')
+
 def error404(request):
     return render(request,'404.html', status=404)

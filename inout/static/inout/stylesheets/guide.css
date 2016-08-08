@@ -1,0 +1,227 @@
+.track-main-title {
+		    margin-bottom: 10px !important;
+		    color: #ffffff;
+		    font-family: 'Brandon', Fallback, sans-serif;
+		    font-size: 4em;
+		    text-align: center;
+		    margin-top: 300px !important;
+		}
+		.header-banner,
+		.bgl-main {
+		    background: #3F8DD8;
+		}
+		.inout-logo {
+		    margin-top: 60px !important;
+		}
+		.inout-version {
+		    color: #ffffff;
+		    margin-top: 60px;
+		    text-transform: uppercase;
+		    font-family: 'Brandon', Fallback, sans-serif;
+		    font-size: 1.3em;
+		}
+		.version {
+		    display: inline-block;
+		    color: rgb(31, 125, 216);
+		    padding: 4px;
+		    border-radius: 3.5px;
+		    background-color: #ffffff;
+		}
+		.logo-footer {
+		    margin-top: 20vh;
+		}
+		.footer-title {
+		    color: #ffffff;
+		    font-family: 'Brandon', Fallback, sans-serif;
+		    font-size: 4em;
+		}
+		.bgl-blue {
+		    background: #F2F2F2;
+		}
+		@font-face {
+		    font-family: Brandon;
+		    src: url("{% static "inout/fonts/Brandon_bld.otf" %}");
+		}
+		.sub-title {
+		    color: #fff;
+		    font-family: 'Brandon', Fallback, sans-serif;
+		    font-size: 1.8em;
+		    margin-top: 50px;
+		}
+		.section--text {
+		    font-family: 'Regular';
+		    font-weight: 400;
+		    font-size: 2.2em;
+		    color: #fff;
+		}
+		.bg-main {
+		    background: #3F8DD8 !important;
+		}
+		.prize_title {
+		    font-size: 1.6em;
+		    font-weight: 600;
+		    padding-bottom: 2rem;
+		    color: #6f6f6f;
+		}
+		.prize_details {
+		    font-size: 1.3 em;
+		    font-family: 'Regular';
+		}
+		.prize_details li {
+		    padding-top: 10px;
+		    text-align: center;
+		}
+		.prize_section {
+		    margin-bottom: 100px;
+		}
+		.resources_section {
+		    margin-bottom: 4rem
+		}
+		.resources_title {
+		    background: #3f8dd8;
+		    padding: 2rem;
+		    font-size: 1.3em;
+		    color: #fff;
+		    font-weight: 100;
+		}
+		.section__content--text {
+		    text-align: left;
+		    padding-top: 4rem;
+		}
+		.resources_section ul {
+		    counter-reset: counter;
+		}
+		.resources_section ul,
+		li {
+		    padding: 0.5em;
+		}
+		.resources_section li:before {
+		    content: counter(counter);
+		    counter-increment: counter;
+		    display: inline-block;
+		    width: 42px;
+		    color: #fff;
+		    font-size: 20px;
+		    padding: 10px;
+		    margin-right: 30px;
+		    margin-top: 35px;
+		    text-align: center;
+		    background: #3f8dd8;
+		    border-radius: 50%
+		}
+		.api_details li {
+		    padding-top: 10px;
+		    text-align: left;
+		}
+		.apidetail {
+		    margin-bottom: 4%;
+		}
+		.service_detail {
+		    padding-left: 74px;
+		    line-height: 30px;
+		    padding-top: -18px;
+		    margin-top: -51px;
+		    margin-bottom: 30px;
+		}
+		.api {
+		    margin-bottom: 5%;
+		}
+		.api_btn {
+		    /*margin-top: 10%;*/
+		    
+		    background: #3f8dd8;
+		    border-color: #fff;
+		    width: 100px;
+		}
+		.judge_section {
+		    margin-bottom: 5%;
+		}
+		.judge_section img {
+		    margin-bottom: 12%;
+		    width: 200px;
+		}
+		.logo_company img {
+		    width: 90px;
+		    padding-top: 12px;
+		}
+		.top-menu {
+		    margin-top: 50px;
+		}
+		.track-main-title {
+		    margin-bottom: 10px !important;
+		    color: #ffffff;
+		    font-family: 'Brandon', Fallback, sans-serif;
+		    font-size: 4em;
+		    text-align: center;
+		    margin-top: 300px !important;
+		}
+		.header-banner,
+		.bgl-main {
+		    background: #3F8DD8;
+		}
+		.inout-logo {
+		    margin-top: 60px !important;
+		}
+		.inout-version {
+		    float: right;
+		    color: #ffffff;
+		    margin-top: 10px;
+		    text-transform: uppercase;
+		    font-family: 'Brandon', Fallback, sans-serif;
+		    font-size: 1.3em;
+		}
+		.version {
+		    display: inline-block;
+		    color: rgb(31, 125, 216);
+		    padding: 4px;
+		    border-radius: 3.5px;
+		    background-color: #ffffff;
+		}
+		.logo-footer {
+		    margin-top: 20vh;
+		}
+		.footer-title {
+		    color: #ffffff;
+		    font-family: 'Brandon', Fallback, sans-serif;
+		    font-size: 4em;
+		}
+		.bgl-blue {
+		    background: #F2F2F2;
+		}
+		@font-face {
+		    font-family: Brandon;
+		    src: url("/static/inout/fonts/Brandon_bld.otf");
+		}
+		.section--text {
+		    font-family: 'Regular';
+		    font-weight: 400;
+		    font-size: 2.2em;
+		    color: #fff;
+		}
+		/* tabs */
+		
+		.nav-tabs {
+		    border-bottom: none;
+		}
+		.nav-tabs>li>a {
+		    border: none;
+		    color: #f1f1f1;
+		    font-family: 'Regular';
+		    font-size: 1.7em;
+		}
+		.nav>li>a:focus,
+		.nav>li>a:hover {
+		    background: transparent;
+		    border-bottom: 2px solid #fff;
+		}
+		.nav-tabs>li.active>a,
+		.nav-tabs>li.active>a:focus,
+		.nav-tabs>li.active>a:hover {
+		    background: transparent;
+		    border: none;
+		    border-bottom: 2px solid white;
+		    color: #fff;
+		}
+		.main_header {
+		    background: #3F8DD8 !important;
+		}
