@@ -133,6 +133,25 @@
 		    border-color: #fff;
 		    width: 100px;
 		}
+		.submit_btn {
+			background: #ffffff;
+			border-color: #fff;
+			width: 100px;
+			font-size: 20px;
+			font-family: 'Regular';
+			border-radius: 0;
+			width: 172px;
+			color: #3f8dd8;
+			margin-top: 45%;
+		}
+		.api_btn, .submit_btn:hover {
+			background: #3f8dd8;
+			color:#fff;
+		}
+		.submit_btn a:hover {
+			/*background: #3f8dd8;*/
+			color:#fff;
+		}
 		.judge_section {
 		    margin-bottom: 5%;
 		}
