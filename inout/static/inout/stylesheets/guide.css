@@ -74,7 +74,7 @@
 		.prize_section {
 		    margin-bottom: 100px;
 		}
-		.resources_section {
+		.resources_section, .resources_hardware {
 		    margin-bottom: 4rem
 		}
 		.resources_title {
@@ -224,4 +224,10 @@
 		}
 		.main_header {
 		    background: #3F8DD8 !important;
+		}
+		.badge {
+			background-color: #3f8dd8 !important;
+		}
+		.device_list {
+			margin-top:40px;
 		}

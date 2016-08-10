@@ -53,7 +53,6 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css" />
 	<link rel="stylesheet" href="{% static "inout/stylesheets/styles.css" %}">
 	<style>
-		
 	</style>
 
 </head>
@@ -62,19 +61,19 @@
 
     <div class="container">
         <div class="row top-menu">
-            <div class="col-lg-4">
+            <div class="col-lg-3">
                 <img src="./../../static/inout/images/tracks/logo_InOut.png" alt="" />
             </div>
-            <div class="col-lg-4 hidden-sm">
+            <div class="col-lg-5 col-lg-offset-1 hidden-sm hidden-sm">
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist" id="guide">
-                    <li role="presentation" class="active"><a href="#prizes" aria-controls="prizes" role="tab" data-toggle="tab">Prizes</a></li>
-                    <li role="presentation"><a href="#resources" aria-controls="resources" role="tab" data-toggle="tab">Resources</a></li>
+                    <li role="presentation"><a href="#prizes" aria-controls="prizes" role="tab" data-toggle="tab">Prizes</a></li>
+                    <li role="presentation"><a href="#resources" class="active" aria-controls="resources" role="tab" data-toggle="tab">Resources</a></li>
                     <li role="presentation"><a href="#judges" aria-controls="judges" role="tab" data-toggle="tab">Judges</a></li>
-                    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">VR</a></li>
+                    <li role="presentation"><a href="#submit" aria-controls="submit" role="tab" data-toggle="tab">Submit hack</a></li>
                 </ul>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-3">
                 <p class="inout-version"> <span class="version" style="display: inline-block;">Third-edition</span>&nbsp;&nbsp;hackinout.co</p>
             </div>
         </div>
@@ -85,7 +84,7 @@
                     <li role="presentation" class="active"><a href="#prizes" aria-controls="prizes" role="tab" data-toggle="tab">Prizes</a></li>
                     <li role="presentation"><a href="#resources" aria-controls="resources" role="tab" data-toggle="tab">Resources</a></li>
                     <li role="presentation"><a href="#judges" aria-controls="judges" role="tab" data-toggle="tab">Judges</a></li>
-                    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">VR</a></li>
+                    <li role="presentation"><a href="#submit" aria-controls="submit" role="tab" data-toggle="tab">Submit hack</a></li>
                 </ul>
             </div>
         </div>
@@ -98,7 +97,7 @@
 
 <div class="tab-content">
 
-    <div role="tabpanel" class="tab-pane active in" id="prizes">
+    <div role="tabpanel" class="tab-pane" id="prizes">
         <!-- <Prize section starts here -->
         <div class="container-fluid bg-main">
             <div class="container">
@@ -197,7 +196,7 @@
         <!-- prize section ends here -->
     </div>
 
-    <div role="tabpanel" class="tab-pane" id="resources">
+    <div role="tabpanel" class="tab-pane active in" id="resources">
         <!-- Hardware section starts here -->
 
         <div class="container-fluid bg-main">
@@ -218,9 +217,39 @@
                 <section class="section-2">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="resources_section">
+                            <div class="resources_hardware">
                                 <h2 class="resources_title text-left">Hardware</h2>
-                                <p class="section__content--text">None of us need to search far for a friend or family member impacted by sickness or injury. At our most vulnerable moments, we are confronted with a healthcare system woefully incapable of meeting the current demands. We are calling on all hackers and sponsors to innovate for a healthier future.</p>
+                                <p class="section__content--text">None of us need to search far for a friend or family member impacted by sickness or injury. At our most vulnerable moments, we are confronted with a healthcare system woefully incapable of meeting the current demands. We are calling on all hackers and sponsors to innovate for a healthier future. Here is our tentative hardware list:</p>
+                            
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 device_list">
+                                        <ul class="list-group">
+                                            <li class="list-group-item"> 3D Printer</li>
+                                            <li class="list-group-item">AccelroGyro MPU6050</li>
+                                            <li class="list-group-item">Amazon Echo</li>
+                                            <li class="list-group-item">Arduino 101</li>
+                                            <li class="list-group-item">Arduino Ethernet Shield</li>
+                                            <li class="list-group-item"> Arduino MKR1000</li>                     
+                                            <li class="list-group-item"> Arduino UNO</li>
+                                            <li class="list-group-item">Common Parts (Resistor, LEDs, etc)</li>                     
+                                            <li class="list-group-item"> Compass HMC5883L</li>
+                                            <li class="list-group-item">< Intel Edison</li>
+                                            <li class="list-group-item"> Leap Motion</li>                     
+                                            <li class="list-group-item">Microsoft Kinect</li>
+                                            <li class="list-group-item">Mouser + Hackster ScrewDriver</li>                     
+        
+                                            <li class="list-group-item"> NodeMCU</li>
+                                            <li class="list-group-item">NXP Boards</li>                 
+                                            <li class="list-group-item">Onion Board</li>
+                                            <li class="list-group-item">Particle Photon</li>
+                                            <li class="list-group-item">Power Bank (Microsoft Azure)</li> 
+                                            <li class="list-group-item">Raspberry Pi Camera</li>
+                                            <li class="list-group-item">Sensor Kit</li> 
+                                            <li class="list-group-item">Sparkfun FreeSOCS</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
                             </div>
                             <div class="resources_section api">
                                 <h2 class="resources_title text-left">Services</h2>
@@ -460,11 +489,28 @@
     </div>
 
 
-    <div role="tabpanel" class="tab-pane " id="settings">
-        <h1>Placeholder text</h1>
+    <div role="tabpanel" class="tab-pane " id="submit">
+        <div class="container-fluid bg-main">
+            <div class="container">
+                <section class="section-2">
+                                    <div class="row">
+                                        <div class="col-md-5 col-md-offset-2">
+                                            <img class="img-responsive" src="./../../static/inout/images/guide/submit.png" alt="about">
+                                        </div>
+                                        <div class="col-md-4 text-right">
+                                            <p class="section__content--text">You can lorem epsum here.</p>
+                                            <button type="button" class="btn btn-primary btn-block api_btn">API DOCS</button>
+                                        </div>
+                                    </div>
+                </section>
+            </div>
+        </div>
     </div>
 </div>
 
+
+
+           
 
 
 
