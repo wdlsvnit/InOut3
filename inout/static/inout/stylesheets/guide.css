@@ -143,14 +143,11 @@
 			width: 172px;
 			color: #3f8dd8;
 			margin-top: 45%;
+			margin-right:50%; 
 		}
-		.api_btn, .submit_btn:hover {
-			background: #3f8dd8;
-			color:#fff;
-		}
-		.submit_btn a:hover {
-			/*background: #3f8dd8;*/
-			color:#fff;
+		.submit_btn:hover {
+			background: #3f8dd8 !important;
+			color:#fff !important;
 		}
 		.judge_section {
 		    margin-bottom: 5%;
@@ -224,7 +221,7 @@
 		}
 		.nav-tabs>li>a {
 		    border: none;
-		    color: #f1f1f1;
+		    color: #fff !important;
 		    font-family: 'Regular';
 		    font-size: 1.7em;
 		}
@@ -256,9 +253,16 @@
 		.logo_twitter {
 			width: 45px !important;
 		}
-		.judge_section a {
+		.judge_section, a {
 			color: #3f8dd8 !important;
 		}
 		.logo_google {
 			width: 85px !important;
 		}
+		.api_details a{
+			color:#fff !important;
+			background: #3f8dd8 !important;
+		}
+	.footer--content a {
+	    color: white !important;
+	}
