@@ -160,7 +160,7 @@
 		    width: 200px;
 		}
 		.logo_company img {
-		    width: 90px;
+		    width: 100px;
 		    padding-top: 12px;
 		}
 		.top-menu {
@@ -249,4 +249,16 @@
 		}
 		.device_list {
 			margin-top:40px;
+		}
+		.logo_exotel {
+			width:66px !important;
+		}
+		.logo_twitter {
+			width: 45px !important;
+		}
+		.judge_section a {
+			color: #3f8dd8 !important;
+		}
+		.logo_google {
+			width: 85px !important;
 		}
