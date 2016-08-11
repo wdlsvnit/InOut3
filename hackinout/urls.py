@@ -35,7 +35,7 @@ urlpatterns = [
     url(r'^sponsorship/',include('sponsorship.urls')),
     url(r'^campus/',campus, name="campus"),
     url(r'^tracks/',tracks, name="tracks"),
-    url(r'^guides/',guides, name="guides")
+    url(r'^live/',guides, name="guides")
     # url(r'^404/$', django.views.defaults.page_not_found, )
     ]
 handler404 = "inout.views.error404"
