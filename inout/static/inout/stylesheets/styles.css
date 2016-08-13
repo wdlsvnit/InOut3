@@ -726,10 +726,10 @@ a:active {
   display: block;
   float: left;
   max-height: 100px;
-  width: 12%;
+  width: 14%;
 }
 .section--sponsors .box .six:first-child {
-  margin-left: 14%;
+  margin-left: 11%;
 }
 .section--sponsors .box .four {
   display: block;
@@ -837,6 +837,16 @@ a:active {
   margin-left: -25px;
   width: 65% !important;
 }
+@media only screen and (max-width: 575px) {
+  .section--sponsors .box .logo_rethinkdb {
+    margin-left: 0px !important;
+  }
+}
+@media only screen and (max-width: 1140px) {
+  .section--sponsors .box .logo_rethinkdb {
+    margin-left: 0px !important;
+  }
+}
 .section--sponsors .box .logo_twitter {
   width: 60% !important;
   margin-left: -5%;
@@ -852,6 +862,19 @@ a:active {
 }
 @media only screen and (max-width: 1140px) {
   .section--sponsors .box .logo_exotel {
+    margin-left: 0px !important;
+  }
+}
+.section--sponsors .box .logo_snapdeal {
+  margin-left: -28px;
+}
+@media only screen and (max-width: 575px) {
+  .section--sponsors .box .logo_snapdeal {
+    margin-left: 0px !important;
+  }
+}
+@media only screen and (max-width: 1140px) {
+  .section--sponsors .box .logo_snapdeal {
     margin-left: 0px !important;
   }
 }
@@ -891,6 +914,16 @@ a:active {
 @media only screen and (max-width: 350px) {
   .section--sponsors .box .logo_kloudless {
     margin-left: -10px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .section--sponsors .box .logo_kloudless {
+    margin-left: 0px !important;
+  }
+}
+@media only screen and (max-width: 1140px) {
+  .section--sponsors .box .logo_kloudless {
+    margin-left: 0px !important;
   }
 }
 .section--sponsors .box .logo_gdg {
