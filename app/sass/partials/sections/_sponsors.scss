@@ -54,11 +54,11 @@
   display: block;
   float: left;
   max-height: 100px;
-  width: 12%;
+  width: 14%;
 }
 
 .six:first-child {
-  margin-left: 14%;
+  margin-left: 11%;
 }
 
 
@@ -169,6 +169,12 @@ img {
 .logo_rethinkdb {
   margin-left:-25px;
   width:65% !important;
+  @include when(SMinus) {
+  margin-left:0px !important;
+  } 
+  @include when(LMinus) {
+  margin-left:0px !important;
+  }
 }
 
 .logo_twitter{
@@ -185,7 +191,15 @@ img {
   margin-left:0px !important;
   }
 }
-
+.logo_snapdeal {
+  margin-left:-28px;
+  @include when(SMinus) {
+  margin-left:0px !important;
+  } 
+  @include when(LMinus) {
+  margin-left:0px !important;
+  }
+}
 .logo_tech{
   width:85%;
 }
@@ -217,6 +231,12 @@ img {
     @include when(XSMinus) {
     margin-left:-10px;
     }
+    @include when(SMinus) {
+  margin-left:0px !important;
+  } 
+  @include when(LMinus) {
+  margin-left:0px !important;
+  }
 }
 .logo_gdg {
   width: 100% !important;
