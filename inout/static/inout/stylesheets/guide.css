@@ -162,6 +162,7 @@
 		.judge_section img {
 		    margin-bottom: 12%;
 		    width: 200px;
+		    max-height: 200px;
 		}
 		.logo_company img {
 		    width: 100px;
@@ -278,4 +279,11 @@
 	}
 	.promo_code_link{
 		line-height: 30px;
+	}
+	.logo_intel_judge {
+		width:60px !important;
+	}
+	.logo_wingify_judge {
+		    width: 78px !important;
+    padding-top: 26px !important;
 	}
