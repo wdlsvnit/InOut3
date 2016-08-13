@@ -273,3 +273,9 @@
 	.footer--content a {
 	    color: white !important;
 	}
+	.code {
+	    background: #3f8dd8;
+	}
+	.promo_code_link{
+		line-height: 30px;
+	}
