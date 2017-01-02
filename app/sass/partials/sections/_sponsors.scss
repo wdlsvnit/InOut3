@@ -171,7 +171,7 @@ img {
   width:65% !important;
   @include when(SMinus) {
   margin-left:0px !important;
-  } 
+  }
   @include when(LMinus) {
   margin-left:0px !important;
   }
@@ -186,7 +186,7 @@ img {
   margin-left:35px;
   @include when(SMinus) {
   margin-left:0px !important;
-  } 
+  }
   @include when(LMinus) {
   margin-left:0px !important;
   }
@@ -195,7 +195,7 @@ img {
   margin-left:-28px;
   @include when(SMinus) {
   margin-left:0px !important;
-  } 
+  }
   @include when(LMinus) {
   margin-left:0px !important;
   }
@@ -233,7 +233,7 @@ img {
     }
     @include when(SMinus) {
   margin-left:0px !important;
-  } 
+  }
   @include when(LMinus) {
   margin-left:0px !important;
   }
@@ -272,7 +272,7 @@ img {
   margin-top:30px !important;
 }
 .logo_sendgrid {
- width:65%; 
+ width:65%;
 }
 .logo_invision {
   width:55%;
@@ -304,7 +304,7 @@ margin-top: -10px;
 .logo_ys {
   width: 70%;
   margin-top: 50px;
-  margin-left:16%;
+  margin-left:5%;
 }
 .sponsor {
   	display : inline-block;
@@ -319,7 +319,7 @@ margin-top: -10px;
   	}
   }
   }
-		
+
 	p {
 			font-size : 2.3rem;
     		padding-bottom : 7pc;
